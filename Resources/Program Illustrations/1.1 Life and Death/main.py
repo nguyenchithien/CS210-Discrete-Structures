@@ -9,7 +9,7 @@ maximumPeople = input( "HOW MANY PEOPLE SHOULD BE IN A CIRCLE? " )
 pygame.init()
 fpsClock = pygame.time.Clock()
 window = pygame.display.set_mode( ( 768, 768 ) )
-pygame.display.set_caption( "Magic Trick" )
+pygame.display.set_caption( "Life and Death" )
 
 bgColor = pygame.Color( 140, 225, 255 )
 txtColor = pygame.Color( 0, 0, 0 )
