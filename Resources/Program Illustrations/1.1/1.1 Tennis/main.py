@@ -19,24 +19,68 @@ setCount = 0
 riggsScore = 0
 kingScore = 0
 tennisScores = [ 0, 15, 30, 40, "game" ]
+chanceOfKingWinning = 0.55
+chanceOfMatch = -1
 
 images = {
     "King" : pygame.image.load( "content/king.png" ),
-    "Riggs" : pygame.image.load( "content/riggs.png" )
+    "Riggs" : pygame.image.load( "content/riggs.png" ),
+    "Reset" : pygame.image.load( "content/reset.png" )
 }
 
-people = [
-    { "name" : "King",  "image" : images["King"],       "x" : 0, "y" : 50, "w" : 64, "h" : 96 },
-    { "name" : "Riggs", "image" : images["Riggs"],      "x" : 0, "y" : 130, "w" : 64, "h" : 96 },
-]
+people = []
 
-matchText = {
-    "set" : { "label" : fontObj.render( "Set 1", False, txtColor ), "pos" : ( 0, 0 ) },
-    "kingscore" : { "label" : fontObj.render( "King: 0", False, txtColor), "pos" : ( 100, 0 ) },
-    "riggsscore" : { "label" : fontObj.render( "Riggs: 0", False, txtColor), "pos" : ( 300, 0 ) },
-}
+buttons = []
+matchText = {}
 
 winImages = []
+    
+def Reset():
+    
+    del people[:]
+    del buttons[:]
+    del winImages[:]
+    matchText.clear()
+    
+    print( "Reset" )
+    
+    global columnCount
+    global setCount
+    global riggsScore
+    global kingScore
+    global tennisScores
+    global chanceOfKingWinning
+    global chanceOfMatch
+    
+    
+    columnCount = 0
+    setCount = 0
+    riggsScore = 0
+    kingScore = 0
+    tennisScores = [ 0, 15, 30, 40, "game" ]
+    chanceOfKingWinning = 0.55
+    chanceOfMatch = -1
+    
+    global people
+    global buttons
+    global matchText
+
+    people = [
+        { "name" : "King",  "image" : images["King"],       "x" : 0, "y" : 50, "w" : 64, "h" : 96 },
+        { "name" : "Riggs", "image" : images["Riggs"],      "x" : 0, "y" : 130, "w" : 64, "h" : 96 },
+    ]
+
+    buttons = [
+        { "name" : "Reset", "image" : images["Reset"],      "x" : 800, "y" : 50, "w" : 150, "h" : 50 },
+    ]
+
+    matchText = {
+        "set" : { "label" : fontObj.render( "Set 1", False, txtColor ), "pos" : ( 0, 0 ) },
+        "kingscore" : { "label" : fontObj.render( "King: 0", False, txtColor), "pos" : ( 100, 0 ) },
+        "riggsscore" : { "label" : fontObj.render( "Riggs: 0", False, txtColor), "pos" : ( 300, 0 ) },
+        "chance" : { "label" : fontObj.render( "Chance: -", False, txtColor), "pos" : ( 500, 0 ) },
+    }
+    
     
 def IsClicked( mouseX, mouseY, obj ):
     return ( mouseX >= obj["x"] 
@@ -69,6 +113,20 @@ def AddWinner( winner ):
         
     matchText[ "riggsscore" ]["label"] = fontObj.render( "Riggs: " + str( tennisScores[ riggsScore ] ), False, txtColor )
     matchText[ "kingscore" ]["label"] = fontObj.render( "King: " + str( tennisScores[ kingScore ] ), False, txtColor )
+    
+    global chanceOfMatch
+    global chanceOfKingWinning
+    if ( chanceOfMatch == -1 ):
+        if ( winner == "Riggs" ):
+            chanceOfMatch = (1 - chanceOfKingWinning)
+        elif ( winner == "King" ):
+            chanceOfMatch = chanceOfKingWinning
+    else:
+        if ( winner == "Riggs" ):
+            chanceOfMatch = chanceOfMatch * (1 - chanceOfKingWinning)
+        else:
+            chanceOfMatch = chanceOfMatch * chanceOfKingWinning
+    matchText[ "chance" ]["label"] = fontObj.render( "Chance: " + str( chanceOfMatch * 100 ) + "%", False, txtColor )
         
     winImages.append( newImage )
 
@@ -78,6 +136,11 @@ def ClickPerson( mouseX, mouseY ):
             print( person["name"], " wins" )
             AddWinner( person["name"] )
             return True
+            
+    for button in buttons:
+        if ( IsClicked( mouseX, mouseY, button ) ):
+            Reset()
+            return False
             
 def NextSet():
     print( "Next set" )
@@ -100,6 +163,11 @@ def NextSet():
     matchText[ "riggsscore" ]["label"] = fontObj.render( "Riggs: " + str( tennisScores[ riggsScore ] ), False, txtColor )
     matchText[ "kingscore" ]["label"] = fontObj.render( "King: " + str( tennisScores[ kingScore ] ), False, txtColor )
     
+    chanceOfMatch = -1
+    
+   
+
+Reset()
       
 while True:
     window.fill( bgColor )
@@ -126,6 +194,9 @@ while True:
     
     for key, text in matchText.items():
         window.blit( text["label"], text["pos"] )
+    
+    for button in buttons:
+        window.blit( button["image"], ( button["x"], button["y"] ) )
     
     pygame.display.update()
     fpsClock.tick( 30 )
