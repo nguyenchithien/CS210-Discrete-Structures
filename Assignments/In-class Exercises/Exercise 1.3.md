@@ -86,7 +86,6 @@ Fill out the following truth table to analyze the situation:
     <tr>
 	<th>Blue is telling the truth</th>
 	<th>Red is telling the truth</th>
-	<th>|</th>
 	<th>At least one lied</th>
 	<th>1 Bob AND 1 Andrew AND 1 Lie</th>
     </tr>
