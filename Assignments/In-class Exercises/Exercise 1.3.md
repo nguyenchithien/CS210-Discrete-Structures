@@ -39,7 +39,7 @@ Fill in the following truth table:
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>|</td><td>_</td>
+		<td>_</td><td>_</td><td>_</td>
 	</tr>
 </table>
 
