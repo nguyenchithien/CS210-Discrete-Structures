@@ -23,23 +23,23 @@ Fill in the following truth table:
 
 <table>
 	<tr>
-		<th>p</th><th>q</th><th>¬p ∧ q</th>
+		<th>p</th><th>q</th><th>|</th><th>¬p ∧ q</th>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>_</td>
+		<td>_</td><td>_</td><td>|</td><td>_</td>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>_</td>
+		<td>_</td><td>_</td><td>|</td><td>_</td>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>_</td>
+		<td>_</td><td>_</td><td>|</td><td>_</td>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>_</td>
+		<td>_</td><td>_</td><td>|</td><td>_</td>
 	</tr>
 </table>
 
@@ -78,7 +78,7 @@ Translate the following from English into logical terms, using the propositions 
 
 > If we know that at least one of them lied, then what color shirt is Andrew wearing?
 
-- ([Truth-Tellers and Liars. Brilliant.org. Retrieved from https://brilliant.org/wiki/truth-tellers-and-liars/](https://brilliant.org/wiki/truth-tellers-and-liars/))
+###### ([Truth-Tellers and Liars. Brilliant.org. Retrieved from https://brilliant.org/wiki/truth-tellers-and-liars/](https://brilliant.org/wiki/truth-tellers-and-liars/))
 
 Fill out the following truth table to analyze the situation:
 
@@ -107,3 +107,106 @@ Fill out the following truth table to analyze the situation:
 	<td>_</td><td>_</td><td>|</td><td>_</td><td>_</td>
     </tr>
 </table>
+
+## Problem 5
+
+> There are 3 boxes, exactly one of which has a car. You can keep the car if you pick the correct box!
+
+> On each box there is a statement, exactly one of which is true.
+
+> Box A: The car is in this box.
+
+> Box B: The car is not in this box.
+
+> Box C: The car is not in box A.
+
+> Which box has the car?
+
+###### ([Truth-Tellers and Liars. Brilliant.org. Retrieved from https://brilliant.org/wiki/truth-tellers-and-liars/](https://brilliant.org/wiki/truth-tellers-and-liars/))
+
+Think of this problem in terms of the propositions:
+
+    1. p: A (car in box A)
+    
+    2. q: ¬B (car not in box B)
+    
+    3. r: ¬A (car not in box A)
+    
+Since there is only one car, we will test only these statements:
+
+    1. Car is in box A
+    
+    2. Car is in box B
+    
+    3. Car is in box C
+    
+And since only one note can be true, we will write each scenario in terms
+of the each note assuming it is true, and the others are false:
+
+    4. p ∧ ¬ ( q ∨ r )
+    (p is true, but q and r are not)
+    
+    5. q ∧ ¬ ( p ∨ r )
+    (q is true, but p and r are not)
+     
+    6. r ∧ ¬ ( p ∨ q )
+    (r is true, but p and q are not)
+    
+Fill out the following truth table to figure out which box the car is in.
+
+
+<table>
+    <tr>
+	<th>A<br>Car in box A<th>
+	<th>B<br>Car in box B</th>
+	<th>C<br>Car in box C</th>
+	<th>p<br>p = A</th>
+	<th>q<br>q = ¬B</th>
+	<th>r<br>r = ¬A</th>
+	<th>|</th>
+	<th>p ∧ ¬ ( q ∨ r )</th>
+	<th>q ∧ ¬ ( p ∨ r )</th>
+	<th>r ∧ ¬ ( p ∨ q )</th>
+    </tr>
+    
+    <tr>
+	<td>T</td>
+	<td>F</td>
+	<td>F</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+	<td>|</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+    </tr>
+    
+    <tr>
+	<td>F</td>
+	<td>T</td>
+	<td>F</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+	<td>|</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+    </tr>
+    
+    <tr>
+	<td>F</td>
+	<td>F</td>
+	<td>T</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+	<td>|</td>
+	<td>_</td>
+	<td>_</td>
+	<td>_</td>
+    </tr>
+</table>
+
+Which box has the car in it?
