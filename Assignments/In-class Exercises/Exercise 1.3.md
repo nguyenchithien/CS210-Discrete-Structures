@@ -157,7 +157,7 @@ Fill out the following truth table to figure out which box the car is in.
 
 <table>
     <tr>
-	<th>A<br>Car in box A<th>
+	<th>A<br>Car in box A</th>
 	<th>B<br>Car in box B</th>
 	<th>C<br>Car in box C</th>
 	<th>p<br>p = A</th>
