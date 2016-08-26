@@ -23,19 +23,19 @@ Fill in the following truth table:
 
 <table>
 	<tr>
-		<th>p</th><th>q</th><th>|</th><th>¬p ∧ q</th>
+		<th>p</th><th>q</th><th>¬p ∧ q</th>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>|</td><td>_</td>
+		<td>_</td><td>_</td><td>_</td>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>|</td><td>_</td>
+		<td>_</td><td>_</td><td>_</td>
 	</tr>
 
 	<tr>
-		<td>_</td><td>_</td><td>|</td><td>_</td>
+		<td>_</td><td>_</td><td>_</td>
 	</tr>
 
 	<tr>
@@ -92,19 +92,19 @@ Fill out the following truth table to analyze the situation:
     </tr>
     
     <tr>
-	<td>_</td><td>_</td><td>|</td><td>_</td><td>_</td>
+	<td>_</td><td>_</td><td>_</td><td>_</td>
     </tr>
     
     <tr>
-	<td>_</td><td>_</td><td>|</td><td>_</td><td>_</td>
+	<td>_</td><td>_</td><td>_</td><td>_</td>
     </tr>
     
     <tr>
-	<td>_</td><td>_</td><td>|</td><td>_</td><td>_</td>
+	<td>_</td><td>_</td><td>_</td><td>_</td>
     </tr>
     
     <tr>
-	<td>_</td><td>_</td><td>|</td><td>_</td><td>_</td>
+	<td>_</td><td>_</td><td>_</td><td>_</td>
     </tr>
 </table>
 
@@ -134,11 +134,11 @@ Think of this problem in terms of the propositions:
     
 Since there is only one car, we will test only these statements:
 
-    1. Car is in box A
+    1. A: Car is in box A
     
-    2. Car is in box B
+    2. B: Car is in box B
     
-    3. Car is in box C
+    3. C: Car is in box C
     
 And since only one note can be true, we will write each scenario in terms
 of the each note assuming it is true, and the others are false:
@@ -163,7 +163,6 @@ Fill out the following truth table to figure out which box the car is in.
 	<th>p<br>p = A</th>
 	<th>q<br>q = ¬B</th>
 	<th>r<br>r = ¬A</th>
-	<th>|</th>
 	<th>p ∧ ¬ ( q ∨ r )</th>
 	<th>q ∧ ¬ ( p ∨ r )</th>
 	<th>r ∧ ¬ ( p ∨ q )</th>
@@ -176,7 +175,6 @@ Fill out the following truth table to figure out which box the car is in.
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
-	<td>|</td>
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
@@ -189,7 +187,6 @@ Fill out the following truth table to figure out which box the car is in.
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
-	<td>|</td>
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
@@ -202,7 +199,6 @@ Fill out the following truth table to figure out which box the car is in.
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
-	<td>|</td>
 	<td>_</td>
 	<td>_</td>
 	<td>_</td>
