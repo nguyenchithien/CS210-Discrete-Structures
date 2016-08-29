@@ -10,9 +10,25 @@
 
 ([Predicate (mathematical logic) / Wikipedia](https://en.wikipedia.org/wiki/Predicate_%28mathematical_logic%29))
 
+A proposition is more of a static statement that does not change,
+while a predicate is more like a *function*, where you can plug in some value
+and it will give a different result based on the input.
+
+F(t) is the predicate "t is greater than 100".
+
+### Quantified Statement
+
+> A quantified statement is a simple statement in predicate logic whose subject is qualified by either the universal quantifier or the existential quantifier.
+
+([Definition: Quantified Statement / ProofWiki](https://proofwiki.org/wiki/Definition:Quantified_Statement))
+
+Think of the entire "There exists x in D such that ..." or "∀ x ∈ X, P(x)" as the quantified statement.
+
 ### Domain
 
-asdf
+> In mathematics, and more specifically in naive set theory, the domain of definition (or simply the domain) of a function is the set of "input" or argument values for which the function is defined. That is, the function provides an "output" or value for each member of the domain.
+
+([Domain of a function / Wikipedia](https://en.wikipedia.org/wiki/Domain_of_a_function))
 
 ### Symbols
 
@@ -42,7 +58,9 @@ asdf
 
 ([Set (mathematics) / Wikipedia](https://en.wikipedia.org/wiki/Set_%28mathematics%29#Definition))
 
-### Negations
+---
+
+## Negations
 
 We can apply DeMorgan's laws towards predicates as well as propositions.
 
@@ -52,9 +70,20 @@ We can apply DeMorgan's laws towards predicates as well as propositions.
 	
 * Predicates
 	* The negation of **∀ x ∈ X, P(x)** is **∃ x ∈ X, ¬P(x)**
+		* "For all x in X, such that P(x)." --> "There exists x in X, such that not-P(x)"
 		* ([Universal quantification / Wikipedia](https://en.wikipedia.org/wiki/Universal_quantification#Negation))
 	* The negation of **∃ x ∈ X, P(x)** is **∀ x ∈ X, ¬P(x)**
 		* ([Existential quantification / Wikipedia](https://en.wikipedia.org/wiki/Existential_quantification#Negation))
+
+### Example
+
+	What is the negation of: ∀ x ∈ X, x > 32
+
+1. ¬( ∀ x ∈ X, x > 32 )
+2. ∃ x ∈ X, ¬( x > 32 )
+3. ∃ x ∈ X, x <= 32
+
+Think of it as distributing the ¬ between each *part* of the quantified statement.
 
 ---
 
