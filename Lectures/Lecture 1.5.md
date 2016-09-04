@@ -40,7 +40,7 @@ the contrapositive of P → Q is thus ¬ Q → ¬ P. For instance, the propositi
 
 In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the contrapositive is **∀ x ∈ D, ¬Q(x) → ¬P(x)**.
 
-*if not Q then not P*
+*if not Q then not P* - reversal and negation of both statements
 
 ### Converse
 
@@ -53,7 +53,7 @@ In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the contrapositive i
 
 In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **∀ x ∈ D, Q(x) → P(x)**.
 
-*if Q then P*
+*if Q then P* - reversal of both statements
 
 ### Inverse
 
@@ -66,7 +66,7 @@ In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **�
 
 In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the inverse is **∀ x ∈ D, ¬P(x) → ¬Q(x)**.
 
-*if not P then not Q*
+*if not P then not Q* - negation of both statements
 
 ---
 
