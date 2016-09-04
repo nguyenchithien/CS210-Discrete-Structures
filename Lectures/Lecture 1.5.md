@@ -60,7 +60,7 @@ In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **�
 
 ([Contraposition / Wikipedia](https://en.wikipedia.org/wiki/Contraposition))
 
-In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **∀ x ∈ D, ¬P(x) → ¬Q(x)**.
+In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the inverse is **∀ x ∈ D, ¬P(x) → ¬Q(x)**.
 
 ---
 
