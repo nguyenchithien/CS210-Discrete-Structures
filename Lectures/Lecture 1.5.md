@@ -73,9 +73,9 @@ The truth table for **p → q** is:
 <th>p</th><th>q</th><th>p → q</th>
 </tr>
 <tr>
-<td>T</td><td>T</td><td>T</td>
-<td>T</td><td>F</td><td>F</td>
-<td>F</td><td>T</td><td>T</td>
+<td>T</td><td>T</td><td>T</td></tr><tr>
+<td>T</td><td>F</td><td>F</td></tr><tr>
+<td>F</td><td>T</td><td>T</td></tr><tr>
 <td>F</td><td>F</td><td>T</td>
 </tr>
 </table>
