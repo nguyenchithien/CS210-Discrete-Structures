@@ -62,4 +62,34 @@ In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **�
 
 In predicate terms, if **∀ x ∈ D, P(x) → Q(x)**, then the converse is **∀ x ∈ D, ¬P(x) → ¬Q(x)**.
 
+---
+
+## Truth Tables of Implications
+
+The truth table for **p → q** is:
+
+<table>
+<tr>
+<th>p</th><th>q</th><th>p → q</th>
+</tr>
+<tr>
+<td>T</td><td>T</td><td>T</td>
+<td>T</td><td>F</td><td>F</td>
+<td>F</td><td>T</td><td>T</td>
+<td>F</td><td>F</td><td>T</td>
+</tr>
+</table>
+
+([Material conditional / Wikipedia](https://en.wikipedia.org/wiki/Material_conditional#Truth_table))
+
+The statement **p → q** means only "if p is true, then q is also true", and doesn't give a result for if p is false; therefore, the *validity* of p → q is still intact if **p is false**, because p being false doesn't have an effect on q; the only time the statement "if p is true then q is true" is invalid is if p is true, but then q is false.
+
+--
+
+## Negation of implications
+
+Remember that, "In order to prove an implication false, we must have a case where the hypothesis is true and the conclusion is false."
+
+**¬(p → q)** is logically equivalent to **p ∧ ¬q**.
+
 
