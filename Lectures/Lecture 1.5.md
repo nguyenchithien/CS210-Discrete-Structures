@@ -92,4 +92,17 @@ Remember that, "In order to prove an implication false, we must have a case wher
 
 **¬(p → q)** is logically equivalent to **p ∧ ¬q**.
 
-
+<table>
+<tr>
+<th>p</th><th>q</th><th>p → q</th><th>¬(p → q)</th><th>p ∧ ¬q</th>
+</tr>
+<tr>
+<td>T</td><td>T</td><td>T</td><td>F</td><td>F</td>
+</tr><tr>
+<td>T</td><td>F</td><td>F</td><td>T</td><td>T</td>
+</tr><tr>
+<td>F</td><td>T</td><td>T</td><td>F</td><td>F</td>
+</tr><tr>
+<td>F</td><td>F</td><td>T</td><td>F</td><td>F</td>
+</tr>
+</table>
