@@ -143,3 +143,9 @@ Now, you can use this program to solve all your truth tables! You just have to u
 Sometimes, you will have to build truth tables with *three* propositional variables, and you can customize the program to look like this:
 
 ![p and q and not r](images/three-variables.png)
+
+---
+
+## Turn In
+
+Upload your .py code file to the assignment dropbox
