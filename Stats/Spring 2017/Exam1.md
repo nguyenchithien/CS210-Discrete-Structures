@@ -11,6 +11,12 @@ and two for the Night session.
 
 ![day session stats](exam1_day.png)
 
+* A's: 12
+* B's: 3
+* C's: 0
+* D's: 1
+* F's: 2
+
 ## Night session
 
 ---
