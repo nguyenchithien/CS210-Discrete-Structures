@@ -7,15 +7,205 @@ and two for the Night session.
 
 # Overall stats
 
+## Day session
+
+![day session stats](exam1_day.png)
+
+## Night session
+
 ---
 
 # Question breakdown
+
+## Day session
+
+<table>
+	<tr>
+		<th>Question #</th>
+		<th>MEAN Score<br>(Average)</th>
+		<th>MEDIAN Score<br>(Middle)</th>
+		<th>MODE Score<br>(Most often repeated)</th>
+	</tr>
+	
+	<tr>
+		<td>Question 1</td>
+		<td>	3.53	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 2</td>
+		<td>	3.76	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 3</td>
+		<td>	3.76	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 4</td>
+		<td>	3.94	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 5</td>
+		<td>	3.53	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 6</td>
+		<td>	3.53	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 7</td>
+		<td>	3.53	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 8</td>
+		<td>	3.35	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 9</td>
+		<td>	2.41	</td> <!-- mean -->
+		<td>	2	</td> <!-- median -->
+		<td>	2	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 10</td>
+		<td>	3.24	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 11</td>
+		<td>	3.71	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
+	</tr>
+</table>
+
+## Night session
+
+<table>
+	<tr>
+		<th>Question #</th>
+		<th>MEAN Score<br>(Average)</th>
+		<th>MEDIAN Score<br>(Middle)</th>
+		<th>MODE Score<br>(Most often repeated)</th>
+	</tr>
+	
+	<tr>
+		<td>Question 1</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 2</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 3</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 4</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 5</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 6</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 7</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 8</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 9</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 10</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+	
+	<tr>
+		<td>Question 11</td>
+		<td>	asdf	</td> <!-- mean -->
+		<td>	asdf	</td> <!-- median -->
+		<td>	asdf	</td> <!-- mode -->
+	</tr>
+</table>
+
+## Notes
 
 Question 10
 
 Phrasing isn't "If you got an extra life, then you collected 100 coins";
 the cause would be "You got an extra life" and the result would be
 "you got 100 coins". It isn't a simple rephrasing of the original problem.
+
+Example
+
+* Original: "If you collect a green mushroom, then you get an extra life."
+* Contrapositive: "If you don't collect an extra life, then you don't collect a green mushroom."
+* Incorrect: "If you don't get an extra life, then you *didn't* collect the green mushroom."
 
 ---
 
