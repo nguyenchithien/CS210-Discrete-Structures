@@ -19,11 +19,14 @@ and two for the Night session.
 
 ## Night session
 
-* A's: 1
-* B's: 0
-* C's: 0
+![night session stats](exam1_night.png)
+
+* A's: 9
+* B's: 8
+* C's: 2
 * D's: 0
 * F's: 0
+
 
 ---
 
