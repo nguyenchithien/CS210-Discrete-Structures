@@ -219,6 +219,18 @@ Phrasing isn't "If you got an extra life, then you collected 100 coins";
 the cause would be "You got an extra life" and the result would be
 "you got 100 coins". It isn't a simple rephrasing of the original problem.
 
+Also, given the statement
+
+	p: You run into a goomba
+	q: You lose a life
+	p → q: if you run into a goomba, then you lose a life
+	
+Many people got the contrapositive and inverses wrong
+
+* Contrapositive ¬q → ¬p
+	* Right: "If you do not lose a life, then you do not run into a goomba"
+	* WRONG: "You won't lose a life if you don't run into a goomba"
+
 Example
 
 * Original: "If you collect a green mushroom, then you get an extra life."
