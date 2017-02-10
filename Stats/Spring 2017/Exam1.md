@@ -245,6 +245,8 @@ and a number *o* that is divisible by 4:
 	
 	where o and b are integers
 
+Secondly, when you're using a predicate P(x) or whatever else, you **must define it**. You cannot simply state "P(x)" as the answer to a problem without specifying what P(x) is.
+
 ---
 
 # Survey responses
