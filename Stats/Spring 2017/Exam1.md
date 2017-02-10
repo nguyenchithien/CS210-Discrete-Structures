@@ -19,6 +19,12 @@ and two for the Night session.
 
 ## Night session
 
+* A's: 1
+* B's: 0
+* C's: 0
+* D's: 0
+* F's: 0
+
 ---
 
 # Question breakdown
