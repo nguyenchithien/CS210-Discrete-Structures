@@ -219,6 +219,26 @@ Example
 * Contrapositive: "If you don't collect an extra life, then you don't collect a green mushroom."
 * Incorrect: "If you don't get an extra life, then you *didn't* collect the green mushroom."
 
+Predicates
+
+Too many people tried to write statements like "x is divisible by 3" symbolically. **These are supposed to be written out in English**, such as:
+
+	P(x) is the predicate x is divisible by 3
+	
+We **never covered how to write a number as divisible by 3, or even, or odd** - that is in Chapter 2. Using English to define the predicates is fine.
+
+For reference, the definition of an even number *n* is:
+
+	n = 2k
+
+and an odd number *m* is:
+
+	m = 2a + 1
+
+and a number *o* that is divisible by 4:
+
+	o = 4b
+
 ---
 
 # Survey responses
