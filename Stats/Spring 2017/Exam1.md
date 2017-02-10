@@ -230,14 +230,20 @@ We **never covered how to write a number as divisible by 3, or even, or odd** - 
 For reference, the definition of an even number *n* is:
 
 	n = 2k
+	
+	where n and k are integers
 
 and an odd number *m* is:
 
 	m = 2a + 1
+	
+	where m and a are integers
 
 and a number *o* that is divisible by 4:
 
 	o = 4b
+	
+	where o and b are integers
 
 ---
 
