@@ -129,79 +129,79 @@ and two for the Night session.
 	
 	<tr>
 		<td>Question 1</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.31	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 2</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.77	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 3</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.92	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 4</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.92	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 5</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.08	</td> <!-- mean -->
+		<td>	3	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 6</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.69	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 7</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	4.00	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 8</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.00	</td> <!-- mean -->
+		<td>	3	</td> <!-- median -->
+		<td>	3	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 9</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	2.15	</td> <!-- mean -->
+		<td>	2	</td> <!-- median -->
+		<td>	2	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 10</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.08	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 	
 	<tr>
 		<td>Question 11</td>
-		<td>	asdf	</td> <!-- mean -->
-		<td>	asdf	</td> <!-- median -->
-		<td>	asdf	</td> <!-- mode -->
+		<td>	3.92	</td> <!-- mean -->
+		<td>	4	</td> <!-- median -->
+		<td>	4	</td> <!-- mode -->
 	</tr>
 </table>
 
