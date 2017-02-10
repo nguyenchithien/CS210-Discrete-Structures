@@ -207,6 +207,12 @@ and two for the Night session.
 
 ## Notes
 
+Question 9
+
+The negation of an implication is NOT AN IMPLICATION.
+
+	¬( p → q ) ≡ p ∧ ¬q
+
 Question 10
 
 Phrasing isn't "If you got an extra life, then you collected 100 coins";
