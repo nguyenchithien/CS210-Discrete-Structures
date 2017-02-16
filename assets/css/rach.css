@@ -1,5 +1,7 @@
 hr { background: url( "../graphics/bar.png" ) no-repeat center center; height: 65px; width: 616px; margin: 20px auto; }
 
+hr.plain { background: none; }
+
 h3 strong { color: #ffffff; font-size: 1.5em; font-weight: bold; padding: 5px; background: #0860c3; }
 
 div.before-class h3       { background: #ffda89; }
@@ -16,3 +18,7 @@ div.homework-assigned h3 { padding: 10px; }
 
 
 h5 { font-weight: bold; }
+
+table tr.exam { background: #fff000; font-weight: bold; }
+
+blockquote.syllabus { font-size: 1.0em; background: #efefef; }
