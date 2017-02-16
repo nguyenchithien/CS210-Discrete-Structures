@@ -8,7 +8,7 @@ main = {
 	dudes : [],
     
     init : function( pSettings, pCanvasWindow ) {
-		//main.circleCount = window.prompt( "How many people in the circle?" );
+		main.circleCount = window.prompt( "How many people in the circle?" );
 
         main.settings = pSettings;
         main.canvasWindow = pCanvasWindow;
