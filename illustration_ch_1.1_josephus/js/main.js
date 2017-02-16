@@ -33,7 +33,7 @@ main = {
 			
 			// load image
 			dude.image = new Image();
-			dude.image.src = "images/" + String(i % 15 + 1) + ".png";
+			dude.image.src = "illustration_ch_1.1_josephus/images/" + String(i % 15 + 1) + ".png";
 			
 			var rads = (circleRatio * i) * Math.PI / 180;
 			
@@ -97,11 +97,11 @@ main = {
 				// Change image
 				if ( main.dudes[i].isAlive == true )
 				{
-					main.dudes[i].image.src = "images/" + String(main.dudes[i].number % 15 + 1) + ".png";
+					main.dudes[i].image.src = "illustration_ch_1.1_josephus/images/" + String(main.dudes[i].number % 15 + 1) + ".png";
 				}
 				else
 				{
-					main.dudes[i].image.src = "images/dead.png";
+					main.dudes[i].image.src = "illustration_ch_1.1_josephus/images/dead.png";
 				}
 			}
 			
