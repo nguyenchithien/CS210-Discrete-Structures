@@ -41,4 +41,16 @@ Names:
 
 ---
 
+## Section 1: Common sets of numbers
 
+  The following sets you may have seen previously in other math classes. We will also be working with them now in this colass,  
+  ℚ   The set of rational numbers   These can be fractional, and are characterized as ratios of integers.
+  ℕ   The set of natural numbers    These are "counting numbers"; i.e., non-negative integers.
+  ℝ   The set of real numbers       Numbers that are not imaginary. This can include decimal numbers with possibly unending strings of digits after the decimal point.
+  ℤ   The set of integers           Whole numbers (positive, negative, and zero). No fractions or decimals.
+
+## Section 2: Subsets
+
+## Section 3: Intersection ∩, Union ∪, and Difference -
+
+## Section 4: Set-builder notation
