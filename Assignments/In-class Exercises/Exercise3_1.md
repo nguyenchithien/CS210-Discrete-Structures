@@ -129,6 +129,57 @@ Names:
 
 ## Section 2: Subsets
 
+	Next we will be defining our own sets, in order to define
+	the problem 'domain' for our problems.
+	
+	When we are creating sets A, B, C, etc., there will also
+	be a universal set U, which contains all elements that
+	belong to all other sets.
+	
+	Once we have our sets defined, we can do the following
+	operations on them:
+
+	A ∩ B:	The intersection of A and B	
+	The intersection is a set that contains the elements
+	that are common to both A and B, and none of the
+	elements that show up in one but not the other.
+	
+	In set-builder notation: A ∩ B = { x ∈ U : x ∈ A ∧ x ∈ B }
+	
+	A ∪ B:	The union of A and B
+	The union is a set that contains all elements
+	from both A and B, merging their elements together.
+	
+	In set-builder notation: A ∪ B = { x ∈ U : x ∈ A ∨ x ∈ B }
+	
+	A - B:	The difference of A and B
+	The difference of A and B is the set of elements
+	in A, which are not also in B.
+	
+	In set-builder notation: A - B = { x ∈ U : x ∈ A ∧ x ∉ B }
+	
+	A':		The complement of A
+	Given some set A within the universe U, the
+	complement of A (A') is the set that contains
+	the elements in U, and none of the elements from A.
+	In other words, A' = U - A.
+	
+	U:	The universal set is the set of all elements.
+	
+	Ø:	The empty set is a set with no elements.
+	
+	Disjoint sets:	A and B are disjoint sets if 
+	A ∩ B = Ø
+	
+See also:
+
+* [https://en.wikipedia.org/wiki/Intersection_(set_theory)](https://en.wikipedia.org/wiki/Intersection_(set_theory))
+* [https://en.wikipedia.org/wiki/Union_(set_theory)](https://en.wikipedia.org/wiki/Union_(set_theory))
+
+---
+
 ## Section 3: Intersection ∩, Union ∪, and Difference -
+
+---
 
 ## Section 4: Set-builder notation
