@@ -1,17 +1,16 @@
-Chapter 3.1 Exercise		
+Chapter 3.1 Exercise
 
 CS 210, Spring 2017
 
+<table width="100%">
+	<tr><td>Team</td><td>Section</td><td>Names</td></tr>
+</table>
+
 **Team:**
 
-Section:
+**Section:**
 
-Names:
-
-1. 
-2. 
-3. 
-4. 
+**Names:**
 
 **Rules:** 
 
@@ -233,7 +232,6 @@ A and B are disjoint sets if A ∩ B = Ø
 
 </blockquote>
 
-See also:
 
 ---
 
