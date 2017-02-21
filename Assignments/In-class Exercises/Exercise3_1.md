@@ -119,17 +119,11 @@ Names:
 
 ### Question 2 ()
 
-#### 2a.
+**2a.** List three numbers that belong to the set ℤ, but not in the set ℕ.
 
-List three numbers that belong to the set ℤ, but not in the set ℕ.
+**2b.** List three numbers that belong to the set ℚ, but not in the set ℤ.
 
-#### 2b.
-
-List three numbers that belong to the set ℚ, but not in the set ℤ.
-
-#### 2c.
-
-List three numbers that are in the set ℝ, but not in the set ℚ.
+**2c.** List three numbers that are in the set ℝ, but not in the set ℚ.
 
 ---
 
