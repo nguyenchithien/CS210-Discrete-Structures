@@ -163,7 +163,8 @@ operations on them:
 <blockquote>
 </blockquote>
 
-**[A ∩ B:	The intersection of A and B]((https://en.wikipedia.org/wiki/Intersection_(set_theory)))**
+**[A ∩ B:	The intersection of A and B](https://en.wikipedia.org/wiki/Intersection_(set_theory))**
+
 The intersection is a set that contains the elements
 that are common to both A and B, and none of the
 elements that show up in one but not the other.
@@ -174,6 +175,7 @@ In set-builder notation: A ∩ B = { x ∈ U : x ∈ A ∧ x ∈ B }
 </blockquote>
 
 **[A ∪ B:	The union of A and B](https://en.wikipedia.org/wiki/Union_(set_theory))**
+
 The union is a set that contains all elements
 from both A and B, merging their elements together.
 
@@ -182,7 +184,8 @@ In set-builder notation: A ∪ B = { x ∈ U : x ∈ A ∨ x ∈ B }
 <blockquote>
 </blockquote>
 
-A - B:	The difference of A and B
+[**A - B: The difference of A and B**](https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement)
+
 The difference of A and B is the set of elements
 in A, which are not also in B.
 
@@ -191,7 +194,7 @@ In set-builder notation: A - B = { x ∈ U : x ∈ A ∧ x ∉ B }
 <blockquote>
 </blockquote>
 
-A':		The complement of A
+[**A':	The complement of A**](https://en.wikipedia.org/wiki/Complement_(set_theory))
 Given some set A within the universe U, the
 complement of A (A') is the set that contains
 the elements in U, and none of the elements from A.
@@ -200,18 +203,19 @@ In other words, A' = U - A.
 <blockquote>
 </blockquote>
 
-U:	The universal set is the set of all elements.
+[**U:**	The universal set is the set of all elements.](https://en.wikipedia.org/wiki/Universal_set)
 
 <blockquote>
 </blockquote>
 
-Ø:	The empty set is a set with no elements.
+[**Ø:**	The empty set is a set with no elements.](https://en.wikipedia.org/wiki/Empty_set)
 
 <blockquote>
 </blockquote>
 
-Disjoint sets:	A and B are disjoint sets if 
-A ∩ B = Ø
+[**Disjoint sets:**](https://en.wikipedia.org/wiki/Disjoint_sets)
+
+A and B are disjoint sets if A ∩ B = Ø
 
 </blockquote>
 
