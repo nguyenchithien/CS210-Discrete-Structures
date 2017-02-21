@@ -44,10 +44,24 @@ Names:
 ## Section 1: Common sets of numbers
 
     The following sets you may have seen previously in other math classes. We will also be working with them now in this colass,  
-    ℚ   The set of rational numbers   These can be fractional, and are characterized as ratios of integers.
-    ℕ   The set of natural numbers    These are "counting numbers"; i.e., non-negative integers.
-    ℝ   The set of real numbers       Numbers that are not imaginary. This can include decimal numbers with possibly unending strings of digits after the decimal point.
-    ℤ   The set of integers           Whole numbers (positive, negative, and zero). No fractions or decimals.
+    ℚ   The set of rational numbers   
+    These can be fractional, and are characterized as ratios of integers.
+    Examples: ℚ includes 1/2, -17/4, 3/1.
+    
+    ℕ   The set of natural numbers    
+    These are "counting numbers"; i.e., non-negative integers.
+    Examples: ℕ = { 0, 1, 2, 3, 4, ... }
+   
+    ℤ   The set of integers           
+    Whole numbers (positive, negative, and zero). No fractions or decimals.
+    (Though if a fraction reduces to an integer with a 1 on the bottom: 4/2, 5/1, etc.)
+    Examples: ℤ = { ..., -2, -1, 0, 1, 2, ... }
+    
+    ℝ   The set of real numbers       
+    Numbers that are not imaginary. This can include decimal numbers with 
+    possibly unending strings of digits after the decimal point.
+
+
 
 ## Section 2: Subsets
 
