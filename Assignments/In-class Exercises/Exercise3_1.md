@@ -43,7 +43,9 @@ Names:
 
 ## Section 1: Common sets of numbers
 
-    The following sets you may have seen previously in other math classes. We will also be working with them now in this colass,  
+    The following sets you may have seen previously in other math classes.
+    We will also be working with them now in this class.  
+    
     ℚ   The set of rational numbers   
     These can be fractional, and are characterized as ratios of integers.
     Examples: ℚ includes 1/2, -17/4, 3/1.
@@ -61,7 +63,75 @@ Names:
     Numbers that are not imaginary. This can include decimal numbers with 
     possibly unending strings of digits after the decimal point.
 
+### Question 1 ()
 
+**Match the numbers to sets:** For the following numbers, which set(s) do they belong to?
+
+<table>
+    <tr>
+        <th></th>
+        <th>ℚ</th>
+        <th>ℕ</th>
+        <th>ℤ</th>
+        <th>ℝ</th>
+    </tr>
+    
+    <tr>
+        <td>10</td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    
+    <tr>
+        <td>-5</td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    
+    <tr>
+        <td>8/4</td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    
+    <tr>
+        <td>2.40</td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+    
+    <tr>
+        <td>π</td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+        <td>  </td>
+    </tr>
+</table>
+
+### Question 2 ()
+
+#### 2a.
+
+List three numbers that belong to the set ℤ, but not in the set ℕ.
+
+#### 2b.
+
+List three numbers that belong to the set ℚ, but not in the set ℤ.
+
+#### 2c.
+
+List three numbers that are in the set ℝ, but not in the set ℚ.
+
+---
 
 ## Section 2: Subsets
 
