@@ -160,8 +160,7 @@ belong to all other sets.
 Once we have our sets defined, we can do the following
 operations on them:
 
-<blockquote>
-</blockquote>
+---
 
 **[A ∩ B:	The intersection of A and B](https://en.wikipedia.org/wiki/Intersection_(set_theory))**
 
@@ -171,8 +170,7 @@ elements that show up in one but not the other.
 
 In set-builder notation: A ∩ B = { x ∈ U : x ∈ A ∧ x ∈ B }
 
-<blockquote>
-</blockquote>
+---
 
 **[A ∪ B:	The union of A and B](https://en.wikipedia.org/wiki/Union_(set_theory))**
 
@@ -181,8 +179,7 @@ from both A and B, merging their elements together.
 
 In set-builder notation: A ∪ B = { x ∈ U : x ∈ A ∨ x ∈ B }
 
-<blockquote>
-</blockquote>
+---
 
 [**A - B: The difference of A and B**](https://en.wikipedia.org/wiki/Complement_(set_theory)#Relative_complement)
 
@@ -191,8 +188,7 @@ in A, which are not also in B.
 
 In set-builder notation: A - B = { x ∈ U : x ∈ A ∧ x ∉ B }
 
-<blockquote>
-</blockquote>
+---
 
 [**A':	The complement of A**](https://en.wikipedia.org/wiki/Complement_(set_theory))
 Given some set A within the universe U, the
@@ -200,18 +196,15 @@ complement of A (A') is the set that contains
 the elements in U, and none of the elements from A.
 In other words, A' = U - A.
 
-<blockquote>
-</blockquote>
+---
 
 [**U:**	The universal set is the set of all elements.](https://en.wikipedia.org/wiki/Universal_set)
 
-<blockquote>
-</blockquote>
+---
 
 [**Ø:**	The empty set is a set with no elements.](https://en.wikipedia.org/wiki/Empty_set)
 
-<blockquote>
-</blockquote>
+---
 
 [**Disjoint sets:**](https://en.wikipedia.org/wiki/Disjoint_sets)
 
