@@ -2,10 +2,6 @@ Chapter 3.1 Exercise
 
 CS 210, Spring 2017
 
-<table width="100%">
-	<tr><td>Team</td><td>Section</td><td>Names</td></tr>
-</table>
-
 **Team:**
 
 **Section:**

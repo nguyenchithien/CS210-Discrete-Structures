@@ -1,0 +1,7 @@
+TEST 1
+
+U = { g, j, k, l, o, p, q, s }
+A = { g, j, l, p, s }
+B = { k, q }
+C = { g, l, s }
+D = { j, p }
