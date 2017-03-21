@@ -32,8 +32,6 @@ and two for the Night session.
 
 # Question breakdown
 
-## Day session
-
 <table>
 <tr>
 <th>Question #</th>
