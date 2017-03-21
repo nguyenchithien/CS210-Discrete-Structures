@@ -1,4 +1,4 @@
-# Exam 1 Stats, Spring 2017
+# Chapter 1 Exam Stats, Spring 2017
 
 There were four versions of Exam 1 - two for the Day session,
 and two for the Night session.
