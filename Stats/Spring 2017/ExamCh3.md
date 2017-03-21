@@ -35,127 +35,127 @@ and two for the Night session.
 ## Day session
 
 <table>
-	<tr>
-		<th>Question #</th>
-		<th>Day<br>MEAN Score<br>(Average)</th>
-		<th>Day<br>MEDIAN Score<br>(Middle)</th>
-		<th>Day<br>MODE Score<br>(Most often repeated)</th>
-		<th></th>
-		<th>Night<br>MEAN Score<br>(Average)</th>
-		<th>Night<br>MEDIAN Score<br>(Middle)</th>
-		<th>Night<br>MODE Score<br>(Most often repeated)</th>
-	</tr>
-	
-	<tr>
-		<td>Question 1</td>
-		<td>	3.38	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.38	</td> <!-- mean -->
-		<td>	3.5	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 2</td>
-		<td>	2.88	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.06	</td> <!-- mean -->
-		<td>	3.5	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 3</td>
-		<td>	2.79	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	2	</td> <!-- mode -->
-		<td></td>
-		<td>	3.03	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 4</td>
-		<td>	2.76	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	2.50	</td> <!-- mean -->
-		<td>	2	</td> <!-- median -->
-		<td>	2	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 5</td>
-		<td>	3.74	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.88	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 6</td>
-		<td>	3.76	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.35	</td> <!-- mean -->
-		<td>	3.5	</td> <!-- median -->
-		<td>	3.5	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 7</td>
-		<td>	4.00	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.88	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 8</td>
-		<td>	3.68	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	3.65	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 9</td>
-		<td>	2.65	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	2.00	</td> <!-- mean -->
-		<td>	2	</td> <!-- median -->
-		<td>	2	</td> <!-- mode -->
-	</tr>
-	
-	<tr>
-		<td>Question 10</td>
-		<td>	3.06	</td> <!-- mean -->
-		<td>	4	</td> <!-- median -->
-		<td>	4	</td> <!-- mode -->
-		<td></td>
-		<td>	2.68	</td> <!-- mean -->
-		<td>	3	</td> <!-- median -->
-		<td>	3	</td> <!-- mode -->
-	</tr>
-	
+<tr>
+<th>Question #</th>
+<th>Day<br>MEAN Score<br>(Average)</th>
+<th>Day<br>MEDIAN Score<br>(Middle)</th>
+<th>Day<br>MODE Score<br>(Most often repeated)</th>
+<th></th>
+<th>Night<br>MEAN Score<br>(Average)</th>
+<th>Night<br>MEDIAN Score<br>(Middle)</th>
+<th>Night<br>MODE Score<br>(Most often repeated)</th>
+</tr>
+
+<tr>
+<td>Question 1</td>
+<td>	3.38	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.38	</td> <!-- mean -->
+<td>	3.5	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 2</td>
+<td>	2.88	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.06	</td> <!-- mean -->
+<td>	3.5	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 3</td>
+<td>	2.79	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	2	</td> <!-- mode -->
+<td></td>
+<td>	3.03	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 4</td>
+<td>	2.76	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	2.50	</td> <!-- mean -->
+<td>	2	</td> <!-- median -->
+<td>	2	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 5</td>
+<td>	3.74	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.88	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 6</td>
+<td>	3.76	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.35	</td> <!-- mean -->
+<td>	3.5	</td> <!-- median -->
+<td>	3.5	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 7</td>
+<td>	4.00	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.88	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 8</td>
+<td>	3.68	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	3.65	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 9</td>
+<td>	2.65	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	2.00	</td> <!-- mean -->
+<td>	2	</td> <!-- median -->
+<td>	2	</td> <!-- mode -->
+</tr>
+
+<tr>
+<td>Question 10</td>
+<td>	3.06	</td> <!-- mean -->
+<td>	4	</td> <!-- median -->
+<td>	4	</td> <!-- mode -->
+<td></td>
+<td>	2.68	</td> <!-- mean -->
+<td>	3	</td> <!-- median -->
+<td>	3	</td> <!-- mode -->
+</tr>
+
 </table>
 
 
