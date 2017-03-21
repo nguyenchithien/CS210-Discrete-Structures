@@ -82,53 +82,53 @@ possibly unending strings of digits after the decimal point.
 **Match the numbers to sets:** For the following numbers, which set(s) do they belong to?
 
 <table>
-    <tr>
-        <th></th>
-        <th>ℚ</th>
-        <th>ℕ</th>
-        <th>ℤ</th>
-        <th>ℝ</th>
-    </tr>
-    
-    <tr>
-        <td>10</td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    
-    <tr>
-        <td>-5</td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    
-    <tr>
-        <td>8/4</td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    
-    <tr>
-        <td>2.40</td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
-    
-    <tr>
-        <td>π</td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-    </tr>
+<tr>
+<th></th>
+<th>ℚ</th>
+<th>ℕ</th>
+<th>ℤ</th>
+<th>ℝ</th>
+</tr>
+
+<tr>
+<td>10</td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr>
+<td>-5</td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr>
+<td>8/4</td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr>
+<td>2.40</td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+</tr>
+
+<tr>
+<td>π</td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+<td>  </td>
+</tr>
 </table>
 
 ### Question 2 ()
