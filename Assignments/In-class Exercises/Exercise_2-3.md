@@ -25,7 +25,7 @@ A **Predicate** is a function *P(x)* that results in either a
 Whether the output of *P(x)* is true or false depends
 on the input *x*. *P(2)* is false, but *P(11)* is true.
  
-<blockquote>
+</blockquote>
 
 ### Exercise 1
 
