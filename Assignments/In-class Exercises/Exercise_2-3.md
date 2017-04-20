@@ -315,6 +315,7 @@ n = 3
 is equivalent to the sum from *i = 1 to m-1*, plus the final term at (2m-1).**
 
 ![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1)* 
+
 = ![sum from i = 1 to m-1](images/sum_1_to_m-1_small.png) *(2i - 1) + (2m - 1)*
 
 </td>
@@ -328,6 +329,7 @@ is equivalent to the sum from *i = 1 to m-1*, plus the final term at (2m-1).**
 Substitute this value into the equation in Step 4.**
 
 ![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1)* 
+
 = *(m - 1)<sup>2</sup> + (2m - 1)*
 
 </td>
@@ -366,6 +368,26 @@ We have shown that
 
 </blockquote>
 
+### Exercise 5
 
+Use induction to prove
+
+![sum](images/sum_1_to_n_small.png) *(2i + 4) = n<sup>2</sup> + 5n*,
+for each *n ≥ 1*.
+
+Make sure to also build the table for *n = 1*, *n = 2*, *n = 3*.
+
+List each step as your follow along with the previous example.
+
+### Exercise 6
+
+Use induction to prove
+
+![sum](images/sum_1_to_n_small.png) *(2<sup>i</sup>) = 2<sup>n+1</sup> - n - 2*,
+for each *n ≥ 1*.
+
+Make sure to also build the table for *n = 1*, *n = 2*, *n = 3*.
+
+List each step as your follow along with the previous example.
 
 
