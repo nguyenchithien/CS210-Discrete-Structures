@@ -156,9 +156,13 @@ is equivalently described by
 Note: You may need an overview of exponent rules for this one!
 
 <blockquote>
+
 1. x<sup>a</sup> / x<sup>b</sup> = x<sup>a - b</sup>
+
 2. x<sup>a</sup> · x<sup>b</sup> = x<sup>a+b</sup>
+
 3. x<sup>4</sup> / x<sup>2</sup> = x<sup>2</sup> 
+
 </blockquote>
 
 ### Exercise 3
