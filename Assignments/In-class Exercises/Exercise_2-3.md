@@ -189,7 +189,92 @@ is equivalently described by
 
 --- 
 
+## Section 3: Proving equivalence between a Summation and a Closed formula
 
+<blockquote>
+With a **summation-formula equivalence proof**, we also have a series of
+steps to follow, and another example will help out more than anything.
+
+**Example:**
+
+Use induction to prove each of the following. As part of your proof,
+write and verify each statement for at least *n = 1*, *n = 2*, *n = 3*,
+and *n = 4*.
+
+Proposition:
+
+![sum](images/sum_1_to_n_small.png) *(2i - 1) = n<sup>2</sup>* for each *n ≥ 1*.
+
+<table>
+
+<tr>
+
+<th> Step 1: </th>
+
+<td>
+
+**Check the results of a<sub>1</sub> for both the recursive and closed formula:**
+
+* Recursive: *a<sub>1</sub> = 1* (Already provided)
+* Closed: *a<sub>1</sub>* = 4(1) - 3 = 1
+
+They match, so we can continue...
+
+</td>
+
+</tr>
+
+<tr>
+<th> Step 2: </th>
+<td>
+
+**Rewrite the recursive formula in terms of m:**
+
+*a<sub>m</sub> = a<sub>m-1</sub> + 4*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 3: </th>
+<td>
+
+**Find the equation for a<sub>m-1</sub> through the closed formula:**
+
+* *a<sub>n</sub> = 4n-3*
+* *a<sub>m-1</sub> = 4(m-1) - 3*
+* *a<sub>m-1</sub> = 4m - 7*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 4: </th>
+<td>
+
+**Plug a<sub>m-1</sub> into the recursive formula from step 2 and simplify:**
+
+* *a<sub>m</sub> = a<sub>m-1</sub> + 4*
+* *a<sub>m</sub> = (4m - 7) + 4*
+* *a<sub>m</sub> = 4m - 3*
+
+</td>
+</tr>
+
+<tr>
+<th> PROOF: </th>
+<td>
+
+Our result *a<sub>m</sub> = 4m-3* and the closed formula
+*a<sub>n</sub> = 4n-3* match, so the closed formula
+and the recursive formula are equivalent.
+
+</td>
+</tr>
+
+</table>
+
+</blockquote>
 
 
 
