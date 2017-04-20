@@ -289,9 +289,9 @@ n = 3
 <th> Step 2: </th>
 <td>
 
-**Rewrite the recursive formula in terms of m:**
+**Redefine the proposition in terms of *m-1*.**
 
-*a<sub>m</sub> = a<sub>m-1</sub> + 4*
+![sum from i = 1 to m-1](images/sum_1_to_m-1_small.png) *(2i - 1) = (m-1)<sup>2</sup>*
 
 </td>
 </tr>
@@ -300,11 +300,9 @@ n = 3
 <th> Step 3: </th>
 <td>
 
-**Find the equation for a<sub>m-1</sub> through the closed formula:**
+**Rewrite the summation from *i = 1 to n* as the summation from *i = 1 to m*.**
 
-* *a<sub>n</sub> = 4n-3*
-* *a<sub>m-1</sub> = 4(m-1) - 3*
-* *a<sub>m-1</sub> = 4m - 7*
+![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1) = m<sup>2</sup>*
 
 </td>
 </tr>
@@ -313,11 +311,42 @@ n = 3
 <th> Step 4: </th>
 <td>
 
-**Plug a<sub>m-1</sub> into the recursive formula from step 2 and simplify:**
+**Now take the equation from Step 3 and expand it: The sum from *i = 1 to m*
+is equivalent to the sum from *i = 1 to m-1*, plus the final term at (2m-1).**
 
-* *a<sub>m</sub> = a<sub>m-1</sub> + 4*
-* *a<sub>m</sub> = (4m - 7) + 4*
-* *a<sub>m</sub> = 4m - 3*
+![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1)* 
+= ![sum from i = 1 to m-1](images/sum_1_to_m-1_small.png) *(2i - 1) + (2m - 1)*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 5: </th>
+<td>
+
+**In Step 2, we found the value of ![sum from i = 1 to m-1](images/sum_1_to_m-1_small.png).
+Substitute this value into the equation in Step 4.**
+
+![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1)* 
+= *(m - 1)<sup>2</sup> + (2m - 1)*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 6: </th>
+<td>
+
+**Simplify**
+
+![sum from i = 1 to m-1](images/sum_1_to_m_small.png) *(2i - 1)*  
+= *(m - 1)<sup>2</sup> + (2m - 1)*
+
+= *(m - 1)(m - 1) + (2m - 1)*
+
+= *m<sup>2</sup> - 2m + 1 + 2m - 1*
+
+= *m<sup>2</sup>*
 
 </td>
 </tr>
@@ -326,9 +355,9 @@ n = 3
 <th> PROOF: </th>
 <td>
 
-Our result *a<sub>m</sub> = 4m-3* and the closed formula
-*a<sub>n</sub> = 4n-3* match, so the closed formula
-and the recursive formula are equivalent.
+We have shown that 
+
+![sum](images/sum_1_to_n_small.png) *(2i - 1) = n<sup>2</sup>*
 
 </td>
 </tr>
