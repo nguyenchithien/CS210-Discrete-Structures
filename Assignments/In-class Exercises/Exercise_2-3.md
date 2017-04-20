@@ -47,3 +47,38 @@ b. *P(n)* is *"n<sup>2</sup> + 1 is prime."*
 1. *P(3) =*
 1. *P(m-1) =*
 
+---
+
+## Section 2: Providing equivalence between a Recursive formula and a Closed formula
+
+<blockquote>
+Now we're getting into our heavier proofs. 
+Chapters 2.3 and 2.4 have the main proofs that we are working on for this chapter. 
+Once you learn the steps, they're not hard, 
+but it can be difficult to keep them all straight. 
+Make sure to get plenty of practice. 
+
+The best way to illustrate how to prove a 
+**recursive-closed formula equivalence**
+is probably just to show an example with the steps highlighted. 
+
+**Example:**
+
+Show that the sequence defined by the recursive formula
+
+*a<sub>k</sub> = a<sub>k-1</sub> + 4*, where *a<sub>1</sub> = 1*, for *k ≥ 2</sub>
+
+is equivalently described by the closed formula *a<sub>n</sub> = 4n - 3*.
+
+
+
+</blockquote>
+
+
+
+
+
+
+
+
+
