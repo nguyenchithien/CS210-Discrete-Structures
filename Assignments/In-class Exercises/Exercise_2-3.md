@@ -74,22 +74,69 @@ is equivalently described by the closed formula *a<sub>n</sub> = 4n - 3*.
 
 <tr>
 
-<th>
-Step 1:
-</th>
+<th> Step 1: </th>
 
 <td>
 
 **Check the results of a<sub>1</sub> for both the recursive and closed formula:**
 
 * Recursive: *a<sub>1</sub> = 1* (Already provided)
-* Closed: *a<sub>1</sub> = 4(1) - 3 = 1
+* Closed: *a<sub>1</sub>* = 4(1) - 3 = 1
 
 They match, so we can continue...
 
 </td>
 
 </tr>
+
+<tr>
+<th> Step 2: </th>
+<td>
+
+**Rewrite the recursive formula in terms of m:**
+
+*a<sub>m</sub> = a<sub>m-1</sub> + 4*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 3: </th>
+<td>
+
+**Find the equation for a<sub>m-1</sub> through the closed formula:**
+
+* *a<sub>n</sub> = 4n-3*
+* *a<sub>m-1</sub> = 4(m-1) - 3*
+* *a<sub>m-1</sub> = 4m - 7*
+
+</td>
+</tr>
+
+<tr>
+<th> Step 4: </th>
+<td>
+
+**Plug a<sub>m-1</sub> into the recursive formula from step 2 and simplify:**
+
+* *a<sub>m</sub> = a<sub>m-1</sub> + 4*
+* *a<sub>m</sub> = (4m - 7) + 4*
+* *a<sub>m</sub> = 4m - 3*
+
+</td>
+</tr>
+
+<tr>
+<th> PROOF: </th>
+<td>
+
+Our result *a<sub>m</sub> = 4m-3* and the closed formula
+*a<sub>n</sub> = 4n-3* match, so the closed formula
+and the recursive formula are equivalent.
+
+</td>
+</tr>
+
 
 </table>
 
