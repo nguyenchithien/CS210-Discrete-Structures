@@ -137,13 +137,53 @@ and the recursive formula are equivalent.
 </td>
 </tr>
 
-
 </table>
 
 </blockquote>
 
+### Exercise 2
 
+Prove the following statement. Go through each step as in the example above,
+and label each step as you work through it.
 
+Show that the sequence defined by 
+*b<sub>k</sub> = 4 · b<sub>k-1</sub> + 3*, 
+with *b<sub>1</sub> = 3*
+for *k ≥ 2*,
+is equivalently described by 
+*b<sub>n</sub> = 2<sup>2n</sup> - 1*.
+
+Note: You may need an overview of exponent rules for this one!
+
+<blockquote>
+1. x<sup>a</sup> / x<sup>b</sup> = x<sup>a - b</sup>
+2. x<sup>a</sup> · x<sup>b</sup> = x<sup>a+b</sup>
+3. x<sup>4</sup> / x<sup>2</sup> = x<sup>2</sup> 
+</blockquote>
+
+### Exercise 3
+
+Prove the following statement. Go through each step as in the example above.
+
+Show that the sequence defined by 
+*a<sub>n</sub> = a<sub>n-1</sub> + 2*
+with *a<sub>1</sub> = 5*
+for *n ≥ 2*,
+is equivalently described by 
+*a<sub>n</sub> = 2n + 3*.
+
+### Exercise 4
+
+Prove the following statement. Go through each step as in the example above.
+
+Show that the sequence defined by 
+*a<sub>k</sub> = 2 · a<sub>k-1</sub> + 1*
+with *a<sub>1</sub> = 1*
+for *k ≥ 2*,
+is equivalently described by 
+*a<sub>n</sub> = 2<sup>n</sup> - 1*.
+
+--- 
 
 
 
