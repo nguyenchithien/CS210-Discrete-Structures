@@ -70,7 +70,28 @@ Show that the sequence defined by the recursive formula
 
 is equivalently described by the closed formula *a<sub>n</sub> = 4n - 3*.
 
+<table>
 
+<tr>
+
+<th>
+Step 1:
+</th>
+
+<td>
+
+**Check the results of a<sub>1</sub> for both the recursive and closed formula:**
+
+* Recursive: *a<sub>1</sub> = 1* (Already provided)
+* Closed: *a<sub>1</sub> = 4(1) - 3 = 1
+
+They match, so we can continue...
+
+</td>
+
+</tr>
+
+</table>
 
 </blockquote>
 
