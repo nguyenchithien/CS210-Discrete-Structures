@@ -214,7 +214,7 @@ Proposition:
 <td>
 
 **"Trace" both equations to make sure that the results match for
-values like *n = 1*, *n = 2*, *n = 3*, and *n = 4*.
+values like *n = 1*, *n = 2*, *n = 3*, and *n = 4*.**
 
 <!-- tableception -->
 <table>
