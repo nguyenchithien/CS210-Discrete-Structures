@@ -198,8 +198,7 @@ steps to follow, and another example will help out more than anything.
 **Example:**
 
 Use induction to prove each of the following. As part of your proof,
-write and verify each statement for at least *n = 1*, *n = 2*, *n = 3*,
-and *n = 4*.
+write and verify each statement for at least *n = 1*, *n = 2*, and *n = 3*.
 
 Proposition:
 
@@ -214,7 +213,7 @@ Proposition:
 <td>
 
 **"Trace" both equations to make sure that the results match for
-values like *n = 1*, *n = 2*, *n = 3*, and *n = 4*.**
+values like *n = 1*, *n = 2*, and *n = 3*.**
 
 <!-- tableception -->
 <table>
@@ -225,28 +224,15 @@ values like *n = 1*, *n = 2*, *n = 3*, and *n = 4*.**
 
 <tr>
 <td>
-* n = 1*
+*n = 1*
 </td>
 <td>
-asdf
+* Σ(2i - 1) 
+* = (2 · 1 - 1) 
+* = 1
 </td>
 <td>
-asdf
-</td>
-<td>
-✓ OK! 
-</td>
-</tr>
-
-<tr>
-<td>
-* n = 2*
-</td>
-<td>
-asdf
-</td>
-<td>
-asdf
+1<sup>2</sup> = 1
 </td>
 <td>
 ✓ OK! 
@@ -255,13 +241,15 @@ asdf
 
 <tr>
 <td>
-* n = 3*
+*n = 2*
 </td>
 <td>
-asdf
-</td>
+* Σ(2i - 1)
+* = (2 · 1 - 1) + (2 · 2 - 1)
+* = 1 + 3 = 4
+* </td>
 <td>
-asdf
+2<sup>2</sup> = 4
 </td>
 <td>
 ✓ OK! 
@@ -270,13 +258,15 @@ asdf
 
 <tr>
 <td>
-* n = 4*
+*n = 3*
 </td>
 <td>
-asdf
+* Σ(2i - 1) 
+* = (2 · 3 - 1) + (2 · 1 - 1) + (2 · 2 - 1) 
+* = 1 + 3 + 5 = 9
 </td>
 <td>
-asdf
+3<sup>2</sup> = 9
 </td>
 <td>
 ✓ OK! 
