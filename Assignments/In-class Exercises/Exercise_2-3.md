@@ -213,12 +213,77 @@ Proposition:
 
 <td>
 
-**Check the results of a<sub>1</sub> for both the recursive and closed formula:**
+**"Trace" both equations to make sure that the results match for
+values like *n = 1*, *n = 2*, *n = 3*, and *n = 4*.
 
-* Recursive: *a<sub>1</sub> = 1* (Already provided)
-* Closed: *a<sub>1</sub>* = 4(1) - 3 = 1
+<!-- tableception -->
+<table>
 
-They match, so we can continue...
+<tr>
+<th> n value </th><th> Summation </th><th> Closed formula </th><th> Result </th>
+</tr>
+
+<tr>
+<td>
+* n = 1*
+</td>
+<td>
+asdf
+</td>
+<td>
+asdf
+</td>
+<td>
+✓ OK! 
+</td>
+</tr>
+
+<tr>
+<td>
+* n = 2*
+</td>
+<td>
+asdf
+</td>
+<td>
+asdf
+</td>
+<td>
+✓ OK! 
+</td>
+</tr>
+
+<tr>
+<td>
+* n = 3*
+</td>
+<td>
+asdf
+</td>
+<td>
+asdf
+</td>
+<td>
+✓ OK! 
+</td>
+</tr>
+
+<tr>
+<td>
+* n = 4*
+</td>
+<td>
+asdf
+</td>
+<td>
+asdf
+</td>
+<td>
+✓ OK! 
+</td>
+</tr>
+
+</table>
 
 </td>
 
