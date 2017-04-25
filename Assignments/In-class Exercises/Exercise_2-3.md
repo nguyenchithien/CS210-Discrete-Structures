@@ -383,7 +383,7 @@ List each step as your follow along with the previous example.
 
 Use induction to prove
 
-![sum](images/sum_1_to_n_small.png) *(2<sup>i</sup>) = 2<sup>n+1</sup> - n - 2*,
+![sum](images/sum_1_to_n_small.png) *(2<sup>i</sup>-1) = 2<sup>n+1</sup> - n - 2*,
 for each *n ≥ 1*.
 
 Make sure to also build the table for *n = 1*, *n = 2*, *n = 3*.
