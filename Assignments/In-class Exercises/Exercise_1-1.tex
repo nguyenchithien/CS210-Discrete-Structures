@@ -1,0 +1,267 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{boxedminipage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 210}
+\chead{Fall 2017}
+\rhead{Ch 1.1 Exercise}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize By Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+    
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    %- Info -----------------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    \chapter*{Chapter 1.1 In-class Exercise} \stepcounter{chapter}
+
+    \iftoggle{answerkey}{
+      \begin{answer} ANSWER KEY \end{answer}
+    }{}
+
+    \paragraph{Info:}
+    In-class exercises are meant to introduce you to the new topics
+    of this chapter of the book. Each part will have an introductory
+    description of the content and example(s), followed by practice
+    problems for you to work on. ~\\
+
+    These assignments are \textbf{team assignments} - your team will
+    turn in \textit{one} copy of the exericse. It is up to your team
+    how to appropach the assignments; you can work separately and then
+    check your work together, or you can collaborate on the assignment
+    together. ~\\
+
+    Work must be clean; points may be deducted if the instructor cannot
+    read the work.
+
+    \paragraph{Section:} ~\\
+        $\Box$ MW 4:30 - 5:45 pm \tab
+        $\Box$ M 6:00 - 8:50 pm \tab
+        $\Box$ TR 2:00 - 3:15 pm
+
+    \paragraph{Team:}
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\
+        3. & 4.
+    \end{tabular}
+    % table %
+
+    ~\\
+
+    \paragraph{Points:} \fitb / 5
+    
+    \hrulefill{}
+    
+    \newpage{}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    %------------------------------------------------------------------%
+    \section*{1. Coin toss}
+
+        \begin{intro}{Coin toss}
+            When we're flipping a coin, there are two possible outcomes:
+            \textit{heads} or \textit{tails}. If we flip more than one
+            coin, then we end up with more possible outcomes. For example,
+            when flipping two coins, we have four possible outcomes:
+
+            \begin{center}
+                \begin{tabular}{ | l | c | c | }
+                    \hline
+                    1. & HEADS & HEADS \\ \hline
+                    2. & HEADS & TAILS \\ \hline
+                    3. & TAILS & HEADS \\ \hline
+                    4. & TAILS & TAILS \\ \hline
+                \end{tabular}
+            \end{center}
+        \end{intro}
+
+        \begin{question}{1}{2}
+            Draw a table of all possible outcomes if someone flips three coins.
+            \iftoggle{answerkey}{ \begin{answer}
+                \begin{center}
+                    \begin{tabular}{ | l | c | c | c | }
+                        \hline
+                        1. & HEADS & HEADS & HEADS \\ \hline
+                        2. & HEADS & HEADS & tails \\ \hline
+                        3. & HEADS & tails & HEADS \\ \hline
+                        4. & HEADS & tails & tails \\ \hline
+                        5. & tails & HEADS & HEADS \\ \hline
+                        6. & tails & HEADS & tails \\ \hline
+                        7. & tails & tails & HEADS \\ \hline
+                        8. & tails & tails & tails \\ \hline
+                    \end{tabular}
+                \end{center}
+        	\end{answer} }{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }
+        \end{question}
+
+        \begin{question}{2}{2}
+            Write out how many outcomes there are for each of the following.
+
+            \begin{enumerate}
+                \item Flipping one coin: \fitb{}            \iftoggle{answerkey}{\begin{answer} ($2^{1} = 2$) \end{answer} } {}
+                \item Flipping two coins: \fitb{}           \iftoggle{answerkey}{\begin{answer} ($2^{2} = 4$) \end{answer} } {}
+                \item Flipping three coins: \fitb{}         \iftoggle{answerkey}{\begin{answer} ($2^{3} = 8$) \end{answer} } {}
+                
+                \item Rolling one 6-sided die: \fitb{}      \iftoggle{answerkey}{\begin{answer} ($6^{1} = 6$) \end{answer} } {}
+                \item Rolling two 6-sided dice: \fitb{}     \iftoggle{answerkey}{\begin{answer} ($6^{2} = 36$) \end{answer} } {}
+                \item Rolling three 6-sided dice: \fitb{}   \iftoggle{answerkey}{\begin{answer} ($6^{3} = 216$) \end{answer} } {}
+            \end{enumerate}
+        \end{question}
+
+        \begin{question}{3}{2}
+            So if we have $n$ possible outcomes per event (roll die, flip coin),
+            and we ``run" the event $m$ times (one coin, two dice),
+            how many total outcomes $ o $ will there be? (Write as a simple equation).
+
+            $ o = $ \iftoggle{answerkey}{\begin{answer} $ n^{m} $ \end{answer} } {}
+        \end{question}
+
+    %------------------------------------------------------------------%
+    \section*{2. Josephus game}
+
+        \begin{intro}{The Josephus game}
+            The Josephus game is a theoretical problem, and for now we
+            will just solve it systematically by stepping through the
+            instructions given.
+
+            \paragraph{Setup:} People are sitting in a circle, each with
+            an assigned number (their location in the circle).
+
+            \paragraph{Step:} People are eliminated at every $n$th step,
+            with counting beginning at the $n$th person.
+
+            \paragraph{Result:} After stepping through, figure out the
+            position of the \textit{last} and \textit{second-to-last}
+            person left (not eliminated).
+
+            \paragraph{Example:} Let's say that we begin with a circle of
+            \textit{10} people, numbered from 1 to 10. We will eliminate
+            people at an interval of \textit{2} - so, every-other-person,
+            beginning with person \#2. Who will be the last person standing?
+
+            \includegraphics[width=12cm]{images/josephus.png}
+        \end{intro}
+
+        \begin{question}{4}{2}
+            Given a Josephus circle of 15 people,
+            if we are eliminating every 3rd person (starting with person 3),
+            who is the last to be tagged – and the 2nd to last to be tagged? \\
+            {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 15 \end{answer} }{}
+            {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
+
+            \begin{center}
+                \includegraphics[width=6cm]{images/josephus-15.png}
+            \end{center}
+            
+        \end{question}
+
+        \begin{question}{5}{2}
+            Given a Josephus circle of 10 people,
+            if we are eliminating every 4th person (starting with person 4),
+            who is the last to be tagged – and the 2nd to last to be tagged? \\
+            {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 6 \end{answer} }{}
+            {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
+
+            \begin{center}
+                \includegraphics[width=7cm]{images/josephus-10.png}
+            \end{center}
+        \end{question}
+       
+    %------------------------------------------------------------------% 
+    \newpage
+    \section*{3. Game trees}
+
+        \begin{intro}{Game trees}
+            In section 1.1, we will also be looking at events that have multiple outcomes –
+            such as flipping one coin, two coins, or three coins, or who of two people win
+            one, two, or three tennis matches. With small amounts of ``variables", we can
+            list out all the possible outcomes, and we can build a game tree based on this.
+            
+            \paragraph{Example:} ~\\
+            If you flip one coin, the result with be HEADS (H) or TAILS (T).
+            If you flip two coins, what are all the outcomes?
+
+            \begin{center}
+                \includegraphics[width=5cm]{images/gametree.png}
+                
+                \begin{tabular}{l l}
+                    1. HH &  2. HT \\
+                    3. TH &  4. TT
+                \end{tabular}
+            \end{center}
+
+        \end{intro}
+
+        \newpage
+        \begin{question}{6}{2}
+            Suppose you toss three coins – a nickel, a dime, and a quarter,
+            and you record the results in that order. For example,
+            ``HTH" means nickel = heads, dime = tails, quarter = heads.
+
+            \begin{enumerate}
+                \item In a systematic way, list all the different results you could record.
+
+                \iftoggle{answerkey}{ \begin{answer} 1. HHH, 2. HHT, 3. HTH, 4. HTT, \\ 5. THH, 6. THT, 7. TTH, 8. TTT
+                \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+
+                \item Draw a game tree for recording the results
+
+                \iftoggle{answerkey}{ \begin{answer}
+
+                \includegraphics{images/ans-gametree.png}
+                
+                \end{answer} }{ { ~\\ \raisebox{0pt}[6cm][0pt]{  } } }
+
+                \item On the game tree, label each possible result either 0, 1, 2, or 3,
+                to indicate how many \textit{heads} there are.
+
+                \item Do you think a person who tosses three coins is more likely to get all
+                three heads, or to get exactly two heads?
+                
+                \iftoggle{answerkey}{ \begin{answer} More likely to get exactly 2 heads \end{answer} }{}
+                
+            \end{enumerate}
+        \end{question}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
