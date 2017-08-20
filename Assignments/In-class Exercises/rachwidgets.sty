@@ -75,13 +75,15 @@
 \newcommand\ttab[1][0.1cm]{\hspace*{#1}}
 
 % Intro box %
-\newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
+\newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } } { \end{mdframed} }
+
+\newenvironment{introNOHEAD}[0]{  \begin{mdframed}[backgroundcolor=intro] } { \end{mdframed} }
 
 % Hint box %
-\newenvironment{hint}[1]{   \begin{mdframed}[backgroundcolor=hint]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
+\newenvironment{hint}[1]{   \begin{mdframed}[backgroundcolor=hint]\noindent \textbf{ #1 } } { \end{mdframed} }
 
 % Error box %
-\newenvironment{error}[1]{  \begin{mdframed}[backgroundcolor=error]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
+\newenvironment{error}[1]{  \begin{mdframed}[backgroundcolor=error]\noindent \textbf{ #1 } } { \end{mdframed} }
 
 
 
