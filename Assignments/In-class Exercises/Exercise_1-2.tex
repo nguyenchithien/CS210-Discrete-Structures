@@ -211,12 +211,12 @@
             Figure out the \textbf{recursive formula} for the following sequences. \\
             For these sequences, $a_{n-1}$ will not be multiplied by anything,
             but will have something added to it.
-            Be sure to specify $a_{1}$ first.
+            Be sure to specify $a_{1}$ first. It will be the first number in the sequence.
 
             \begin{itemize}
-                \item[a.] 1, 3, 5, 7, 9
+                \item[a.] 1, 3, 5, 7, 9     \tab \textit{($a_{1} = 1$)}
                 \item[b.] 1, 5, 9, 13, 17
-                \item[c.] 2, 4, 6, 8, 10
+                \item[c.] 2, 4, 6, 8, 10    \tab \textit{($a_{1} = 2$)}
                 \item[d.] 2, 6, 10, 14, 18
             \end{itemize}
         \end{question}
@@ -351,7 +351,7 @@
 
     \begin{center}
         \begin{tabular}{ | l | l | }
-            \hline{}
+            \hline
             0 & Nothing written \\ \hline
             1 & Something written, but incorrect \\ \hline
             2 & Partially correct, but multiple errors \\ \hline
@@ -564,8 +564,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{6a}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 3, 5, 7, 9
+    \begin{answersheetquestion}{6a}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 3, 5, 7, 9
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = a_{n-1} + 2$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -575,8 +575,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{6b}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 5, 9, 13, 17
+    \begin{answersheetquestion}{6b}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 5, 9, 13, 17
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = a_{n-1} + 4$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -586,8 +586,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{6c}{Find closed formula}{3}
-        Find closed formula for sequence: 2, 4, 6, 8, 10
+    \begin{answersheetquestion}{6c}{Find recursive formula}{3}
+        Find recursive formula for sequence: 2, 4, 6, 8, 10
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = a_{n-1} + 2$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -597,8 +597,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{6d}{Find closed formula}{3}
-        Find closed formula for sequence: 2, 6, 10, 14, 18
+    \begin{answersheetquestion}{6d}{Find recursive formula}{3}
+        Find recursive formula for sequence: 2, 6, 10, 14, 18
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = a_{n-1} + 4$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -608,8 +608,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{7a}{Find closed formula}{3}
-        Find closed formula for sequence: 2, 4, 8, 16, 32
+    \begin{answersheetquestion}{7a}{Find recursive formula}{3}
+        Find recursive formula for sequence: 2, 4, 8, 16, 32
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 2 \cdot a_{n-1}$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -619,8 +619,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{7b}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 3, 9, 27, 81
+    \begin{answersheetquestion}{7b}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 3, 9, 27, 81
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 3 \cdot a_{n-1}$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -630,8 +630,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{7c}{Find closed formula}{3}
-        Find closed formula for sequence: 3, 6, 12, 24, 48
+    \begin{answersheetquestion}{7c}{Find recursive formula}{3}
+        Find recursive formula for sequence: 3, 6, 12, 24, 48
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 2 \cdot a_{n-1}$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -641,8 +641,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{7d}{Find closed formula}{3}
-        Find closed formula for sequence: 2, 4, 16, 256, 65536
+    \begin{answersheetquestion}{7d}{Find recursive formula}{3}
+        Find recursive formula for sequence: 2, 4, 16, 256, 65536
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = (a_{n-1})^{2}$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -652,8 +652,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{8a}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 3, 7, 15, 31
+    \begin{answersheetquestion}{8a}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 3, 7, 15, 31
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 2 \cdot a_{n-1} + 1$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -663,8 +663,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{8b}{Find closed formula}{3}
-        Find closed formula for sequence: 2, 5, 11, 23, 47
+    \begin{answersheetquestion}{8b}{Find recursive formula}{3}
+        Find recursive formula for sequence: 2, 5, 11, 23, 47
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 2 \cdot a_{n-1} + 1$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -674,8 +674,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{8c}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 5, 17, 53, 161
+    \begin{answersheetquestion}{8c}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 5, 17, 53, 161
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 3 \cdot a_{n-1} + 2$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -685,8 +685,8 @@
     
     ~\\
     % - QUESTION --------------------------------------------------%
-    \begin{answersheetquestion}{8d}{Find closed formula}{3}
-        Find closed formula for sequence: 1, 4, 10, 22, 46
+    \begin{answersheetquestion}{8d}{Find recursive formula}{3}
+        Find recursive formula for sequence: 1, 4, 10, 22, 46
         \iftoggle{answerkey}{ \begin{answer} $a_{n} = 2 \cdot a_{n-1} + 2$ \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
     \end{answersheetquestion}
 
@@ -733,7 +733,7 @@
 
         ~\\
         Then, add each of the elements to get the result of 
-        $\sum_{k=1}^{4}(3k) $ \iftoggle{answerkey}{ \begin{answer}
+        $\sum_{k=1}^{5}(4) $ \iftoggle{answerkey}{ \begin{answer}
             $4 + 4 + 4 + 4 + 4 = 20$
         \end{answer} }{}
     \end{answersheetquestion}

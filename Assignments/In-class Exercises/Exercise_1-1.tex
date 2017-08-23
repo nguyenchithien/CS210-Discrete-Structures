@@ -137,18 +137,22 @@
         \begin{question}{4}{10\%}
             Given a Josephus circle of 15 people,
             if we are eliminating every 3rd person (starting with person 3),
-            who is the last to be tagged – and the 2nd to last to be tagged?
+            who is the last to be ``killed" – and the 2nd to last to be ``killed"?
 
             \begin{center}
                 \includegraphics[width=6cm]{images/josephus-15.png}
             \end{center}
+
+            \begin{hint}{Hint:}
+                Don't count ``dead" people, make sure to skip over them!
+            \end{hint}
             
         \end{question}
 
         \begin{question}{5}{10\%}
             Given a Josephus circle of 10 people,
             if we are eliminating every 4th person (starting with person 4),
-            who is the last to be tagged – and the 2nd to last to be tagged?
+            who is the last to be ``killed" – and the 2nd to last to be ``killed"?
 
             \begin{center}
                 \includegraphics[width=7cm]{images/josephus-10.png}
@@ -252,7 +256,7 @@
 
     \begin{center}
         \begin{tabular}{ | l | l | }
-            \hline{}
+            \hline
             0 & Nothing written \\ \hline
             1 & Something written, but incorrect \\ \hline
             2 & Partially correct, but multiple errors \\ \hline
@@ -310,14 +314,14 @@
     
     ~\\
     \begin{answersheetquestion}{4}{Jospehus game A}{10}
-        {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 15 \end{answer} }{}
+        {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 14 \end{answer} }{}
         {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
     \end{answersheetquestion}
 
     
     ~\\
     \begin{answersheetquestion}{5}{Jospehus game B}{10}
-        {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 15 \end{answer} }{}
+        {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 6 \end{answer} }{}
         {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
         
     \end{answersheetquestion}
