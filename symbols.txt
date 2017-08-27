@@ -12,5 +12,12 @@
 ∈ ℤ
 ∈ ℕ
 
+∀x∈ℤ, P(x)
+
+Σ
+
 What is (f ◦ g)(x) - in other words, f(g(x)).
 What is (g ◦ f)(x) - in other words, g(f(x)).
+
+
+⌊x⌋ 	⌈x⌉
