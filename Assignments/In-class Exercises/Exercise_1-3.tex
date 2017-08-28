@@ -1,0 +1,704 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{boxedminipage}
+
+\newcommand{\laChapter}{1.3\ }
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 210}
+\chead{Fall 2017}
+\rhead{Ch \laChapter Exercise}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize By Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    %- INSTRUCTIONS ---------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    \chapter*{Chapter \laChapter In-class Exercise} \stepcounter{chapter}
+
+    \iftoggle{answerkey}{
+      \begin{answer} ANSWER KEY \end{answer}
+    }{}
+
+    \paragraph{Info:}
+    In-class exercises are meant to introduce you to the new topics
+    of this chapter of the book. Each part will have an introductory
+    description of the content and example(s), followed by practice
+    problems for you to work on. ~\\
+
+    These assignments are \textbf{team assignments} - your team will
+    turn in \textit{one} copy of the exericse. It is up to your team
+    how to appropach the assignments; you can work separately and then
+    check your work together, or you can collaborate on the assignment
+    together. ~\\
+
+    Work must be clean; points may be deducted if the instructor cannot
+    read the work.
+
+    \hrulefill{}
+
+    \newpage{}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+    \begin{center} \section*{Chapter \laChapter In-class Exercise Instructions} \end{center}
+
+    \begin{center}
+        \textbf{This is the instruction page,
+        make sure to fill out your answers in the worksheet later in the document}
+    \end{center}
+
+    %------------------------------------------------------------------%
+    \section*{1. Propositional Logic}
+
+        \begin{introNOHEAD}
+            A \textbf{proposition} is a statement which has truth value: it is either true (T) or false (F).
+            \footnote{From https://en.wikibooks.org/wiki/Discrete\_Mathematics/Logic}
+
+            The statement doesn't have to necessarily be TRUE, it could also
+            be FALSE, but it has to be unambiguously so. ~\\
+
+            \begin{tabular}{ | l | l | l | }
+                \hline
+                \textbf{Statement} & \textbf{Proposition?} & \textbf{Result?}
+                \\ \hline
+                2 + 3 = 5 & Yes & True
+                \\ \hline
+                2 + 2 = 5 & Yes & False
+                \\ \hline
+                This class has 30 students & Yes & False\footnote{Probably :)}
+                \\ \hline
+                Is the movie good? & No &
+                \\ \hline
+            \end{tabular}
+        \end{introNOHEAD}
+
+
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{1}{8\%}
+            For the following, mark whether the statement is a \textbf{proposition} and,
+            if it is, mark whether it is \textbf{true} or \textbf{false}.
+        \end{question}
+
+        \begin{enumerate}
+            \item[a.] 10 + 20 = 30.
+            \item[b.] $2 \cdot a$ is always even.
+            \item[c.] Is $4 < 5$?
+            \item[d.] Pineapple belongs on pizza.\footnote{I'm not going to count off points whether you say true or false :)}
+        \end{enumerate}
+
+    %------------------------------------------------------------------%
+    \newpage
+    \section*{2. Compound Propositions}
+        \begin{introNOHEAD}
+            We can also create a \textbf{compound proposition} using the logical operators
+            for AND $\land$, OR $\lor$, and NOT $\neg$. When we're writing out
+            a compound proposition, we will usually assign each proposition a
+            \textbf{propositional variable}.
+
+            ~\\ If we have the propositions
+            $p$ is the proposition ``Paul is taking discrete math",
+            $q$ is the proposition, ``Paul has a calculator",
+            then we can build the compound propositions like:
+            \begin{itemize}
+                \item[] $p \land q$: Paul is taking discrete math and Paul has a calculator
+                \item[] $p \lor q$: Paul is taking discrete math or Paul has a calculator
+                \item[] $\neg p$: Paul is NOT taking discrete math
+                \item[] $\neg q$: Paul does NOT have a calculator
+            \end{itemize}
+
+            The result of a compound proposition depends on the value of
+            each proposition it is made up of:
+
+            \begin{enumerate}
+                \item A compound proposition $a \land b \land c$ is \textbf{only true}
+                    if all propositions are true; it will be \textbf{false} if
+                    one or more of the propositions is false.
+                \item A compound proposition $a \lor b \lor c$ is \textbf{true}
+                    if one or more of the propositions is true; it is \textbf{only false}
+                    if all propositions are false.
+                \item A compound proposition $\neg a$ is \textbf{true} only
+                    if the proposition is false; it is only \textbf{false} if
+                    the proposition is true.
+            \end{enumerate}
+
+        \end{introNOHEAD}
+
+        % - QUESTION --------------------------------------------------%
+        \newpage
+        \begin{question}{2}{24\%}
+            Given the following compound propositions and proposition values,
+            write out whether the full compound proposition is \textbf{true} or \textbf{false}.
+        \end{question}
+
+        \paragraph{a AND b:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            a. &        $a \land b$ &       $a = true, b = true$ &      \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}  \\ \hline
+            b. &        $a \land b$ &       $a = true, b = false$ &      \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}  \\ \hline
+            c. &        $a \land b$ &       $a = false, b = true$ &      \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}  \\ \hline
+            d. &        $a \land b$ &       $a = false, b = false$ &      \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}  \\ \hline
+        \end{tabular}
+
+        \paragraph{a OR b:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            e. &        $a \lor b$ &       $a = true, b = true$ &     \\ \hline
+            f. &        $a \lor b$ &       $a = true, b = false$ &    \\ \hline
+            g. &        $a \lor b$ &       $a = false, b = true$ &    \\ \hline
+            h. &        $a \lor b$ &       $a = false, b = false$ &   \\ \hline
+        \end{tabular}
+
+        \paragraph{Combinations:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            i. &        $a \land \neg b$ &       $a = true, b = false$ &   \\ \hline
+            j. &        $a \lor \neg b$ &        $a = false, b = true$ &   \\ \hline
+
+            k. &        $\neg a \land b$ &       $a = false, b = true$ &   \\ \hline
+            l. &        $\neg a \lor b$ &        $a = false, b = false$ &  \\ \hline
+        \end{tabular}
+
+
+        % - QUESTION --------------------------------------------------%
+        \newpage
+        \begin{question}{3}{40\%}
+            For the following, ``translate" the following English statements
+            into compound propositions.
+
+            \begin{itemize}
+                \item[] $p:$ ``The printer is offline"
+                \item[] $q:$ ``The printer is out of paper"
+                \item[] $r:$ ``The document has finished printing"
+            \end{itemize}
+        \end{question}
+
+        \begin{enumerate}
+            \item[a.] The printer is not out of paper.
+            \item[b.] The printer is online.
+            \item[c.] The printer is offline and it is out of paper
+            \item[d.] The printer is online and it is not out of paper.
+            \item[e.] Either the printer is online, or it is out of paper.
+            \item[f.] The printer is online, but it is out of paper.
+            \item[g.] The printer is offline or it is out of paper, but not both.
+            \item[h.] The printer is online and the printer has paper, and the document has not finished printing.
+        \end{enumerate}
+
+
+    %------------------------------------------------------------------%
+    \newpage
+    \section*{3. Truth tables}
+        \begin{introNOHEAD}
+            When we're working with compound propositional statements,
+            the result of the compound depends on the true/false values
+            of each proposition it is built up of.
+            ~\\
+            We can diagram out all possible states of a compound proposition
+            by using a \textbf{truth table}. In a truth table, we list
+            all propositional variables first on the left, as well as
+            all possible combinations of their states, and then
+            the compound statement's result on the right.
+
+            ~\\
+
+            \begin{tabular}{ l l l }
+
+                \begin{tabular}{ | c | c | c | c | }
+                    \hline
+                    $p$ & $q$ & & $p \land q$ \\ \hline
+                    T & T & & T \\ \hline
+                    T & F & & F \\ \hline
+                    F & T & & F \\ \hline
+                    F & F & & F \\ \hline
+
+                \end{tabular}
+                &
+
+                \begin{tabular}{ | c | c | c | c | }
+                    \hline
+                    $p$ & $q$ & & $p \land q$ \\ \hline
+                    T & T & & T \\ \hline
+                    T & F & & F \\ \hline
+                    F & T & & F \\ \hline
+                    F & F & & F \\ \hline
+
+                \end{tabular}
+                &
+
+                \begin{tabular}{ | c | c | c | }
+                    \hline
+                    $p$ & & $\neg p$ \\ \hline
+                    T & & F \\ \hline
+                    F & & T \\ \hline
+
+                \end{tabular}
+
+            \end{tabular}
+        \end{introNOHEAD}
+
+        ~\\
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{4}{12\%}
+            Complete the following truth tables. ~\\
+        \end{question}
+
+        ~\\
+        a.
+        \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
+            \hline
+            $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
+            T & T & & F & \\ \hline
+            T & F & & T & \\ \hline
+            F & T & &  & \\ \hline
+            F & F & &  & \\ \hline
+        \end{tabular}
+
+        ~\\~\\
+        b.
+        \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
+            \hline
+            $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
+            T & T & & & & \\ \hline
+            T & F & & & & \\ \hline
+            F & T & & & & \\ \hline
+            F & F & & & & \\ \hline
+        \end{tabular}
+
+        \newpage
+        \begin{introNOHEAD}
+            When you're building out truth tables, there is a specific order
+            you should write out the ``T" and ``F" states.
+            Begin with all ``T" values first, and work your way down to
+            all ``F" values first. As you go, change the right-most state
+            from ``T" to ``F", working your way from right-to-left.
+
+            ~\\
+            So with two variables: \\ ``TT", ``TF", ``FT", ``FF".
+        \end{introNOHEAD}
+
+
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{5}{6\%}
+            Using the rules above, write out all the states for a
+            truth table with three propositional variables. ~\\
+        \end{question}
+
+        \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
+            \hline
+            $p$ & $q$ & $r$   \\ \hline
+            T & T & T         \\ \hline
+            T & T & F         \\ \hline
+            T &  &          \\ \hline
+            T & F & F         \\ \hline
+            F &  &          \\ \hline
+            F &  &          \\ \hline
+            F &  &          \\ \hline
+            F & F & F         \\ \hline
+        \end{tabular}
+
+        \newpage
+
+        \begin{introNOHEAD}
+            Whenever the final columns of the truth tables for two propositions $p$ and $q$ are the same,
+            we say that $p$ and $q$ are \textbf{logically equivalent}, and we write: $p \equiv q$.
+            \footnote{From https://en.wikibooks.org/wiki/Discrete\_Mathematics/Logic}
+        \end{introNOHEAD}
+
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{6}{10\%}
+                Use a truth table to show that the compound propositions,
+
+                \begin{center}
+                $ \neg p \land \neg q $
+                \tab and \tab
+                $ \neg ( p \lor q ) $
+                \end{center}
+                are logically equivalent. The final two columns are
+                the compound propositions above.
+        \end{question}
+        ~\\
+        \begin{tabular}{ | c | c | c | c | c | c  c | c | c | c | c | c | }
+            \hline
+            $p$ &
+            $q$ & &
+
+            $\neg p$ &
+            $\neg q$ &
+
+            $(p \lor q)$ & & &
+
+            $ \neg p \land \neg q $ & &
+            $ \neg ( p \lor q ) $
+            \\ \hline
+
+            T & T & & F & F & & & & & & \\ \hline
+            T & F & & F & T & & & & & & \\ \hline
+            F & T & & T & F & & & & & & \\ \hline
+            F & F & & T & T & & & & & & \\ \hline
+        \end{tabular}
+
+    %------------------------------------------------------------------%
+    %- WORKSHEET ------------------------------------------------------%
+    %------------------------------------------------------------------%
+    \newpage
+    \begin{center} \section*{Chapter \laChapter In-class Exercise Worksheet} \end{center}
+
+    \iftoggle{answerkey}{
+      \begin{answer} \begin{center} ANSWER KEY \end{center} \end{answer}
+    }{}
+
+    \paragraph{Team:}
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\
+        3. & 4.
+    \end{tabular}
+    % table %
+
+    \paragraph{Section:} ~\\
+        $\Box$ MW 4:30 - 5:45 pm \tab
+        $\Box$ M 6:00 - 8:50 pm \tab
+        $\Box$ TR 2:00 - 3:15 pm
+
+    \paragraph{Team rules:}
+
+    \begin{itemize}
+        \item \textbf{Only one worksheet will be turned in per team.}
+            Each member of the team will receive the same score.
+        \item You can collaborate on the exercise together, or you can
+            work separately and then compare your answers with your team
+            as you fill out the turn-in worksheet.
+    \end{itemize}
+
+    \paragraph{Work rules:}
+
+    \begin{itemize}
+        \item Fill out your answers on this answer sheet.
+        \item Write cleanly and linearly - if I can't make sense of
+            your solution then you won't get credit.
+        \item Write out each step (within reason) - if I can't see the
+            logic you followed to get to your answer, you may get points taken off.
+        \item Don't scribble out cancellations - I can't read that.
+            For example, if a numerator/denominator cancel out, or a +/-
+            cancels out, don't scribble out the numbers - just use a single slash!
+    \end{itemize}
+
+    \paragraph{Grading:}
+        The total amount of points for an in-class exercise is 5 points each.
+        Each question will have a weight assigned to it, and will be given
+        a a point value between 0 and 4:
+
+    \begin{center}
+        \begin{tabular}{ | l | l | }
+            \hline
+            0 & Nothing written \\ \hline
+            1 & Something written, but incorrect \\ \hline
+            2 & Partially correct, but multiple errors \\ \hline
+            3 & Mostly correct, with one or two errors \\ \hline
+            4 & Perfect; correct answer and notation \\ \hline
+
+        \end{tabular}
+    \end{center}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    % \iftoggle{answerkey}{ \begin{answer} asdfasdf \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+    % \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+
+    %------------------------------------------------------------------%
+    \newpage{}
+    \section*{Answer sheet}
+
+    ~\\
+    % - QUESTION --------------------------------------------------%
+    \begin{answersheetquestion}{1}{Proposition or not?}{8}
+        For the following, mark whether the statement is a \textbf{proposition} and,
+        if it is, mark whether it is \textbf{true} or \textbf{false}.
+    \end{answersheetquestion}
+
+    \begin{enumerate}
+        \item[a.] 10 + 20 = 30.
+            \iftoggle{answerkey}{ \begin{answer} Proposition, true \end{answer} }{}
+        \item[b.] $2 \cdot a$ is always even.
+            \iftoggle{answerkey}{ \begin{answer} Proposition, true \end{answer} }{}
+        \item[c.] Is $4 < 5$?
+            \iftoggle{answerkey}{ \begin{answer} Not a proposition \end{answer} }{}
+        \item[d.] Pineapple belongs on pizza.
+            \iftoggle{answerkey}{ \begin{answer} Proposition, true \end{answer} }{}
+    \end{enumerate}
+
+    \hrulefill
+
+    % - QUESTION --------------------------------------------------%
+    \begin{answersheetquestion}{2}{Proposition or not?}{24}
+        Given the following compound propositions and proposition values,
+        write out whether the full compound proposition is \textbf{true} or \textbf{false}.
+    \end{answersheetquestion}
+
+    ~\\
+    \begin{tabular}{ l l    l l     l l     l l }
+
+        a. & \fitb[2cm] &
+        b. & \fitb[2cm] &
+        c. & \fitb[2cm] &
+        d. & \fitb[2cm]
+
+        \\
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}
+        \\
+
+        e. & \fitb[2cm] &
+        f. & \fitb[2cm] &
+        g. & \fitb[2cm] &
+        h. & \fitb[2cm]
+
+        \\
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}
+        \\
+
+        i. & \fitb[2cm] &
+        j. & \fitb[2cm] &
+        k. & \fitb[2cm] &
+        l. & \fitb[2cm]
+
+        \\
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} FALSE \end{answer} }{}
+        &
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{} 
+        &
+        & \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+        \\
+    \end{tabular} ~\\
+
+    \hrulefill
+
+    % - QUESTION --------------------------------------------------%
+    \begin{answersheetquestion}{3}{Proposition or not?}{40}
+        For the following, ``translate" the following English statements
+        into compound propositions. \\
+        $p:$ ``The printer is offline" ,
+        $q:$ ``The printer is out of paper" , \\
+        $r:$ ``The document has finished printing" ~\\
+    \end{answersheetquestion}
+
+    \begin{tabular}{ p{6cm}  p{6cm} }
+        a. \iftoggle{answerkey}{ \begin{answer} $\neg q$ \end{answer} }{} &
+        b. \iftoggle{answerkey}{ \begin{answer} $\neg p$ \end{answer} }{} \\
+        c. \iftoggle{answerkey}{ \begin{answer} $p \land q$ \end{answer} }{} &
+        d. \iftoggle{answerkey}{ \begin{answer} $\neg p \land \neg q$ \end{answer} }{} \\
+        e. \iftoggle{answerkey}{ \begin{answer} $p \lor q$ \end{answer} }{} &
+        f. \iftoggle{answerkey}{ \begin{answer} $\neg p \land q$ \end{answer} }{} \\
+        g. \iftoggle{answerkey}{ \begin{answer} $(p \lor q) \land (p \land q)$ \end{answer} }{} &
+        h. \iftoggle{answerkey}{ \begin{answer} $\neg p \land \neg q \land \neg r$ \end{answer} }{} \\
+    \end{tabular}
+
+    % - QUESTION --------------------------------------------------%
+    \newpage
+    \begin{answersheetquestion}{4}{Truth tables}{12}
+    \end{answersheetquestion}
+
+    ~\\
+    a.
+    \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
+        \hline
+        $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
+        T & T & & F     & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\ \hline
+        T & F & & T     & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        F & T & & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}      & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\ \hline
+        F & F & & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}      & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\ \hline
+    \end{tabular}
+
+    ~\\~\\
+    b.
+    \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
+        \hline
+        $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
+        T & T &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\ \hline
+        T & F &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        F & T &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        F & F &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+    \end{tabular} ~\\
+
+    \hrulefill
+
+    % - QUESTION --------------------------------------------------%
+    \begin{answersheetquestion}{5}{States}{6}
+        Write out all the states for a
+        truth table with three propositional variables. ~\\
+    \end{answersheetquestion}
+
+    \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
+        \hline
+        $p$ & $q$ & $r$
+        \\ \hline
+        T & T & T
+        \\ \hline
+        T & T & F
+        \\ \hline
+        T & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        T & F & F
+        \\ \hline
+        F & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        F & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\ \hline
+        F & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &     \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\ \hline
+        F & F & F
+        \\ \hline
+    \end{tabular}
+
+    \newpage
+    % - QUESTION --------------------------------------------------%
+    \begin{answersheetquestion}{5}{Logically equivalent}{10}
+                Use a truth table to show that the compound propositions,
+
+                \begin{center}
+                $ \neg p \land \neg q $
+                \tab and \tab
+                $ \neg ( p \lor q ) $
+                \end{center}
+                are logically equivalent. The final two columns are
+                the compound propositions above.
+    \end{answersheetquestion}
+        ~\\ ~\\
+
+    \begin{tabular}{ | c | c | c | c |  c | c | c | c | c | c | }
+        \hline
+            $p$ &
+            $q$ & &
+
+            $\neg p$ &
+            $\neg q$ &
+
+            $(p \lor q)$ & &
+
+            $ \neg p \land \neg q $ & &
+            $ \neg ( p \lor q ) $
+            \\ \hline
+
+        T & T & & F & F
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+
+        \\ \hline
+        T & F & & F & T
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\ \hline
+        F & T & & T & F
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\ \hline
+        F & F & & T & T
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\ \hline
+
+    \end{tabular}
+    ~\\
+
+    \hrulefill
+
+    %------------------------------------------------------------------%
+    %- Grading --------------------------------------------------------%
+    %------------------------------------------------------------------%
+    \subsection*{Grading}
+
+    \begin{center}
+
+        \begin{tabular}{ | l | l | l | l | }
+            \hline
+            \textbf{ Question } & \textbf{ Weight } & \textbf{ 0-4 } & \textbf{ Adjusted score }
+            \\ \hline{}
+
+            1 & 8\% & &    \\ \hline
+            2 & 24\% & &    \\ \hline
+            3 & 40\% & &    \\ \hline
+            4 & 12\% & &    \\ \hline
+            5 & 6\% & &    \\ \hline
+            6 & 10\% & &    \\ \hline
+            & & & \\ \hline
+            & & & \\ \hline
+
+
+        \end{tabular}
+    \end{center}
+
+\end{document}
