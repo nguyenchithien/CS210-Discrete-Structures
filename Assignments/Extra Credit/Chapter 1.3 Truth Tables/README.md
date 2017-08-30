@@ -29,13 +29,17 @@ Let's start out with some simple booleans. In discrete math, we usually use *p* 
 
 In Python, you can create boolean variables like this:
 
-	p = True
-	q = False
+```python
+p = True
+q = False
+```
 	
 and you can print the values of these variables like this:
 
-	print( p )
-	print( q )
+```python
+print( p )
+print( q )
+```
 
 Type this into your script, and go to **Run > Run Module** (or hit F5) and the program will run in the Python shell.
 
@@ -47,46 +51,48 @@ You can also use the keywords **and**, **or**, and **not** to combine propositio
 
 Source Code:
 
-	p = True
-	q = False
-	
-	print( "p is: ", p )
-	print( "q is: ", q )
-	print( "p and q: ", p and q )
-	print( "p or q: ", p or q )
+```python
+p = True
+q = False
+
+print( "p is: ", p )
+print( "q is: ", q )
+print( "p and q: ", p and q )
+print( "p or q: ", p or q )
+```
 
 Therefore, if you wanted to write out a truth table that looked like this:
 
 <table>
-	<tr>
-		<th>p</th>
-		<th>q</th>
-		<th>p ∧ q</th>
-	</tr>
+<tr>
+<th>p</th>
+<th>q</th>
+<th>p ∧ q</th>
+</tr>
 
-	<tr>
-		<td>T</td>
-		<td>T</td>
-		<td>T</td>
-	</tr>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
 
-	<tr>
-		<td>T</td>
-		<td>F</td>
-		<td>F</td>
-	</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
 
-	<tr>
-		<td>F</td>
-		<td>T</td>
-		<td>F</td>
-	</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
 
-	<tr>
-		<td>F</td>
-		<td>F</td>
-		<td>F</td>
-	</tr>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
 </table>
 
 You could manually type it out in code like this:
@@ -95,26 +101,28 @@ You could manually type it out in code like this:
 
 Source Code:
 
-	p = True
-	q = True
-	
-	print( "p \t", "q \t", "p and q" )
-	print( p, "\t", q, "\t", p and q )
-	
-	p = True
-	q = False
-	
-	print( p, "\t", q, "\t", p and q )
-	
-	p = False
-	q = True
-	
-	print( p, "\t", q, "\t", p and q )
-	
-	p = False
-	q = False
-	
-	print( p, "\t", q, "\t", p and q )
+```python
+p = True
+q = True
+
+print( "p \t", "q \t", "p and q" )
+print( p, "\t", q, "\t", p and q )
+
+p = True
+q = False
+
+print( p, "\t", q, "\t", p and q )
+
+p = False
+q = True
+
+print( p, "\t", q, "\t", p and q )
+
+p = False
+q = False
+
+print( p, "\t", q, "\t", p and q )
+```
 
 
 But... it would be easier to use loops!
@@ -125,14 +133,18 @@ But... it would be easier to use loops!
 
 Let's store all possible values for *p* and for *q* in new variables - Lists. This will look like:
 
-	pValues = [ True, False ]
-	qValues = [ True, False ]
+```python
+pValues = [ True, False ]
+qValues = [ True, False ]
+```
 
 Then, we can use for loops to do T-T, T-F, F-T, and F-F automatically for us!
-	
-	for p in pValues:
-	    for q in qValues:
-	        print( p, "\t", q, "\t", p and q )
+
+```python
+for p in pValues:
+	for q in qValues:
+		print( p, "\t", q, "\t", p and q )
+```
 
 Then when the program runs it will look like this:
 
