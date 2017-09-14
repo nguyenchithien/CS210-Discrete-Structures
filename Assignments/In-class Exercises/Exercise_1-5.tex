@@ -11,6 +11,9 @@
 \usepackage{boxedminipage}
 
 \newcommand{\laChapter}{1.5\ }
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcounter{question}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -55,7 +58,8 @@
         \end{intro}
 
         % - QUESTION --------------------------------------------------%
-        \begin{question}{1}{5\%}
+        \stepcounter{question}
+        \begin{question}{\thequestion}{5\%}
             For the following ``if, then" statements, create two
             \textbf{propositional variables}, assign them values (from
             the original statement), and then write it symbolically.
@@ -107,15 +111,171 @@
         \end{intro}
 
         % - QUESTION --------------------------------------------------%
-        \begin{question}{1}{5\%}
+        \stepcounter{question}
+        \begin{question}{\thequestion}{5\%}
             Complete the truth tables (on the worksheet) for the following
             compound expressions.
 
+            \begin{center}
+                \begin{tabular}{p{4cm} p{4cm} p{4cm}}
+                    a. $(p \land q) \to r$ &
+                    b. $p \to (q \lor r)$ &
+                    c. $\neg( p \to q )$
+                \end{tabular}
+            \end{center}
+        \end{question}
+
+        \hrulefill
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{5\%}
+            Write each of the following statements as a
+            quantified predicate, using \\
+            $P(x)$ is ``$x > 0$" and
+            $Q(x)$ is ``$y > 0$"
+
             \begin{enumerate}
-                \item[a.] $(p \land q) \to q$
+                \item[a.] If $x$ is positive, then $y$ is positive. 
+                \item[b.] If $x$ is positive, then $y$ is not positive. 
+                \item[c.] If $x$ is not positive, then $y$ is positive. 
+                \item[d.] If $x$ is not positive, then $y$ is not positive.
             \end{enumerate}
         \end{question}
 
+
+    \newpage
+
+    \section*{2. Negations of Implications}
+
+    \begin{introNOHEAD}
+        The negation of the implication $p \to q$ is the statement
+        $p \land (\neg q)$. We can see that these are equivalent
+        with a truth table:
+
+        \begin{center}
+            \begin{tabular}{c c | c | c | c }
+                $p$ & $q$ & $p \to q$ & $\neg( p \to q)$ & $p \land \neg q$
+                \\ \hline
+                T & T & T & F & F
+                \\
+                T & F & F & T & T
+                \\
+                F & T & T & F & F
+                \\
+                F & F & T & F & F
+            \end{tabular}
+        \end{center}
+
+        It is important to remember that \textbf{the negation of an
+        implication is not also an implication!}
+
+        \paragraph{Example:} We're going to do science. My hypothesis is
+        that ``a watched pot never boils", so let's turn this into an
+        implication.
+
+        \begin{center}
+            Hypothesis $p$: ``You watch a pot." \\
+            Conclusion $q$: ``The pot never boils." \\
+            $p \to q$: If you watch a pot, then the pot never boils.
+        \end{center}
+
+        There are four different things that can happen:
+
+        \begin{enumerate}            
+            \item If we watch the pot ($p$), and it never boils ($q$), then our implication is true:
+                We've proven it. Our implication is \textbf{true}.
+            \item If we watch the pot ($p$), and it DOES boil ($\neg q$), then our hypothesis has been disproven:
+                we did the experiment, and our conclusion was wrong, so the implication is \textbf{false}.
+            \item If we don't watch the pot ($\neg p$), and it never boils ($q$), while our conclusion
+                may be true, we didn't even bother to follow through with our hypothesis; we failed at science.
+                We can't prove or disprove our original hypothesis. In this case, the implication is
+                still \textbf{true}, because we haven't disproven it.
+            \item If we don't watch the pot ($\neg p$), and it DOES boil ($\neg q$), same as above,
+                we aren't performing our hypothesis, so this doesn't prove or disprove anything;
+                the implication is still \textbf{true}.
+        \end{enumerate}
+    \end{introNOHEAD}
+
+    \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{5\%}
+            For each of the following statements, write out the negation
+            both symbolically and in English.
+
+
+            \begin{enumerate}
+                \item[a.] $i$: If you go to New Delhi, $j$: You will see the Jantar Mantar. \\
+                    $i \to j$: If you go to New Delhi, then you will see the Jantar Mantar.
+                \item[b.]
+                    $j$: Jessica gets chocolate,
+                    $c$: Jessica gets cake, \\
+                    $b$: Jessica has a happy birthday. \\
+                    $(j \lor c) \to b$: If Jessica gets chocolate or Jessica gets cake, then Jessica has a happy birthday.
+                \item[c.]
+                    $p$: You have a group project, $w$: You do all the work, \\
+                    $s$: Someone else does all the work. \\
+                    $p \to (w \lor s)$: If you have a group project, then either you do all the work,
+                        or someone else does all the work.
+            \end{enumerate}
+        \end{question}
+
+        ~\\~\\
+        \begin{center}
+            \includegraphics[height=6cm]{images/jantar-mantar.jpg}
+        \end{center}
+            
+    \newpage
+    \section*{3. Implications and Quantifiers}
+
+        \begin{introNOHEAD}
+            Consider the implication, $\forall x \in D, P(x) \to Q(x)$.
+
+            \begin{enumerate}
+                \item The \textbf{converse} of this implication is $\forall x \in D, Q(x) \to P(x)$.
+                \item The \textbf{inverse} of this implication is $\forall x \in D, \neg P(x) \to \neg Q(x)$.
+                \item The \textbf{contrapositive} of this implication is $\forall x \in D, \neg Q(x) \to \neg P(x)$.
+            \end{enumerate}
+
+            \paragraph{Example:} $P(n)$ is ``$n$ ends in a 2", $Q(n)$ is ``$n$ is divisible by 2".
+
+            \begin{itemize}
+                \item   $P(n) \to Q(n)$: If $n$ ends in a 2, then $n$ is divisible by 2.
+                \item   $Q(n) \to P(n)$: If $n$ is divisible by 2, then $n$ ends in a 2.
+                \item   $\neg P(n) \to \neg Q(n)$: If $n$ DOESN'T end in a 2, then $n$ ISN'T divisible by 2.
+                \item   $\neg Q(n) \to \neg P(n)$: If $n$ ISN'T divisible by 2, then $n$ DOESN'T end in a 2.
+            \end{itemize}
+        \end{introNOHEAD}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{question}{\thequestion}{5\%}
+            Find the converse, inverse, and contrapositive for each statement.
+            Write it out symbolically as well as in English.
+            
+            \begin{enumerate}
+                \item[a.] $B(x)$: $x$ ate breakfast, $H(x)$: $x$ is hungry. \\
+                    $D$ is the set of all people. \\
+                    $\forall x \in D, \neg B(x) \to H(x)$ \\
+                    For all people, if $x$ didn't eat breakfast, then $x$ is hungry.
+                \item[b.] $M(x)$: $x$ is an musician, $P(x)$: $x$ plays piano. $G(x)$: $x$ plays guitar, \\
+                    $D$ is the set of all people. \\
+                    $\forall x \in D, (P(x) \lor G(x)) \to M(x)$: \\
+                    For all people, if $x$ plays piano or if $x$ plays guitar, then $x$ is an musician.
+                \item[c.] $P(x)$: $x > 2$, $Q(x)$: $x^{2}  > 4$. \\
+                    $\forall x \in \mathbb{R}: P(x) \to Q(x)$:
+                    For all real numbers $x$, if $x > 2$, then $x^{2} > 4$.
+                \item[d.] $R(x)$: $x^{2} = 1$, $S(x)$: $x^{3} = 1$. \\
+                    $\forall x \in \mathbb{Z}: R(x) \to S(x)$:
+                    For all integers $x$, if $x^{2} = 1$, then $x^{3} = 1$.
+            \end{enumerate}
+        \end{question}
+
+            
+
+        
     %------------------------------------------------------------------%
     %- WORKSHEET ------------------------------------------------------%
     %------------------------------------------------------------------%
