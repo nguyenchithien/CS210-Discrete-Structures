@@ -293,16 +293,216 @@
 
     \begin{enumerate}
         \item[a.] IF you don't play, THEN you can't win!
+            \iftoggle{answerkey}{ \begin{answer}
+             $p$: You play, $w$: You win, $\neg p \to \neg w$
+             \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+             
         \item[b.] IF your friends don't dance, THEN they aren't friends of mine!
+            \iftoggle{answerkey}{ \begin{answer}\\
+                $d$: Your friends dance, $f$: Your friends are my friends,\\
+                $\neg d \to \neg f$
+                \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
         \item[c.] IF Timmy's age is over 8 AND Timmy's age is less than 13, THEN Timmy gets Tween-priced movie tickets.
+            \iftoggle{answerkey}{ \begin{answer} \\
+                $e$: Timmy's age is over 8, $t$: Timmy's age is less than 13, \\
+                $m$: Timmy gets Tween-priced movie tickets. \\
+                $(e \land t) \to m$
+                \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
         \item[d.] IF I get enough sleep, OR I drink coffee, THEN I can go to work.
+            \iftoggle{answerkey}{ \begin{answer}
+                $s$: I get enough sleep, $c$: I drink coffee, $w$: I go to work. \\
+                $(s \lor c) \to w$
+            \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
     \end{enumerate}
 \end{answersheetquestion}
 
-\hrulefill{}
+\hrulefill
 
+\begin{answersheetquestion}{2}{Truth tables}{5}    
+    \begin{tabular}{ c c c | p{2cm} c | p{2cm} c | }
+        $p$ & $q$ & $r$ & & a. $(p \land q) \to r$ & & b. $p \to (q \lor r)$
+        \\ \hline
+        T & T & T &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
 
+        \\
+        T & T & F &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
 
+        \\
+        T & F & T & 
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+
+        \\
+        T & F & F &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\
+        F & T & T &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\
+        F & T & F &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\
+        F & F & T &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+
+        \\
+        F & F & F &
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{} &
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+    \end{tabular}
+    ~\\
+    
+    c.
+    
+    \begin{tabular}{c c | c | c}
+        $p$ & $q$ & $p \to q$ & $\neg(p \to q)$
+        \\ \hline
+        T & T
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\
+        T & F
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        \\
+        F & T
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+        \\
+        F & F
+        & \iftoggle{answerkey}{ \begin{answer} T \end{answer} }{}
+        & \iftoggle{answerkey}{ \begin{answer} F \end{answer} }{}
+    \end{tabular}
+    
+\end{answersheetquestion}
+
+    \newpage
+
+\begin{answersheetquestion}{3}{Quantified predicates}{5}
+    \begin{enumerate}
+        \item[a.] If $x$ is positive, then $y$ is positive.
+            \iftoggle{answerkey}{ \begin{answer} $P(x) \to Q(X)$
+            \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+        \item[b.] If $x$ is positive, then $y$ is not positive.
+            \iftoggle{answerkey}{ \begin{answer} $P(x) \to \neg Q(x)$
+            \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+        \item[c.] If $x$ is not positive, then $y$ is positive.
+            \iftoggle{answerkey}{ \begin{answer} $\neg P(x) \to Q(x)$
+            \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+        \item[d.] If $x$ is not positive, then $y$ is not positive.
+            \iftoggle{answerkey}{ \begin{answer} $\neg P(x) \to Q(x)$
+            \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+    \end{enumerate}
+\end{answersheetquestion}
+
+\hrulefill
+
+\begin{answersheetquestion}{4}{Negations}{5}
+    \begin{enumerate}
+        \item[a.] \iftoggle{answerkey}{ \begin{answer}
+            $i \land \neg j$: You go to New Delhi and you do NOT see the Jantar Mantar.
+        \end{answer} }{ { ~\\ \raisebox{0pt}[2.5cm][0pt]{  } } }
+
+        \item[b.] \iftoggle{answerkey}{ \begin{answer}
+            $(j \land c) \land \neg b$: Jessica gets chocolate AND Jessica gets cake AND
+                Jessica DOES NOT have a happy birthday.
+        \end{answer} }{ { ~\\ \raisebox{0pt}[2.5cm][0pt]{  } } }
+
+        \item[c.] \iftoggle{answerkey}{ \begin{answer}
+            $p \land \neg (w \land s) \equiv p \land \neg w \lor \neg s$: You have a group project AND
+                neither you do all the work, nor someone else does all the work.
+        \end{answer} }{ { ~\\ \raisebox{0pt}[2.5cm][0pt]{  } } }
+    \end{enumerate}
+\end{answersheetquestion}
+
+\newpage
+
+\begin{answersheetquestion}{5}{Inverse, Converse, ...}{5}
+
+    \begin{enumerate}
+        \item[a.] $\forall x \in D, \neg B(x) \to H(x)$
+            \begin{itemize}
+                \item Converse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, H(x) \to \neg B(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ is hungry, then $x$ didn't eat breakfast    \end{answer} }{} 
+                
+                \item Inverse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, B(x) \to \neg H(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ ate breakfast then $x$ is NOT hungry    \end{answer} }{} 
+                
+                \item Contrapositive:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg H(x) \to B(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ is NOT hungry, then $x$ ate breakfast    \end{answer} }{} 
+            \end{itemize}
+
+        \item[b.] $\forall x \in D, (P(x) \lor G(x)) \to M(x)$
+            \begin{itemize}
+                \item Converse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, M(x) \to (P(x) \lor G(x))$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ is a musician, then $x$ plays piano \\
+                        or $x$ plays guitar    \end{answer} }{} 
+                
+                \item Inverse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg (P(x) \lor G(x)) \to \neg M(x)$     \end{answer} }{} \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ does NOT play piano \\
+                        and does NOT play guitar,
+                        then $x$ is NOT a musician    \end{answer} }{} 
+                
+                \item Contrapositive:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg M(x) \to \neg (P(x) \lor G(x))$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all people $x$, if $x$ is NOT a musician,
+                        then $x$ doesn't play piano and $x$ doesn't play guitar.
+                    \end{answer} }{} 
+            \end{itemize}
+
+        \item[c.] $\forall x \in \mathbb{R}: P(x) \to Q(x)$
+            \begin{itemize}
+                \item Converse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, Q(x) \to P(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all real numbers $x$, if $x^{2} > 4$ then $x > 2$.    \end{answer} }{} 
+                
+                \item Inverse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg P(x) \to \neg Q(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all real numbers $x$, if $x \leq 2$ then $x^{2} \leq 4$    \end{answer} }{} 
+                
+                \item Contrapositive:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg Q(x) \to \neg P(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all real numbers $x$, if $x^{2} \leq 4$ then $x \leq 2$    \end{answer} }{} 
+            \end{itemize}
+
+        \item[d.] $\forall x \in \mathbb{Z}: R(x) \to S(x)$
+            \begin{itemize}
+                \item Converse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, S(x) \to R(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all integers $x$, if $x^{3} = 1$ then $x^{2} = 1$    \end{answer} }{} 
+                
+                \item Inverse:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg R(x) \to \neg S(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all integers $x$, if $x^{2} \neq 1$ then $x^{3} \neq 1$    \end{answer} }{} 
+                
+                \item Contrapositive:
+                    \iftoggle{answerkey}{ \begin{answer}    $\forall x \in D, \neg S(x) \to \neg R(x)$    \end{answer} }{}  \\
+                    \iftoggle{answerkey}{ \begin{answer}    For all integers $x$, if $x^{3} \neq 1$ then $x^{2} \neq 1$    \end{answer} }{} 
+            \end{itemize}
+    \end{enumerate}
+
+\end{answersheetquestion}
 
 
 
@@ -341,10 +541,8 @@
             4 & 15\% & &    \\ \hline
             
             5 & 25\% & &    \\ \hline
-            
-            6 & 25\% & &    \\ \hline
-            
-            7 & 12\% & &    \\ \hline
+
+            & & & \\ \hline
             
             
             
