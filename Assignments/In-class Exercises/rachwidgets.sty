@@ -34,7 +34,7 @@
 % or FALSE if compiling a worksheet for students.
 
 \newtoggle{answerkey}
-%\toggletrue{answerkey}
+\toggletrue{answerkey}
 %\togglefalse{answerkey}
 
 %\iftoggle{answerkey}{ \begin{answer} ANSWER \end{answer} }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
@@ -43,17 +43,6 @@
 
 % SHOWS ANSWERS IN RED, CHANGE TO WHITE FOR EXAM
 \newenvironment{answer}[0] { \color{red} } { \color{black} }
-
-
-% insert image %
-%\begin{figure}[h]
-%    \includegraphics{images/creative-commons.png}
-%\end{figure}
-
-% left float image %
-%\begin{wrapfigure}{l}{0.25\textwidth}
-%    \includegraphics{images/creative-commons.png}
-%\end{wrapfigure}
 
 
 % Side wrap: %
@@ -75,15 +64,13 @@
 \newcommand\ttab[1][0.1cm]{\hspace*{#1}}
 
 % Intro box %
-\newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } } { \end{mdframed} }
-
-\newenvironment{introNOHEAD}[0]{  \begin{mdframed}[backgroundcolor=intro] } { \end{mdframed} }
+\newenvironment{intro}[1]{  \begin{mdframed}[backgroundcolor=intro]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
 
 % Hint box %
-\newenvironment{hint}[1]{   \begin{mdframed}[backgroundcolor=hint]\noindent \textbf{ #1 } } { \end{mdframed} }
+\newenvironment{hint}[1]{   \begin{mdframed}[backgroundcolor=hint]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
 
 % Error box %
-\newenvironment{error}[1]{  \begin{mdframed}[backgroundcolor=error]\noindent \textbf{ #1 } } { \end{mdframed} }
+\newenvironment{error}[1]{  \begin{mdframed}[backgroundcolor=error]\noindent \textbf{ #1 } \\ } { \end{mdframed} }
 
 
 
@@ -111,11 +98,7 @@
 % SIMPLE QUESTION FORMAT
 \newenvironment{question}[2] {\paragraph{Question #1} \hfill \fitb / #2 ~\\}{}
 
-
-
-% ANSWERSHEET
-\newenvironment{answersheetquestion}[3] {\textbf{\footnotesize{#3\%}} Question #1: #2 \hfill \grader ~\\ }{ }
-
+\newenvironment{questionNOGRADE}[1] {\paragraph{Question #1} ~\\}{}
 
 % Example
 %\begin{question}{1}{2}

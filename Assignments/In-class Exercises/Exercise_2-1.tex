@@ -1,0 +1,126 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\newcommand{\laChapter}{2.1\ }
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcounter{question}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 210}
+\chead{Fall 2017}
+\rhead{Ch \laChapter Exercise}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize By Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    \toggletrue{answerkey}
+    %\togglefalse{answerkey}
+    
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    %------------------------------------------------------------------%
+    \section*{1. Proving statements}
+
+        \begin{intro}{Implications} ~\\
+            This time we're exploring mathematical writing and getting introduced
+            to proofs. This means that we are going to be working with
+            \textbf{contrapositives} and \textbf{implications} some more
+            in order to prove statements.
+            To work with a statement, we turn it into an implication that
+            we can work with mathematically.
+            
+            \paragraph{Example:}
+            For every positive even integer $n$, $n+1$ is odd.
+            
+            Changing to an ``if, then" statement, we can form:
+            
+            If a positive integer $n$ is even, then $n+1$ is odd.
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Rewrite the following statements as ``if, then" statements:
+            
+            \begin{enumerate}
+                \item[a.] When a positive integer $n$ is odd, then $n+1$ is even.
+                
+                    \iftoggle{answerkey}{ \begin{answer} if $n$ is odd, then $n+1$ is even. \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+                
+                \item[b.] All squares have four equal sides.
+                    \begin{hint}{Hint}
+                        Think of representing the square as a variable,
+                        and the length of a side as a variable.
+                    \end{hint}
+                
+                    \iftoggle{answerkey}{ \begin{answer} If $s$ is a square, then the length of every side is $l$. \end{answer} }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+                
+                \item[c.] asdf
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+
+
+
+
+
+    %- Team Info ------------------------------------------------------%
+
+    \newpage
+    
+    \paragraph{Team:}
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\
+        3. & 4.
+    \end{tabular}
+    % table %
+    ~\\
+
+    \hrulefill
+    \subsection*{Grading}
+            
+    \begin{center}
+        
+        \begin{tabular}{ | l | l | l | l | }
+            \hline
+            \textbf{ Question } & \textbf{ Weight } & \textbf{ 0-4 } & \textbf{ Adjusted score }
+            \\ \hline
+            
+            1 & 5\% & &    \\ \hline
+            
+            2 & 6\% & &    \\ \hline
+            
+            3 & 12\% & &    \\ \hline
+            
+            4 & 15\% & &    \\ \hline
+            
+            5 & 25\% & &    \\ \hline
+
+            & & & \\ \hline
+            
+            
+            
+        \end{tabular}
+    \end{center}
+
+\end{document}
