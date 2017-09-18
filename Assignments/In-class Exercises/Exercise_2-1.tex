@@ -127,7 +127,7 @@
     \newpage
 
     %------------------------------------------------------------------%
-    \section*{3. Even and Odd}
+    \section*{3. Even, Odd, and Divisibility}
 
         \begin{intro}{\ }
             In Chapter 2, we will be working with the concept of even and
@@ -173,6 +173,73 @@
 
                 \item[f.] 20
                     \iftoggle{answerkey}{ \begin{answer} $20 = 2 \cdot 10$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+        
+    \newpage
+
+    %------------------------------------------------------------------%
+
+        \begin{intro}{Divisibility}
+            We looked at the definitions for an even and odd number.
+            Here's one more - divisibility!
+
+            ~\\
+            An integer $n$ is divisible by $4$ if it is the result of
+            4 times some other integer. Symbolically, $n = 4k$.
+
+            ~\\
+            We can use this definition for divisible by any number, as we
+            need.
+        \end{intro}
+
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Using the definitions of even, odd, and divisible by \textit{some integer},
+            prove that the following statements are true...
+
+            \paragraph{Example:} ``12 is even" - rewrite as 2(6).
+
+            \begin{enumerate}
+                \item[a.] 100 is even.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $100 = 2(50)$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[b.] 13 is odd.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $13 = 2(6) + 1$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[c.] -13 is odd.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $13 = 2(-7) + 1$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[d.] 20 is divisible by 5.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $20 = 5(4)$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[e.] 20 is divisible by 4.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $20 = 4(5)$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[f.] $6n$ is even.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $2(3n)$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[g.] $8n^{2} + 8n + 4$ is divisible by 4.
+                    \iftoggle{answerkey}{ \begin{answer}
+                    $8n^{2} + 8n + 4 = 4(2n^{2} + 2n + 1)$
+                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+
 
             \end{enumerate}
         \end{questionNOGRADE}
@@ -327,70 +394,5 @@
 
     %- Team Info ------------------------------------------------------%
 
-    \newpage
-
-    %------------------------------------------------------------------%
-
-        \begin{intro}{Divisibility}
-            We looked at the definitions for an even and odd number.
-            Here's one more - divisibility!
-
-            ~\\
-            An integer $n$ is divisible by $4$ if it is the result of
-            4 times some other integer. Symbolically, $n = 4k$.
-
-            ~\\
-            We can use this definition for divisible by any number, as we
-            need.
-        \end{intro}
-
-
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-            Using the definitions of even, odd, and divisible by \textit{some integer},
-            prove that the following statements are true...
-
-            \paragraph{Example:} ``12 is even" - rewrite as 2(6).
-
-            \begin{enumerate}
-                \item[a.] 100 is even.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $100 = 2(50)$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[b.] 13 is odd.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $13 = 2(6) + 1$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[c.] -13 is odd.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $13 = 2(-7) + 1$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[d.] 20 is divisible by 5.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $20 = 5(4)$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[e.] 20 is divisible by 4.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $20 = 4(5)$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[f.] $6n$ is even.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $2(3n)$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-                \item[g.] $8n^{2} + 8n + 4$ is divisible by 4.
-                    \iftoggle{answerkey}{ \begin{answer}
-                    $8n^{2} + 8n + 4 = 4(2n^{2} + 2n + 1)$
-                    \end{answer} } { { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-
-
-            \end{enumerate}
-        \end{questionNOGRADE}
 
 \end{document}
