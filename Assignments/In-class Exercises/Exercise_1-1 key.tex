@@ -16,15 +16,14 @@
 \rhead{Ch 1.1 Exercise}
 \rfoot{\thepage\ of \pageref{LastPage}}
 \lfoot{\scriptsize By Rachel Morris, last updated \today}
-\newcounter{question}
 
 \renewcommand{\headrulewidth}{2pt}
 \renewcommand{\footrulewidth}{1pt}
 
 \begin{document}
     
-    %\toggletrue{answerkey}
-    \togglefalse{answerkey}
+    \toggletrue{answerkey}
+    %\togglefalse{answerkey}
 
     %------------------------------------------------------------------%
     %- INSTRUCTIONS ---------------------------------------------------%
@@ -84,15 +83,11 @@
             \end{center}
         \end{intro}
 
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \begin{question}{1}{10\%}
             Draw a table of all possible outcomes if someone flips three coins.
-        \end{questionNOGRADE}
+        \end{question}
 
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \begin{question}{2}{30\%}
             Write out how many outcomes there are for each of the following.
 
             \begin{enumerate}
@@ -103,15 +98,13 @@
                 \item Rolling two 6-sided dice
                 \item Rolling three 6-sided dice
             \end{enumerate}
-        \end{questionNOGRADE}
+        \end{question}
 
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \begin{question}{3}{10\%}
             So if we have $n$ possible outcomes per event (roll die, flip coin),
             and we ``run" the event $m$ times (one coin, two dice),
             how many total outcomes $ o $ will there be? (Write as a simple equation).
-        \end{questionNOGRADE}
+        \end{question}
 
     %------------------------------------------------------------------%
     \newpage
@@ -140,11 +133,8 @@
             \includegraphics[width=12cm]{images/josephus.png}
         \end{intro}
 
-        \newpage{}
-        
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \newpage
+        \begin{question}{4}{10\%}
             Given a Josephus circle of 15 people,
             if we are eliminating every 3rd person (starting with person 3),
             who is the last to be ``killed" – and the 2nd to last to be ``killed"?
@@ -157,11 +147,9 @@
                 Don't count ``dead" people, make sure to skip over them!
             \end{hint}
             
-        \end{questionNOGRADE}
+        \end{question}
 
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \begin{question}{5}{10\%}
             Given a Josephus circle of 10 people,
             if we are eliminating every 4th person (starting with person 4),
             who is the last to be ``killed" – and the 2nd to last to be ``killed"?
@@ -169,7 +157,7 @@
             \begin{center}
                 \includegraphics[width=7cm]{images/josephus-10.png}
             \end{center}
-        \end{questionNOGRADE}
+        \end{question}
        
     %------------------------------------------------------------------% 
     \newpage
@@ -197,9 +185,7 @@
         \end{intro}
 
         \newpage
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+        \begin{question}{6}{30\%}
             Suppose you toss three coins – a nickel, a dime, and a quarter,
             and you record the results in that order. For example,
             ``HTH" means nickel = heads, dime = tails, quarter = heads.
@@ -212,7 +198,7 @@
                 \item Do you think a person who tosses three coins is more likely to get all
                 three heads, or to get exactly two heads?                
             \end{enumerate}
-        \end{questionNOGRADE}
+        \end{question}
 
 
     %------------------------------------------------------------------%
@@ -289,7 +275,7 @@
     %------------------------------------------------------------------%
     \section*{Answer sheet}
 
-    \begin{questionNOGRADE}{1}{Draw a table of 3 coins tossed}{10}
+    \begin{answersheetquestion}{1}{Draw a table of 3 coins tossed}{10}
         \iftoggle{answerkey}{ \begin{answer}
             \begin{center}
                 \begin{tabular}{ | l | c | c | c | }
@@ -305,9 +291,9 @@
                 \end{tabular}
             \end{center}
         \end{answer} }{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
-    ~\\ \begin{questionNOGRADE}{2}{How many outcomes?}{30}
+    ~\\ \begin{answersheetquestion}{2}{How many outcomes?}{30}
         \begin{enumerate}
             \item Flipping one coin: \fitb{}            \iftoggle{answerkey}{\begin{answer} ($2^{1} = 2$) \end{answer} } {}
             \item Flipping two coins: \fitb{}           \iftoggle{answerkey}{\begin{answer} ($2^{2} = 4$) \end{answer} } {}
@@ -317,33 +303,33 @@
             \item Rolling two 6-sided dice: \fitb{}     \iftoggle{answerkey}{\begin{answer} ($6^{2} = 36$) \end{answer} } {}
             \item Rolling three 6-sided dice: \fitb{}   \iftoggle{answerkey}{\begin{answer} ($6^{3} = 216$) \end{answer} } {}
         \end{enumerate}
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
 
     ~\\
-    \begin{questionNOGRADE}{3}{Equation for outcomes}{10}
+    \begin{answersheetquestion}{3}{Equation for outcomes}{10}
         $ o = $ \iftoggle{answerkey}{\begin{answer} $ n^{m} $ \end{answer} } {}
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
     
     ~\\
-    \begin{questionNOGRADE}{4}{Jospehus game A}{10}
+    \begin{answersheetquestion}{4}{Jospehus game A}{10}
         {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 14 \end{answer} }{}
         {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
     
     ~\\
-    \begin{questionNOGRADE}{5}{Jospehus game B}{10}
+    \begin{answersheetquestion}{5}{Jospehus game B}{10}
         {2nd-to-last:} \fitb    \iftoggle{answerkey}{ \begin{answer} Person 6 \end{answer} }{}
         {Last:} \fitb          \iftoggle{answerkey}{ \begin{answer} Person 5 \end{answer} }{}
         
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
     
     ~\\
     \newpage
-    \begin{questionNOGRADE}{6}{Game tree}{30}
+    \begin{answersheetquestion}{6}{Game tree}{30}
         \begin{enumerate}
             \item In a systematic way, list all the different results you could record.
 
@@ -367,7 +353,7 @@
             \iftoggle{answerkey}{ \begin{answer} More likely to get exactly 2 heads \end{answer} }{}
             
         \end{enumerate}
-    \end{questionNOGRADE}
+    \end{answersheetquestion}
 
 
     %------------------------------------------------------------------%

@@ -28,8 +28,8 @@
 
 \begin{document}
 
-    %\toggletrue{answerkey}
-    \togglefalse{answerkey}
+    \toggletrue{answerkey}
+    %\togglefalse{answerkey}
 
     %------------------------------------------------------------------%
     %- Exercise Begin -------------------------------------------------%
@@ -77,13 +77,13 @@
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
-            Solve the following modulus problems.
+            Prove the following
 
             \paragraph{Example:} Solve 13 mod 5 \\
                 \begin{answer} 13 / 5 = 2, \tab 13 mod 5 = 3, \tab $13 = 5 \cdot 2 + 3$ \end{answer}
 
             \begin{enumerate}
-                \item[a.] 9 mod 7
+                \item[a.] 9 mod 7  \tab ($13 = 15 \cdot q + r$...)
                     \iftoggle{answerkey}{ \begin{answer}
                     9 mod 7 = 2; \tab $9 = 7 \cdot 1 + 2$
                     \end{answer} }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
