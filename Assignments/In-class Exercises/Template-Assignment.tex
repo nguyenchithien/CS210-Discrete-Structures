@@ -1,0 +1,36 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+
+
+\title{Rachel's PyGame Guide}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{subfiles}\usepackage[utf8]{inputenc}
+
+%\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+\newcounter{question}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\laClass}
+\chead{}
+\rhead{\laSemester}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    \subfile{tex/chapter-2-1.tex}
+    \subfile{tex/chapter-2-2.tex}
+    \subfile{tex/chapter-2-3.tex}
+    
+\end{document}

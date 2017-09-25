@@ -1,39 +1,13 @@
-\documentclass[a4paper,12pt]{book}
-\usepackage[utf8]{inputenc}
-\title{}
-\author{Rachel Morris}
-\date{\today}
+\documentclass[../Template-Assignment.tex]{subfiles}
+ 
+\setcounter{chapter}{2}
+\newcommand{\laChapter}{2.3 Mathematical induction\ }
+\setcounter{question}{0}
 
-\usepackage{rachwidgets}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{dirtree}
-\usepackage{boxedminipage}
-
-\newcommand{\laChapter}{2.1\ }
-\newcommand{\laClass}{CS 210\ }
-\newcommand{\laSemester}{Fall 2017\ }
-\newcounter{question}
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{CS 210}
-\chead{Fall 2017}
-\rhead{Ch \laChapter Exercise}
-\rfoot{\thepage\ of \pageref{LastPage}}
-\lfoot{\scriptsize By Rachel Morris, last updated \today}
-
-\renewcommand{\headrulewidth}{2pt}
-\renewcommand{\footrulewidth}{1pt}
 
 \begin{document}
 
-    %toggletrue{answerkey}
-    \togglefalse{answerkey}
-
-    %------------------------------------------------------------------%
-    %- Exercise Begin -------------------------------------------------%
-    %------------------------------------------------------------------%
+    \section{Mathematical Writing}
 
     %------------------------------------------------------------------%
     \subsection{Turning statements to implications}
@@ -84,7 +58,7 @@
     \newpage
 
     %------------------------------------------------------------------%
-    \section*{Counter-examples}
+    \subsection{Counter-examples}
 
         \begin{intro}{Counter-examples} ~\\
             A \textbf{counter-example} is a way to disprove a proposition.
@@ -127,7 +101,7 @@
     \newpage
 
     %------------------------------------------------------------------%
-    \section*{Even, Odd, and Divisibility}
+    \subsection{Even, Odd, and Divisibility}
 
         \begin{intro}{\ }
             In Chapter 2, we will be working with the concept of even and
@@ -247,7 +221,7 @@
     \newpage
 
     %------------------------------------------------------------------%
-    \section*{Closure properties of integers}
+    \subsection{Closure properties of integers}
 
         \begin{intro}{\ }
             The set of all integers is written as $\mathbb{Z}$.
@@ -299,7 +273,7 @@
     \newpage
 
     %------------------------------------------------------------------%
-    \section*{Proving an implication}
+    \subsection{Proving an implication}
 
         \begin{intro}{Simple proof} ~\\
             How do we prove if an implication is true? We will be studying
@@ -392,7 +366,5 @@
             \end{enumerate}
         \end{questionNOGRADE}
 
-    %- Team Info ------------------------------------------------------%
-
-
 \end{document}
+

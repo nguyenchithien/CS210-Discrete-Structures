@@ -1,43 +1,10 @@
-\documentclass[a4paper,12pt]{book}
-\usepackage[utf8]{inputenc}
-\title{}
-\author{Rachel Morris}
-\date{\today}
-
-\usepackage{rachwidgets}
-\usepackage{fancyhdr}
-\usepackage{lastpage}
-\usepackage{dirtree}
-\usepackage{boxedminipage}
-
-\setcounter{chapter}{2}
-\setcounter{section}{2}
+\documentclass[../Template-Assignment.tex]{subfiles}
+ 
 \newcommand{\laChapter}{2.3 Mathematical induction\ }
-\newcounter{question}
-
-\newcommand{\laClass}{CS 210\ }
-\newcommand{\laSemester}{Fall 2017\ }
-
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\laClass \laSemester}
-\chead{}
-\rhead{Ch \laChapter}
-\rfoot{\thepage\ of \pageref{LastPage}}
-\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
-
-\renewcommand{\headrulewidth}{2pt}
-\renewcommand{\footrulewidth}{1pt}
+\setcounter{question}{0}
 
 \begin{document}
-
-    %\toggletrue{answerkey}
-    \togglefalse{answerkey}
-
-    %------------------------------------------------------------------%
-    %- Exercise Begin -------------------------------------------------%
-    %------------------------------------------------------------------%
-
+    \newpage
     \section{Mathematical induction}
 
     %------------------------------------------------------------------%
@@ -461,5 +428,6 @@
             This matches the original proposition.
             }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
         \end{questionNOGRADE}
-    
+
 \end{document}
+
