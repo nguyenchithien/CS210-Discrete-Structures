@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {1}Introduction \& Logic}{2}
+\contentsline {section}{\numberline {1.1}Propositions}{2}
+\contentsline {paragraph}{Proposition:}{2}
+\contentsline {paragraph}{Propositional variables:}{2}
+\contentsline {subsection}{\numberline {1.1.1}Logic operators and compound statements}{3}
+\contentsline {subsection}{\numberline {1.1.2}Negations}{4}
+\contentsline {paragraph}{Negating relational operators}{4}
+\contentsline {subsection}{\numberline {1.1.3}Contradictions and Tautologies}{5}
+\contentsline {subsection}{\numberline {1.1.4}Truth tables}{5}
+\contentsline {subsection}{\numberline {1.1.5}Practice}{6}
+\contentsline {section}{\numberline {1.2}Predicates}{7}
+\contentsline {section}{\numberline {1.3}Implications}{7}

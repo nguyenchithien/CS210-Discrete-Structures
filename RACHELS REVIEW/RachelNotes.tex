@@ -1,0 +1,34 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\title{Chapter 1 Review Guide}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+\usepackage{multirow}
+\usepackage{titlesec}
+\usepackage{scrextend}
+\usepackage{subfiles}\usepackage[utf8]{inputenc}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 210}
+\chead{Fall 2017}
+\rhead{Exam 1 Review Guide}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize By Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+    
+    \subfile{tex/title.tex}
+    \subfile{tex/chapter1.tex}
+
+
+\end{document}

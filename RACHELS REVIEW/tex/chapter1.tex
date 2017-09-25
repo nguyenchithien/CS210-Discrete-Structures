@@ -1,0 +1,292 @@
+\documentclass[../RachelNotes.tex]{subfiles}
+
+\begin{document}
+
+    \chapter{Introduction \& Logic}
+
+    At the beginning of our course, we introduce some little word
+    problems and games as a way to get you to start thinking
+    methodically about the types of problems we will face.
+    The important parts of Chapter 1 of our textbook is the
+    propositions, predicates, and implications, so we will start
+    here with our review, and come back to the sequences later on.
+
+    \section{Propositions}
+
+        \begin{introNOHEAD}
+            \paragraph{Proposition:}
+                A proposition is a type of statement that is either
+                \textit{true or false}. These statements are standalone,
+                and don't take any input. If you're familiar with programming,
+                they are essentially like a boolean variable.
+
+                \begin{center}
+                    ``4 is greater than 5." \\
+                    ``Pratik is taking Discrete Math." \\
+                    ``The moon is bigger than the sun." \\
+                \end{center} ~\\
+                
+                Note that a proposition \textit{doesn't have to be true}
+                -- the moon is not bigger than the sun -- but it is still
+                a proposition because we can identify it as either true or false.
+
+            \paragraph{Propositional variables:}
+                When we want to work with propositions, we will usually
+                come up with a propositional variable. These are like
+                variables in algebra, but instead of containing numbers,
+                they contain propositional statements.
+        \end{introNOHEAD}
+
+        While working with propositions, we will write 'em both in
+        mathematical terms, like:
+
+        \begin{center} $p$ is the proposition, ``length and width are equal." \end{center}
+
+        As well as propositions that are just English statements, like:
+
+        \begin{center} $q$ is the proposition, ``Mariam likes cats." \end{center}
+
+        Either way, we can build statements out of these!
+
+
+
+        \subsection{Logic operators and compound statements}
+
+        If you've spent some time programming, you've probably run across
+        if statements that contain ``and", ``or", and ``not" in the statements.
+        In C++, this would look like:
+
+        \begin{center}
+        \texttt{
+        if ( a $>$ 0 \&\& a $<$ 10 )
+        }
+        \end{center}
+
+        For Discrete Math, we will also have these logic operators, but
+        they look different.
+
+        \begin{center}
+            \begin{tabular}{ c c c }
+                \textbf{English} & \textbf{C++} & \textbf{Logic}
+                \\ \hline
+                AND & \texttt{\&\&} & $\land$
+                \\
+                OR & \texttt{||} & $\lor$
+                \\
+                NOT & \texttt{!} & $\neg$
+            \end{tabular}
+        \end{center}
+
+        When we use these operators to combine two (or more) propositions,
+        the result is a \textbf{compound statement}, like this: 
+
+        \begin{mdframed}
+            ~\\
+            $p$ is the proposition, ``Brandon is allergic to cats" \\
+            $q$ is the proposition, ``Brandon owns a cat" ~\\ ~\\
+            $p \land q$: ``Brandon is allergic to cats, and Brandon owns a cat." \\
+            $p \lor q$: ``Brandon is allergic to cats, or Brandon owns a cat." \\
+            $p \land \neg q$: ``Brandon is allergic to cats, and Brandon \textit{does not} own a cat."
+        \end{mdframed}
+
+
+
+        \subsection{Negations}
+        
+        Using negations, we can turn a propositional statement into its
+        logical opposite... This means that if a statement (or compound statement)
+        is \textit{true}, then the opposite is \textit{false}, and if the
+        statement is \textit{false}, then the opposite is \textit{true}. \\
+
+        If we create the proposition
+        $p$ is ``the printer is functioning."
+
+        Then the negation, $\neg p$, is ``the printer is \textbf{not} functioning."
+
+        We can also negate compound statements, which follow some rules...
+
+        \begin{center}
+            The negation of $p \land q$ is written as $\neg(p \land q)$, \\
+                and is \textit{logically equivalent} to $\neg p \lor \neg q$. ~\\ ~\\
+
+            The negation of $p \lor q$ is written as $\neg(p \lor q)$, \\
+                and is \textit{logically equivalent} to $\neg p \land \neg q$.
+        \end{center}
+
+        When two statements are \textbf{logically equivalent}, it means that
+        their outcomes will be the same based on the values of their
+        propositional variables - in this case, $p$ and $q$.
+
+        \paragraph{Negating relational operators} ~\\
+        You might not have thought about it before, but the negation of
+        something containing a $>$ might not be what you think:
+        The logical opposite of $>$ is $\leq$, and the logical opposite of $<$ is $\geq$.
+
+        \begin{mdframed}
+            $a$ is the proposition, $x > 2$. \tab
+            $\neg a \equiv x \leq 2$.
+            ~\\~\\
+            $b$ is the proposition, $y < 10$. \tab{}
+            $\neg b \equiv y \geq 10$.
+        \end{mdframed}
+
+        And perhaps more intuitively, the negation of $=$ is going to be $\neq$.
+        
+        \begin{mdframed}
+            $c$ is the proposition, $z = 5$. \tab
+            $\neg c \equiv z \neq 5$.
+        \end{mdframed}
+
+        \newpage
+        Just to drive the point home a little more, let's assume we're
+        writing a program and using an \textit{if, else} statement to
+        check some variable.
+    
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.5\textwidth}
+    \centering
+\begin{mdframed}
+\begin{verbatim}
+if ( age < 18 )
+{
+    print( "Can't vote" );
+}
+else
+{
+    print( "Can vote" );
+}
+\end{verbatim}
+\end{mdframed}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+    \centering
+    
+    \begin{addmargin}[1em]{0em}
+        If the user enters some number less than 18, they will see
+        the ``Can't vote" message pop up. However, the else statement
+        will catch any other cases - in this case, if age is equal to 18,
+        or if it is greater than 18.
+    \end{addmargin}
+    
+\end{subfigure}
+\end{figure}
+
+    \subsection{Contradictions and Tautologies}
+
+        We can also end up writing propositional statements that always
+        result to being \textit{true} no matter what, or always
+        result to being \textit{false} no matter what. For the first case,
+        if a statement is always true, then it is a \textbf{tautology}.
+        On the other hand, if the statement is always false, then
+        it is a \textbf{contradiction}. ~\\
+        
+        For example, if we said ``if both p and q are true, then p is true",
+        then that will always be true. If we say $p \land \neg p$, then
+        this will always be false - $p$ cannot be both true and not-true
+        at the same time.
+
+
+    \subsection{Truth tables}
+
+        
+        How do we know if a compound statement is true or false?
+        How can we tell if two compound statements are logically equivalent?
+        We can use \textbf{truth tables} to diagram out all possible states
+        in our propositional statements.
+
+        For a truth table, the left-hand side contains the propositional
+        variables being used by the statement, and the right-hand side
+        contains the compound statement itself (and perhaps some ``in-between"
+        statements to help us solve the final form.)
+        Using the basic truth tables for $p \land q$, $p \lor q$ and $\neg p$,
+        we can figure out the truth tables for more complex propositional statements.
+
+        \newpage
+        
+        
+        Let's say we want to know what the result of $p \land \neg q$ is,
+        for all possible values of $p$ and $q$. We could diagram it like this:
+        
+        \begin{center}
+            \begin{tabular}{c c | c | c}
+                & & & Compound
+                \\
+                \multicolumn{2}{c|}{Variables} & & statement
+                \\
+                $p$ & $q$ & $\neg q$ & $p \land \neg q$
+                \\ \hline
+                T & T & F & F
+                \\
+                T & F & T & T
+                \\
+                F & T & F & F
+                \\
+                F & F & T & F
+            \end{tabular}
+        \end{center}
+
+        But first, let's look at our truth tables for AND, OR, and NOT.
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.3\textwidth}
+\centering
+
+\textbf{And} ~\\ ~\\
+
+\begin{tabular}{ c c | c }
+    $p$ & $q$ & $p \land q$
+    \\ \hline
+    T & T & T \\
+    T & F & F \\
+    F & T & F \\
+    F & F & F
+\end{tabular}
+
+\end{subfigure}%
+\begin{subfigure}{.3\textwidth}
+\centering
+
+\textbf{Or} ~\\ ~\\
+
+\begin{tabular}{ c c | c }
+    $p$ & $q$ & $p \lor q$
+    \\ \hline
+    T & T & T \\
+    T & F & T \\
+    F & T & T \\
+    F & F & F
+\end{tabular}
+    
+\end{subfigure}%
+\begin{subfigure}{.3\textwidth}
+\centering
+
+\textbf{Not} ~\\ ~\\
+
+\begin{tabular}{ c | c }
+    $p$ & $\neg p$
+    \\ \hline
+    T & F \\
+    F & T
+\end{tabular}
+    
+\end{subfigure}
+\end{figure}
+
+
+    \hrulefill
+    \subsection{Practice}
+        
+        
+
+    
+    \newpage
+    \section{Predicates}
+
+    \section{Implications}
+
+\end{document}
+
