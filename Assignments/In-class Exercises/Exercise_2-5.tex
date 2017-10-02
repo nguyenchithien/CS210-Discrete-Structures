@@ -11,8 +11,8 @@
 \usepackage{boxedminipage}
 
 \setcounter{chapter}{2}
-\setcounter{section}{2}
-\newcommand{\laChapter}{2.3 Mathematical induction\ }
+\setcounter{section}{4}
+\newcommand{\laChapter}{2.5 Mathematical induction\ }
 \newcounter{question}
 
 \newcommand{\laClass}{CS 210\ }
@@ -38,369 +38,146 @@
     %- Exercise Begin -------------------------------------------------%
     %------------------------------------------------------------------%
 
-    \section{Mathematical induction}
+    \section{Proof by contradiction}
 
     %------------------------------------------------------------------%
-    \subsection{Intro practice}
+    \subsection{Review practice}
 
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
+            For the statement, ``if $n \% 3 = 1$, then $n \% 9 \neq 5$",
+            where $\%$ stands for ``modulus"...
 
-            Plug in the following values to the given predicate, and state
-            whether it results in a true proposition, or a false one.
-            $P(n)$ is ``$n^{2} + 1$ is prime".
-
-            \begin{itemize}
-                \item[a.] $P(1) = $ \solution{$1+1 = 2$, true}{}
-                \item[b.] $P(3) = $ \solution{$9+1 = 10$, false}{}
-                \item[c.] $P(9) = $ \solution{$81+1 = 81$, false}{}
-            \end{itemize}
-            
-        \end{questionNOGRADE}
-
-        \hrulefill
-
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-
-            For the recursive formula $a_{k} = a_{k-1} + 4$, $a_{1} = 1$,
-            find the values for the following.
-
-            \begin{itemize}
-                \item[a.] $a_{1} = $    \solution{1}{}
-                \item[b.] $a_{2} = $    \solution{$1 + 4 = 5$}{}
-                \item[c.] $a_{3} = $    \solution{$5 + 4 = 9$}{}
-                \item[d.] $a_{m-1} = $  (Anywhere you see $k$, plug in $m-1$.)
-                \solution{$a_{m-2} + 4$}{}
-            \end{itemize}
-            
-        \end{questionNOGRADE}
-
-        \hrulefill
-
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-
-            For the closed formula $a_{n} = 4n - 3$,
-            find the values for the following.
-
-            \begin{itemize}
-                \item[a.] $a_{1} = $    \solution{$4 - 3 = 1$}{}
-                \item[b.] $a_{3} = $    \solution{$12 - 3 = 9$}{}
-                \item[c.] $a_{5} = $    \solution{$20 - 3 = 27$}{}
-                \item[d.] $a_{m-1} = $  (Anywhere you see $n$, plug in $m-1$.) \\
-                \solution{$4(m-1) - 3 = 4m -4 -3 = 4m-7$}{}
-            \end{itemize}
-            
-        \end{questionNOGRADE}
-
-    \newpage
-
-    \subsection{Recursive / Closed formula equivalence}
-
-    \begin{intro}{Question 3a from the textbook}
-        Show that the sequence defined by $a_{k} = a_{k-1} + 4; a_{1} = 1$ for $k \geq 2$
-        is equivalently described by the closed formula $a_{n} = 4n - 3$.
-
-        \paragraph{Step 1: Check $a_{1}$ for both formulas.} ~\\
-            Recursive: $a_{1} = 1$ (provided); \tab{}
-            Closed: $a_{1} = 4(1) - 3 = 1$  \tab \checkmark OK
-
-        \paragraph{Step 2: Rewrite the recursive formula in terms of $m$:}
-        $$ a_{m} = a_{m-1} + 4 $$
-
-        \paragraph{Step 3: Find the equation for $a_{m-1}$ via the closed formula:}
-        $$ a_{n} = 4n-3; \tab a_{m-1} = 4(m-1) - 3; \tab a_{m-1} = 4m-7 $$
-
-        \paragraph{Step 4: Plug $a_{m-1}$ back into the recursive formula and simplify.}
-        $$ a_{m} = a_{m-1} + 4; \tab \to \tab a_{m} = (4m-7) + 4 $$
-        $$ a_{m} = 4m - 7 + 4; \tab a_{m} = 4m - 3 $$
-
-        Looking back at the closed formula, $a_{n} = 4n - 3$, our result from
-        Step 4 and this match, so we have proven that, for all values $k \geq 2$,
-        the recursive formula and closed formula give the same sequence.
-    \end{intro}
-
-    Next you will solve these types of proofs, so follow the steps.
-    We will go over several types of proofs this chapter, and they will
-    be on the exam, so make sure you can tell the different \textit{types}
-    of proofs apart!
-
-    \newpage{}
-    
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-            Show that the sequence defined by
-            $a_{n} = a_{n-1} + 2; a_{1} = 5$ for $k \geq 2$ is equivalently
-            described by the closed formula, $a_{n} = 2n+3$.
-
-        \paragraph{Step 1: Check $a_{1}$ for both formulas.} ~\\
-            \solution{
-            Recursive: $a_{1} = 5$; \tab
-            Closed: $a_{1} = 2(1) + 3 = 5$
-            \tab \checkmark
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-            
-        \paragraph{Step 2: Rewrite the recursive formula in terms of $m$:} ~\\
-            \solution{
-            $a_{m} = 4 \cdot a_{m-1} + 2$
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-
-        \paragraph{Step 3: Find the equation for $a_{m-1}$ via the closed formula:} ~\\
-            \solution{
-            $$ a_{m-1} = 2(m-1) + 3 \tab{}
-            = 2m - 2 + 3 \tab{}
-            = 2m + 1
-            $$
-            }{ { ~\\ \raisebox{0pt}[3cm][0pt]{  } } }
-
-        \paragraph{Step 4: Plug $a_{m-1}$ back into the recursive formula and simplify.} ~\\
-            \solution{
-            $$ a_{m} = a_{m-1} + 2 $$
-
-            $$ a_{m} = (2m+1) + 2 $$
-
-            $$ a_{m} = 2m + 3 $$
-            
-            }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
-        \end{questionNOGRADE}
-
-        
-    \newpage{}
-
-        \begin{hint}{Exponent rules}
-            \textbf{Power rule:} $(a^{m})^{n} = a^{mn}$ \\
-            \textbf{Negative exponent rule:} $a^{-n} = \frac{1}{a^{n}}$ \\
-            \textbf{Product rule:} $a^{m} \cdot a^{n} = a^{m+n}$ \\
-            \textbf{Quotient rule:} $\frac{a^{m}}{a^{n}} = a^{m-n}$
-        \end{hint}
-    
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-            Show that the sequence defined by
-            $ a_{k} = 2 \cdot a_{k-1} + 1 ; a_{1} = 1 $
-            for $k \geq 2$ is equivalently
-            described by the closed formula,
-            $ a_{n} = 2^{n} - 1 $
-
-        \paragraph{Step 1: Check $a_{1}$ for both formulas.} ~\\
-            \solution{
-            Recursive:
-            $ a_{1} = 1 $
-            \tab
-            Closed:
-            $ a_{1} = 2^{1} - 1  = 1$
-            \tab \checkmark
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-            
-        \paragraph{Step 2: Rewrite the recursive formula in terms of $m$:} ~\\
-            \solution{
-            $ a_{m} = 2 \cdot a_{m-1} + 1 $
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-
-        \paragraph{Step 3: Find the equation for $a_{m-1}$ via the closed formula:} ~\\
-            \solution{
-            $$ a_{m-1} = 2^{m-1} - 1
-            \tab{}
-            = 2^{m} \cdot 2^{-1} - 1
-            \tab{}
-            = \frac{2^{m}}{2^{1}} - 1
-            $$
-            }{ { ~\\ \raisebox{0pt}[3cm][0pt]{  } } }
-
-        \paragraph{Step 4: Plug $a_{m-1}$ back into the recursive formula and simplify.} ~\\
-            \solution{
-            $$ a_{m} = 2 \cdot a_{m-1} + 1 $$
-
-            $$ a_{m} = 2^{1}(\frac{2^{m}}{2^{1}} - 1) + 1 $$
-
-            $$ a_{m} = 2^{m} - 2 + 1 $$
-
-            $$ a_{m} = 2^{m} - 1 $$
-            
-            }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
-        \end{questionNOGRADE}
-
-    \newpage{}
-    
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-
-            Show that the sequence defined by $b_{k} = 4 \cdot b_{k-1} + 3, b_{1} = 3$ for $k \geq 2$,
-            is equivalently described by the closed formula $b_{n} = 2^{2n} - 1$.
-
-        \paragraph{Step 1: Check $a_{1}$ for both formulas.} ~\\
-            \solution{
-            Recursive: $a_{1} = 3$; \tab
-            Closed: $a_{1} = 2^{2\cdot1} - 1 = 4 - 1 = 3$ \tab \checkmark
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-            
-        \paragraph{Step 2: Rewrite the recursive formula in terms of $m$:} ~\\
-            \solution{
-            $a_{m} = 4 \cdot a_{m-1} + 3$
-            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
-
-        \paragraph{Step 3: Find the equation for $a_{m-1}$ via the closed formula:} ~\\
-            \solution{
-            $$ a_{m-1} = 2^{2(m-1)} - 1
-            \tab = 2^{2m} \cdot 2^{-2} - 1
-            \tab = \frac{ 2^{2m} }{2^{2}} - 1;$$
-            }{ { ~\\ \raisebox{0pt}[3cm][0pt]{  } } }
-
-        \paragraph{Step 4: Plug $a_{m-1}$ back into the recursive formula and simplify.} ~\\
-            \solution{
-            $$a_{m} = 4 a_{m-1} + 3$$
-
-            $$a_{m} = 4 (\frac{2^{2m}}{2^{2}} - 1) + 3$$
-
-            $$a_{m} = 2^{2}(\frac{2^{2m}}{2^{2}} - 1) + 3$$
-
-            $$a_{m} = 2^{2m} - 4 + 3$$
-
-            $$a_{m} = 2^{2m} - 1$$
-            }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
-
-        \end{questionNOGRADE}
-
-    \newpage
-
-
-    \subsection{Summation / Closed formula equivalence}
-
-    Another type of proof we will do is to show that, for some $n$ plugged
-    into a sum and into a closed formula for that value.
-
-    \begin{intro}{Question 8a from the textbook}
-
-        Use induction to prove the proposition. As part of the proof,
-        verify the statement for $n = 1$, $n = 2$, and $n = 3$.
-        $ \sum_{i=1}^{n} (2i - 1) = n^{2} $        for each $n \geq 1$.
-
-        \paragraph{Step 1: Show that the proposition is true for 1, 2, and 3. } ~\\
-
-            \begin{tabular}{l | p{4cm} | p{4cm} }
-                \textbf{ $i$ value } &
-                \textbf{ $ \sum_{i=1}^{n} (2i - 1) $ } &
-                \textbf{ $n^{2}$ }
-                \\ \hline
-                $i = 1$ &
-                    $ \sum_{i=1}^{1} (2i - 1) $ &
-                    $1^{2}$
-                    \\
-                    &
-                    $= ( 2 \cdot 1 - 1 ) = 1$ &
-                    $= 1$ \tab\checkmark
-                \\ && \\
-                $i = 2$ &
-                    $ \sum_{i=1}^{2} (2i - 1) $&
-                    $2^{2}$
-                    \\
-                    &
-                    $ = (2 \cdot 1 - 1) + (2 \cdot 2 - 1)$ &
+            \begin{enumerate}
+                \item[a.]   What is the hypothesis $p$?
+                    \solution{$n \% 3 = 1$}{ ~\\~\\ }
                     
-                    \\
-                    &
-                    $= (1) + (3) = 4$ &
-                    $ = 4$ \tab\checkmark
-                \\ && \\
-                $i = 3$ &
-                    $ \sum_{i=1}^{3} (2i - 1) $&
-                    $3^{2}$
-                    \\
-                    &
-                    $ = 1 + 3 + (2 \cdot 3 - 1)$
-                    &
-                    \\
-                    &
-                    $ = 1 + 3 + 5 = 9 $ &
-                    $ = 9 $  \tab\checkmark               
-            \end{tabular}
-            
+                \item[b.]   What is the conclusion $q$?
+                    \solution{$n \% 9 \neq 5$}{ ~\\~\\ }
+                
+                \item[c.]   Using $\neg(p \to q) \equiv p \land \neg q$,
+                    write out the negation of this implication in English.
+                    \solution{
+                    $n \% 3 = 1$ and $n \% 9 = 5$
+                    }{ ~\\~\\ }
+            \end{enumerate}
 
-        \paragraph{Step 2: Rewrite the summation as $ \sum_{i=1}^{m-1} (2i - 1) + (2m - 1) $:}
+            This negation can be used to build the counter-example,
+            which we will use for the proof by contradiction.
+        \end{questionNOGRADE}
 
         ~\\~\\
-        $ \sum_{i=1}^{m}(2i-1) = \sum_{i=1}^{m-1}(2i-1) + (2m - 1)$
-
-        \paragraph{Step 3: Find an equation  for $\sum_{i=1}^{m-1}$ via the proposition: }
-
-        ~\\~\\
-        $ \sum_{i=1}^{n} (2i - 1) = n^{2} \tab ... \sum_{i=1}^{m-1}(2i-1) = (m-1)^{2} $
-        
-        \paragraph{Step 4: Plug $\sum_{i=1}^{m-1}$ into the summation from step (2):}
-
-        ~\\~\\
-        $ \sum_{i=1}^{m}(2i-1) = \sum_{i=1}^{n-1}(2i-1) + (2m - 1) \tab = (m-1)^{2} + (2m - 1)$ \\
-        $ \sum_{i=1}^{m}(2i-1) =  m^{2} - 2m + 1 + 2m - 1 $ \\
-        $ \sum_{i=1}^{m}(2i-1) =  m^{2} $ \tab \checkmark{}
-
-        ~\\
-        We get the same form as the original proposition, proving our statement.
-    \end{intro}
-
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=4cm]{images/cat.png}
+            \caption*{There is extra space on the page}
+        \end{figure}
+    
     \newpage
+    %------------------------------------------------------------------%
+    \subsection{Proof by contradiction}
 
+        \begin{intro}{Prove by contradiction: If $n^{2}$ is even, then $n$ is even}
+
+            \subparagraph{Step 1: Identify the hypothesis and conclusion:}
+            Here, our \textbf{hypothesis} is ``$n^{2}$ is even",
+            and our \textbf{conclusion} is ``$n$ is even".
+
+            \subparagraph{Step 2: Identify the negation:}
+            A counter-example of this would be if we have $p \land \neg q$,
+            or ``$n^{2}$ is even and $n$ is odd".
+
+            \subparagraph{Step 3: Build a counter-example:}
+            While the negation of an implication is \textbf{not} an implication,
+            we are using this negation in order to build a \textbf{new implication:}
+            the contradition.
+
+            \textbf{Counter-example:} ``If $n^{2}$ is even, then $n$ is odd"
+
+            \subparagraph{Step 4: Write the hypothesis \& conclusion symbolically:}
+            (For our counter-example implication) \\
+            $n^{2} = 2k$ (some even integer) \tab{}
+            $n = 2j + 1$ (some odd integer)
+
+            \subparagraph{Step 5: Write equation:}
+            Using the statement, we are going to turn this into an equation.
+            $n$ is odd, and $n^{2}$ is even, so if we square the odd $n$
+            to get the even $n^{2}$, we would have...
+            to get the even $n^{2}$, we would have...
+            $(2j + 1)^{2} = 2k$
+
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+            $(2j + 1)^{2} = 2k$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $4j^{2} + 4j + 1 = 2k$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $1 = 2k - 4j^{2} - 4j$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $\frac{1}{2} = k - 2j^{2} - 2j$
+
+            ~\\
+            Since $k$ and $j$ are both integers, through the closure property
+            of integers (+, -, and $\times$ results in an integer),
+            we can show that $k - 2j^{2} - 2j$ results in something that
+            is \textit{not an integer} -- this is a contradiction.
+            It shows that our counter-example
+            is \textbf{false}, and no counter-example can exist.
+        \end{intro}
+
+        \newpage
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
 
-            Use induction to prove
-            $$ \sum_{i=1}^{n} (2i+4) = n^{2} + 5n$$
-            for each $n \geq 1$.
+            Prove by contradiction: If $n^{2}$ is odd, then $n$ is odd.
 
-        \paragraph{Step 1: Show that the proposition is true for 1, 2, and 3. } ~\\
+            \subparagraph{Step 1: Identify the hypothesis and conclusion:}
+                ~\\ \tab Hypothesis:    \solution{$n^{2}$ is odd}{}
+                ~\\ \tab Conclusion:    \solution{$n$ is odd}{}
+            
+            \subparagraph{Step 2: Identify the negation:} ~\\
+                
+                \solution{
+                    $n^{2}$ is odd
+                }{ \fitb[4cm] } AND
+                \solution{
+                    $n$ is even
+                }{ \fitb[4cm] }
+            
+            \subparagraph{Step 3: Build a counter-example:} ~\\ ~\\
+            
+                IF 
+                \solution{
+                    $n^{2}$ is odd
+                }{ \fitb[4cm] } THEN
+                \solution{
+                    $n$ is even
+                }{ \fitb[4cm] }
+                
+            \subparagraph{Step 4: Write the hypothesis \& conclusion symbolically:}
+                
+                ~\\~\\ \tab $n^{2} = $ \solution{$2k+1$}{}
+                ~\\~\\ \tab $n = $ \solution{$2j$}{}
+                ~\\~\\ (Make sure you use different variables for $n^{2}$ and $n$.)
 
-            \begin{tabular}{l | p{4cm} | p{4cm} }
-                \textbf{ $i$ value } &
-                \textbf{ $ \sum_{i=1}^{n} (2i+4) $ } &
-                \textbf{ $n^{2} + 5n$ }
-                \\ \hline
-                $i = 1$ &
-                    \solution{ $2(1)+4 = 6$ }{} &
-                    \solution{ $1^{2} + 5(1) = 6$ }{} 
+            \subparagraph{Step 5: Write equation:}
+                \solution{
+                $2k+1 = (2j)^{2}$
+                }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
 
-                \\ && \\
-                $i = 2$ &
-                    \solution{ $6 + 2(2)+4 = 14$ }{} &
-                    \solution{ $2^{2} + 5(2) = 14$ }{} 
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+                \solution{
+                $2k + 1 = 4j^{2}$ \\ 
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $1 = 4j^{2} - 2k$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $\frac{1}{2} = 2j^{2} - k$
+                }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
 
-                \\ && \\
-                $i = 3$ &
-                    \solution{ $14 + 2(3) + 4 = 24$ }{} &
-                    \solution{ $3^{2} + 5(3) = 9+15 = 24$ }{} 
-            \end{tabular}
-
-        \paragraph{Step 2: Rewrite the summation:} ~\\
-            As the sum from $i = 1$ to $m-1$, plus the final term $(2m+4)$.
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m} (2i+4) = \sum_{i=1}^{m-1} (2i+4) + (2m+4)$
-            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-        \paragraph{Step 3: Find an equation  for $\sum_{i=1}^{m-1}$ via the proposition: } 
-
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m-1} (2i+4) = (m-1)^{2} + 5(m-1) $ ~\\
-            $ \sum_{i=1}^{m-1} (2i+4) = m^{2} - 2m + 1 + 5m - 5 $ ~\\
-            $ \sum_{i=1}^{m-1} (2i+4) = m^{2} + 3m - 4 $
-            }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
-
-
-        \paragraph{Step 4: Plug $\sum_{i=1}^{m-1}$ into the summation from step 2 and simplify:}
-
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m} (2i+4) = (m^{2} + 3m - 4) + (2m+4) $ ~\\
-            $ \sum_{i=1}^{m} (2i+4) = m^{2} + 5m $ ~\\
-            This matches the original proposition.
-            }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
+            Result:
+                \solution{ The result is a fraction, not an integer, therefore no counter-example exists. }{}
+            
         \end{questionNOGRADE}
 
         \newpage
@@ -409,57 +186,35 @@
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
 
-            Use induction to prove that for every positive integer $n$,
-            $$ \sum_{i=1}^{n} i = \frac{n(n+1)}{2}$$
+            Use proof by contradiction to explain why it is impossible
+            for a number $n$ to be of the form $5k+3$ and of $5j+1$ for
+            integers $k$ and $j$.
 
-        \paragraph{Step 1: Show that the proposition is true for 1, 2, and 3. } ~\\
+            \begin{hint}{Hint}
+                $n = 5k+3$ is one statement, and $n = 5j+1$ is the other statement,
+                so $5k+3 = 5j+1$ is your starting point.
+            \end{hint}
 
-            \begin{tabular}{l | p{4cm} | p{4cm} }
-                \textbf{ $i$ value } &
-                \textbf{ $ \sum_{i=1}^{n} i $ } &
-                \textbf{ $ \frac{n(n+1)}{2} $ }
-                \\ \hline
-                $i = 1$ &
-                    \solution{ $1$ }{} &
-                    \solution{ $\frac{1(2)}{2} = 1$ }{} 
+            This isn't in an implication form, so we begin at Step 5...
+                
+            \subparagraph{Step 5: Write equation:} $5k+3 = 5j+1$
 
-                \\ && \\
-                $i = 2$ &
-                    \solution{ $1 + 2 = 3$ }{} &
-                    \solution{ $ \frac{2(2+1)}{2} = 3 $ }{} 
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+                \solution{
+                $3 - 1 = 5j - 5k$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $2 = 5(j - k)$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $\frac{2}{5} = j - k$
+                ~\\~\\
+                }{ { ~\\ \raisebox{0pt}[6cm][0pt]{  } } }
 
-                \\ && \\
-                $i = 3$ &
-                    \solution{ $ 1 + 2 + 3 = 6$ }{} &
-                    \solution{ $ \frac{3(3+1)}{2} = 6 $ }{} 
-            \end{tabular}
-
-        \paragraph{Step 2: Rewrite the summation:} ~\\
-            As the sum from $i = 1$ to $m-1$, plus the final term $m$.
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m} i = \sum_{i=1}^{m-1} (i) + m$
-            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
-
-        \paragraph{Step 3: Find an equation  for $\sum_{i=1}^{m-1}$ via the proposition: } 
-
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m-1} i = \frac{(m-1)(m)}{2} $ ~\\
-            $ \sum_{i=1}^{m-1} i = \frac{m^{2} - m}{2} $
-            }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
-
-
-        \paragraph{Step 4: Plug $\sum_{i=1}^{m-1}$ into the summation from step 2 and simplify:}
-
-            ~\\
-            \solution{
-            $ \sum_{i=1}^{m} i = \frac{m^{2} - m}{2} + m $ ~\\
-            $ \sum_{i=1}^{m} i = \frac{m^{2} - m}{2} + \frac{2m}{2} $ ~\\
-            $ \sum_{i=1}^{m} i = \frac{m^{2} + m}{2} $ ~\\
-            $ \sum_{i=1}^{m} i = \frac{m(m + 1)}{2} $ ~\\
-            This matches the original proposition.
-            }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
+            Result:
+                \solution{ Since $j$ is an integer and $k$ is an integer,
+                $j - k$ must also be an integer. Here, we get a fraction,
+                so the counter-example is invalid.
+                }{}
+            
         \end{questionNOGRADE}
-    
+
 \end{document}
