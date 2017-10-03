@@ -12,7 +12,7 @@
 
 \setcounter{chapter}{2}
 \setcounter{section}{4}
-\newcommand{\laChapter}{2.5 Mathematical induction\ }
+\newcommand{\laChapter}{2.5 Proof by contradiction\ }
 \newcounter{question}
 
 \newcommand{\laClass}{CS 210\ }
@@ -85,15 +85,15 @@
             and our \textbf{conclusion} is ``$n$ is even".
 
             \subparagraph{Step 2: Identify the negation:}
+            The negation of an implication is \textbf{not} an implication.
             A counter-example of this would be if we have $p \land \neg q$,
             or ``$n^{2}$ is even and $n$ is odd".
 
             \subparagraph{Step 3: Build a counter-example:}
-            While the negation of an implication is \textbf{not} an implication,
-            we are using this negation in order to build a \textbf{new implication:}
-            the contradition.
-
-            \textbf{Counter-example:} ``If $n^{2}$ is even, then $n$ is odd"
+            Our counter-example is the scenario where the hypothesis
+            is true and the conclusion is false... or in other words,
+            the negation. 
+            \textbf{Counter-example:} ``$n^{2}$ is even and $n$ is odd"
 
             \subparagraph{Step 4: Write the hypothesis \& conclusion symbolically:}
             (For our counter-example implication) \\
@@ -133,35 +133,33 @@
             Prove by contradiction: If $n^{2}$ is odd, then $n$ is odd.
 
             \subparagraph{Step 1: Identify the hypothesis and conclusion:}
-                ~\\ \tab Hypothesis:    \solution{$n^{2}$ is odd}{}
-                ~\\ \tab Conclusion:    \solution{$n$ is odd}{}
+                ~\\ \tab Hypothesis $p$:    \solution{$n^{2}$ is odd}{}
+                ~\\ \tab Conclusion $q$:    \solution{$n$ is odd}{}
             
-            \subparagraph{Step 2: Identify the negation:} ~\\
-                
+            \subparagraph{Step 2: Identify the negation (counter-example):} ~\\~\\
+            	\tab[0.5cm]
+                $p$:
                 \solution{
                     $n^{2}$ is odd
-                }{ \fitb[4cm] } AND
+                }{ \fitb[4cm] } AND \tab[0.5cm]
+                $\neg q$:
                 \solution{
                     $n$ is even
                 }{ \fitb[4cm] }
             
-            \subparagraph{Step 3: Build a counter-example:} ~\\ ~\\
-            
-                IF 
-                \solution{
-                    $n^{2}$ is odd
-                }{ \fitb[4cm] } THEN
-                \solution{
-                    $n$ is even
-                }{ \fitb[4cm] }
                 
-            \subparagraph{Step 4: Write the hypothesis \& conclusion symbolically:}
+            \subparagraph{Step 3: Write the hypothesis \& conclusion symbolically:}
+            ~\\
+            (Make sure you use different variables for $n^{2}$ and $n$.)
                 
-                ~\\~\\ \tab $n^{2} = $ \solution{$2k+1$}{}
-                ~\\~\\ \tab $n = $ \solution{$2j$}{}
-                ~\\~\\ (Make sure you use different variables for $n^{2}$ and $n$.)
+                ~\\~\\ \tab ($p$) \tab $n^{2} = $ \solution{$2k+1$}{}
+                ~\\~\\ \tab ($\neg q$) \tab $n = $ \solution{$2j$}{}
+                ~\\~\\ 
 
             \subparagraph{Step 5: Write equation:}
+            
+            Set the equation for $n$-squared equal to the equation for $n^2$.
+            
                 \solution{
                 $2k+1 = (2j)^{2}$
                 }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
