@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\setcounter{chapter}{2}
+\setcounter{section}{6}
+\newcommand{\laChapter}{Extra credit - number conversion\ }
+\newcounter{question}
+
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\laClass \laSemester}
+\chead{}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    \section{Numerical Representation extra credit}
+
+    \subsection{Programming a converter}
+
+        Let's take the algorithm given by the textbook and write
+        a program to do our conversions for us.
+    
+            \begin{intro}{Algorithm for converting a decimal number to base $b$:}
+                \begin{enumerate}
+                    \item   Input a natural number $n$
+                    \item   While $n > 0$, do the following:
+                        \begin{enumerate}
+                            \item   Divide $n$ by $b$ and get a quotient $q$ and remainder $r$.
+                            \item   Write $r$ as the next (right-to-left) digit.
+                            \item   Replace the value of $n$ with $q$, and repeat.
+                        \end{enumerate}
+                \end{enumerate}
+            \end{intro}
+
+        Open up a Python IDE (e.g., IDLE, Wing) and start with the following code,
+        which includes a function definition and the main program loop:
+
+\begin{lstlisting}[style=pycode]
+# Function definition
+def ConvertFromDecimal( n, b ):
+    print( "" )
+    print( "n = " + str( n ) + ", b = " + str( b ) )
+
+    number = ""
+
+    return number
+
+# Program
+while( True ):
+    n = input( "Enter a base-10 number to convert: " )
+    b = input( "Enter a base to convert it to: " )
+
+    result = ConvertFromDecimal( n, b )
+
+    print( "Result: " + result )
+\end{lstlisting}
+
+        We are going to update the \texttt{ConvertFromDecimal}
+        function to follow the algorithm above.
+
+    \newpage
+
+    We need to begin implementing the algorithm from step 2.
+    For the step ``While $n > 0$, do the following:", write the Python
+    code:
+
+\begin{verbatim}
+while ( n > 0 ):
+\end{verbatim}
+
+    Note that in Python, the inside of a while loop is specified by
+    indenting all inner code forward one level; Python doesn't use
+    curly braces like C++, Java, or C\# does.
+    
+\begin{lstlisting}[style=pycode]
+def ConvertFromDecimal( n, b ):
+    # Now we're inside the function...
+    print( "" )
+    print( "n = " + str( n ) + ", b = " + str( b ) )
+
+    number = ""
+
+    print( "" )
+    while ( n > 0 ):
+        # Now we're inside the while loop...
+\end{lstlisting}
+
+    Next, within the while loop, we need to calculate the quotient $q$
+    and the remainder $r$, which we can use with division and modulus.
+    This is step 2-a.
+
+\begin{verbatim}
+q = n / b
+r = n % b
+\end{verbatim}
+
+    How does a normal division give us the correct value? Because
+    we are treating $n$ and $b$ as integers (not floats or decimals),
+    so it is \textbf{integer division}. In programming, this means
+    it truncates any remainder.
+
+    We can print out the results like this:
+
+\begin{verbatim}
+print( str( n ) + "/" + str( b ) + " = "
+        + str( q ) + " + " + str( r ) + "/" + str( b ) )
+\end{verbatim}
+
+    Now we add $r$ onto our number string, following step 2-b:
+
+\begin{verbatim}
+number = str( r ) + number
+\end{verbatim}
+
+    And, finally, we replace $n$ with $q$ - step 2-c:
+
+\begin{verbatim}
+n = q
+\end{verbatim}
+
+    At the return of the function, the number is returned.
+
+    \newpage
+
+    Full code:
+
+\begin{lstlisting}[style=pycode]
+# Function definition
+def ConvertFromDecimal( n, b ):
+    print( "" )
+    print( "n = " + str( n ) + ", b = " + str( b ) )
+
+    number = ""
+
+    print( "" )
+    while ( n > 0 ):
+        q = n / b
+        r = n % b
+
+        print( str( n ) + "/" + str( b ) + " = " + str( q ) + " + " + str( r ) + "/" + str( b ) )
+
+        number = str( r ) + number
+        n = q
+
+    return number
+
+# Program
+while( True ):
+    n = input( "Enter a base-10 number to convert: " )
+    b = input( "Enter a base to convert it to: " )
+
+    result = ConvertFromDecimal( n, b )
+
+    print( "" )
+    print( "Result: " + result )
+    print( "\n" )
+\end{lstlisting}
+
+    \newpage
+
+    Example output:
+
+\begin{lstlisting}[style=output]
+Enter a base-10 number to convert: 23
+Enter a base to convert it to: 2
+
+n = 23, b = 2
+
+23/2 = 11 + 1/2
+11/2 = 5 + 1/2
+5/2 = 2 + 1/2
+2/2 = 1 + 0/2
+1/2 = 0 + 1/2
+
+Result: 10111
+
+
+Enter a base-10 number to convert: 65
+Enter a base to convert it to: 16
+
+n = 65, b = 16
+
+65/16 = 4 + 1/16
+4/16 = 0 + 4/16
+
+Result: 41
+\end{lstlisting}
+    
+\end{document}
+
+
+
+
+
+
+
+
