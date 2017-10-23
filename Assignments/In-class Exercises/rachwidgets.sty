@@ -43,12 +43,19 @@
 \toggletrue{answerkey}
 %\togglefalse{answerkey}
 
+% Solution text %
+\newcommand\solution[2] {\iftoggle{answerkey}{\begin{answer}#1\end{answer}}{#2}}
+% \solution{SOLUTION}{ nevermind }
+
+\newcommand\notonkey[2] {\iftoggle{answerkey}{ #2 }{ #1 }}
+
 %\iftoggle{answerkey}{ \begin{answer} ANSWER \end{answer} }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
 %\iftoggle{answerkey}{ \begin{answer} ANSWER \end{answer} }{}
 
 
 % SHOWS ANSWERS IN RED, CHANGE TO WHITE FOR EXAM
 \newenvironment{answer}[0] { \color{red} } { \color{black} }
+
 
 
 % Side wrap: %
@@ -82,9 +89,10 @@
 % Answer box %
 \newenvironment{answerbox}[0]{ \begin{mdframed}\noindent } { \end{mdframed} }
 
-% Solution text %
-\newcommand\solution[2] {\iftoggle{answerkey}{\begin{answer}#1\end{answer}}{#2}}
-% \solution{SOLUTION}{ nevermind }
+% ANSWERSHEET
+\newenvironment{answersheetquestion}[3] {\textbf{\footnotesize{#3\%}} Question #1: #2 \hfill \grader ~\\ }{ }
+
+
 
 % EXAM QUESTION FORMAT
 \newenvironment{examquestion}[4] {\textbf{\footnotesize{#4\%}} Question #1: #2 (#3) \hfill \grader \\ ~ \\ }{ }
