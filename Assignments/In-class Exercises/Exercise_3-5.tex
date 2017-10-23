@@ -11,8 +11,8 @@
 \usepackage{boxedminipage}
 
 \setcounter{chapter}{3}
-\setcounter{section}{3}
-\newcommand{\laChapter}{3.4 Boolean Algebra\ }
+\setcounter{section}{4}
+\newcommand{\laChapter}{3.5 Logic Circuits\ }
 \newcounter{question}
 
 \newcommand{\laClass}{CS 210\ }
@@ -38,49 +38,64 @@
     %- Exercise Begin -------------------------------------------------%
     %------------------------------------------------------------------%
 
-    \section{Boolean Algebra}
+    \section{Logic Circuits}
 
-	\subsection{Logic, Sets, and Boolean Algebra}
+	\subsection{Logic Circuits}
 	
 	\begin{intro}{\ }
-		There are a lot of similarities between the operations we have
-		been doing on sets and with the logic operators we used back in Chapter 1.
-		Now, we're also going to introduce the idea of Boolean Algebra,
-		which also has similarities to Sets and Logic.
+		We are going to be using logic gates as one way to represent our
+		Boolean Algebra expressions graphically. The gates that we will be using are:
 		
 		\begin{center}
-			\begin{tabular}{l c c c}
-				& & & \textbf{Boolean}
-				\\
-				& \textbf{Logic} & \textbf{Sets} & \textbf{Algebra}
-				\\ \hline
-				\textbf{Variables} &
-					$p$, $q$, $r$ & $A$, $B$, $C$ & $a$, $b$, $c$ 
+			\begin{tabular}{c c c}
+				AND $\cdot$ & OR $+$ & NOT $'$ \\
+				\includegraphics[height=4cm]{images/3-5-andgate.png} &
+				\includegraphics[height=4cm]{images/3-5-orgate.png} &
+				\includegraphics[height=4cm]{images/3-5-notgate.png} 
 				\\ \\
-				\textbf{``and'' operation} &
-					$\land$ & $\cap$ & $\cdot$
-				\\ \\
-				\textbf{``or'' operation} &
-					$\lor$ & $\cup$ & $+$
-				\\ \\
-				\textbf{``not'' operation} &
-					$\neg$ & $'$ & $'$
-				\\ \\
-				\textbf{``-'' operation} &
-					$a \land \neg b$ & $A - B$ & $a \cdot b'$
-				\\ \\
-				\textbf{Special} &
-					Tautology & Universal set U & 1
-					\\ \\
-					& Contradiction & Empty set $\emptyset$ & 0
+				\begin{tabular}{ c c | c }
+					$a$ & $b$ & $a \cdot b$ \\ \hline
+					0 & 0 & 0 \\
+					0 & 1 & 0 \\
+					1 & 0 & 0 \\
+					1 & 1 & 1
+				\end{tabular}
+				&
+				
+				\begin{tabular}{ c c | c }
+					$a$ & $b$ & $a + b$ \\ \hline
+					0 & 0 & 0 \\
+					0 & 1 & 1 \\
+					1 & 0 & 1 \\
+					1 & 1 & 1
+				\end{tabular}
+				&
+				
+				\begin{tabular}{ c | c }
+					$a$ & $a'$ \\ \hline
+					0 & 1 \\
+					1 & 0 
+				\end{tabular}
 			\end{tabular}
+			
 		\end{center}
 		
-		\paragraph{Example:} Rephrase the following Logic operation using Set and Boolean Algebra notations: $ ( p \land q ) \lor r $
-		
-		Sets: $(P \cap Q) \cup R$
-		
-		Boolean algebra: $( p \cdot q ) + r$
+			~\\
+			Additionally, we can connect gates together in order to build an expression. 
+			For example:
+			
+		\begin{center}
+			\begin{tabular}{c c c}
+				$(a+b)'$ &
+				$ ab + a'b $ &
+				$(a+b) \cdot (b' + c)$
+				\\
+				\includegraphics[height=6cm]{images/3-5-gate1.png} &
+				\includegraphics[height=6cm]{images/3-5-gate2.png} &
+				\includegraphics[height=6cm]{images/3-5-gate3.png} 
+			\end{tabular}
+		\end{center}
+			
 	\end{intro}
 		
 		\newpage
@@ -89,37 +104,28 @@
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
 			
-			Rewrite the following using Boolean Algebra notation:
-			
-			\begin{enumerate}
-				\item[a.] 	$p \land q$							\solution{ $p \cdot q$ }{}
-				\item[b.] 	$p \lor q$								\solution{ $p + q$ }{}
-				\item[c.] 	$\neg p$								\solution{ $p'$ }{}
-				\item[d.]	$(p \land \neg q) \lor p$			\solution{ $(p \cdot q' ) + p$ }{}
-				\item[e.]	$\neg(\neg p))$						\solution{ $(p')'$ }{}
-				\item[f.]	$(p \land \neg q) \lor p \equiv p$	\solution{ $(p \cdot q') + p = p$ }{}
-			\end{enumerate}
+			Write out the Boolean expression that describes each diagram:
+	
 			
         \end{questionNOGRADE}
         
-		\hrulefill
+        \hrulefill
 		
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
 			
-			Rewrite the following using Boolean Algebra notation:
+			Draw a circuit diagram for the following Boolean expressions:
 			
-			\begin{enumerate}
-				\item[a.] 	$A \cap B$								\solution{ $a \cdot b$ }{}
-				\item[b.] 	$A \cup B$								\solution{ $a + b$ }{}
-				\item[c.] 	$A'$									\solution{ $a'$ }{}
-				\item[d.]	$(A-B)$									\solution{ $a \cdot b'$ }{}
-				\item[e.]	$A' \cup (A \cap B)$					\solution{ $a' + (a \cdot b)$ }{}
-				\item[f.]	$(A - B)' = A' \cup (A \cap B)$		\solution{ $(a \cdot b')' = a'$ }{}
-			\end{enumerate}
+			\begin{tabular}{p{4cm} p{4cm} p{4cm}}
+				a. $a + b'$ &
+				b. $a' \cdot b'$ &
+				c. $a + (b \cdot c)$
+			\end{tabular}
+
 			
         \end{questionNOGRADE}
+        
         
         
 
