@@ -213,7 +213,6 @@
         \end{intro}
 
 
-        \newpage
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
@@ -221,9 +220,9 @@
             Given theset sets:
 
             \begin{tabular}{l l l}
-                $U = \{1, 2, 3, 4, 5, 6\}$ &
+                $U = \{-2, -1, 1, 2, 3, 4, 5, 6\}$ &
                 $A = \{1, 1, 2, 2, 2, 4, 4\}$ &
-                $B = \{2, 2\}$ \\
+                $B = \{-2, 2\}$ \\
                 $C = \{1, 2, 4, 5, 6\}$ &
                 $D = \{6, 5, 4, 2, 1\}$ &
                 $E = \{1, 4\}$
@@ -233,29 +232,217 @@
                 \item[a.] Which of these statements are true? Mark with a $\checkmark$
 
                 \begin{tabular}{l l l}
-                    a. $A \subseteq B$      \solution{}{}
+                    a. $B \subseteq A$      \solution{ \xmark }{ \fitb } &
+                    b. $B \subseteq E$      \solution{ \xmark }{ \fitb } &
+                    c. $E \subseteq A$      \solution{ \checkmark }{ \fitb }
+                    \\
+                    d. $A \subseteq U$      \solution{ \checkmark }{ \fitb } &
+                    e. $D \subseteq C$      \solution{ \checkmark }{ \fitb } &
+                    f. $C \subseteq D$      \solution{ \checkmark }{ \fitb }
+                    \\
+                    g. $B \subseteq \mathbb{N}$ \solution{ \xmark }{ \fitb } &
+                    h. $E \subseteq \mathbb{Z}$ \solution{ \checkmark }{ \fitb } &
+                    i. $A \subseteq C$      \solution{ \checkmark }{ \fitb }
                 \end{tabular}
 
                 \item[b.] Fill in the blanks with either
                     $\subseteq$ (is a subset of), or
                     $\not\subseteq$ (is not a subset of), or
                     $=$ (is equal to) for the following:
+
+                \begin{tabular}{l l l}
+                    a. $C$ \solution{ = }{\fitb} $D$ &
+                    b. $B$ \solution{ $\subseteq$ }{\fitb} $U$ &
+                    c. $A$ \solution{ $\not\subseteq$}{\fitb} $E$
+                \end{tabular}
             \end{enumerate}
 
         \end{questionNOGRADE}
 
+        \newpage
+
+        \subsection{Intersections, unions, and differences}
+
+        \begin{intro}{\ }
+            \begin{tabular}{l l}
+                Intersection of $A$ and $B$, $A \cap B$ &
+                    Is the set that contains those \\ &
+                    elements common to both $A$ and $B$. \\ &
+                    In set-builder notation, we write: \\ &
+                    $A \cap B = \{ x \in U : x \in A \land x \in B \}$
+                    \\
+                \\
+                Union of $A$ and $B$, $A \cup B$ &
+                    Is the set that contains those \\ &
+                    elements in either set $A$ or $B$. \\ &
+                    In set-builder notation, we write: \\ &
+                    $A \cup B = \{ x \in U: x \in A \lor x \in B \}$
+                    \\
+                \\
+                Difference of $A$ and $B$, $A - B$ &
+                    Is the set that contains those elements \\ &
+                    in $A$ which are NOT in $B$. In set- \\&
+                    buidler notation, we write: \\ &
+                    $A - B = \{ x \in U : x \in A \land x \not\in B \}$
+                    \\
+                \\
+                Disjoint sets &
+                    Sets $A$ and $B$ are disjoint if \\ &
+                    $A \cap B = \emptyset$.
+                \\ \\
+                Complement of $A$, $A'$ &
+                    Given a set $A$ with elements from the \\ &
+                    universe $U$, the complement of $A$ \\ &
+                    (written $A'$) is the set that contains \\ &
+                    those elemnets of the universal set $U$ \\ &
+                    which are not in $A$. That is, \\ &
+                    $A' = U-A$.
+                    \\
+            \end{tabular}
+
+            ~\\
+            Venn diagrams are used to visually represent relationships
+            between sets. Set $A$ and set $B$ (or more) are drawn
+            as overalpping circles, and the shaded-in region is the
+            resulting set based on the \textit{intersection},
+            \textit{union}, \textit{complement}, or \textit{difference}
+            operations.
+
+            \begin{center}
+                \begin{tabular}{c c c c}
+                    \includegraphics[width=2.5cm]{images/3-1-intersection.png}
+                    &
+                    \includegraphics[width=2.5cm]{images/3-1-union.png}
+                    &
+                    \includegraphics[width=2.5cm]{images/3-1-difference.png}
+                    &
+                    \includegraphics[width=2.5cm]{images/3-1-complement.png}
+                    \\
+                    $A \cap B$ &
+                    $A \cup B$ &
+                    $A - B$ &
+                    $A'$
+                \end{tabular}
+            \end{center}
+
+        \end{intro}
+
+        \newpage
 
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
+
+            For the following set operations, color in the Venn diagrams.
+
+            \begin{center}
+                \begin{tabular}{c c c}
+                    $A \cap B$ &
+                    $A \cap C$ &
+                    $(A \cap B) \cup C$
+                    \\
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png}
+                    \\
+                    $B \cup C$ &
+                    $A \cap (B \cup C)$ &
+                    $B - C$
+                    \\
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png}
+                    \\
+                    $A'$ &
+                    $(A \cup B) - B$ &
+                    $A \cup (B - C)$
+                    \\
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png}
+                    \\
+                    $(A \cap B) \cup (A \cap C)$ &
+                    $(A \cup B) \cap (A \cup C)$ &
+                    $(A \cup B \cup C)$
+                    \\
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png} &
+                    \includegraphics[width=4cm]{images/venndiagram.png}
+                \end{tabular}
+            \end{center}
+
+        \end{questionNOGRADE}
+
+        \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Given the following sets, compute the set operations and prove
+            the following statements.
+
+            \begin{tabular}{l l l l}
+                $U = \{1, 2, 3, 4, 5, 6, 7, 8 \} $ &
+                $A = \{1, 3, 5\}$ &
+                $B = \{1, 2, 3, 4\}$ &
+                $C = \{1, 2, 5, 6, 8\}$
+            \end{tabular}
+
+            \begin{enumerate}
+                \item[a.]   $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+                    \solution{}{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }
+
+                \item[b.]   $(A \cup B)' = A' \cap B'$
+                    \solution{}{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }
+
+                \item[c.]   $A \cap (A \cup B) = A$
+                    \solution{}{ ~\\ \raisebox{0pt}[4cm][0pt]{  } }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+        \newpage
+
+        \subsection{Set-builder notation}
+
+        \begin{intro}{\ }
+            It is impractical to try to list every element of a set.
+            We use set-builder notation to describe most sets.
+            There are two different forms of set-builder notation:
+
+            ~\\
+            A \textbf{Property Description} is of the form,
+            ``The set of all $x$ in $u$, such that $x$ is \fitb."
+            The blank is some \textit{property} of $x$, which
+            determines whether an element of $U$ is or is not in the set.
+
+            ~\\
+            A \textbf{Form Description} is of the form,
+            ``All numbers of the form \fitb, where $x$ is in the set $D$."
+            The first part will be some equation (like ``$2x$" for even).
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
 
 
         \end{questionNOGRADE}
 
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+
+
+        \end{questionNOGRADE}
 
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
+
 
 
         \end{questionNOGRADE}
