@@ -1,0 +1,272 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\setcounter{chapter}{3}
+\setcounter{section}{0}
+\newcommand{\laChapter}{3.1 Set Definitions and Operations\ }
+\newcounter{question}
+
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\laClass \laSemester}
+\chead{}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    \section{Set Definitions and Operations}
+
+    %------------------------------------------------------------------%
+    \subsection{Common Sets}
+
+        \begin{intro}{Common sets we will see in this chapter:}
+            \begin{tabular}{l l}
+                $\mathbb{N}$, the set of natural numbers &
+                These numbers are ``counting
+                \\ & numbers".
+                This set contains 0 and
+                \\ & positive integers.
+
+                \\
+                $\mathbb{Z}$, the set of integers &
+                This set contains all integers:
+                \\ & positive, negative, and zero.
+                \\
+                $\mathbb{Q}$, the set of rational numbers &
+                This set contains all numbers that can
+                \\ &  be characterized
+                as ratios, such as $\frac{1}{2}$,
+                \\ & $\frac{-17}{4}$,
+                or even $\frac{3}{1}$.
+                \\
+                $\mathbb{R}$, the set of all real numbers &
+                These can be thought of as decimal
+                \\ & numbers with possibly
+                unending
+                \\ & strings of digits after
+                the decimal point.
+            \end{tabular}
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            For the following numbers, which set(s) do they belong to?
+
+            \begin{center}
+                \begin{tabular}{| c | c | c | c | c |}
+                    \hline
+                    & $\mathbb{N}$ & $\mathbb{Z}$ & $\mathbb{Q}$ & $\mathbb{R}$
+                    \\ \hline
+                    10 & & & &
+                    \\ \hline
+                    -5 & & & &
+                    \\ \hline
+                    $12/6$ & & & &
+                    \\ \hline
+                    $\pi$ & & & &
+                    \\ \hline
+                    2.40 & & & &
+                    \\ \hline
+                \end{tabular}
+            \end{center}
+
+        \end{questionNOGRADE}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Give examples for each of the following types of sets:
+
+            \begin{enumerate}
+                \item[a.]   List three numbers that are in the
+                    set of all integers, $\mathbb{Z}$,
+                    but are NOT in the set of natural numbers,
+                    $\mathbb{N}$.
+                    \solution{}{ ~\\ }
+
+                \item[b.]   List three numbers that are in the
+                    set of rational numbers, $\mathbb{Q}$,
+                    but are NOT in the set of integers,
+                    $\mathbb{Z}$.
+                    \solution{}{ ~\\ }
+
+                \item[c.]   List three numbers that are in the
+                    set of all real numbers $\mathbb{R}$,
+                    but are NOT in the set of rational numbers,
+                    $\mathbb{Q}$.
+                    \solution{}{ ~\\ }
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+        \newpage
+
+        \begin{intro}{Writing out sets}
+            When we are building a discrete (finite) set,
+            we usually give the set a capital letter as its
+            identifier. Then, the elements of the set are written
+            within curly-braces, like this:
+
+            $$ A = \{ 2, 4, 6, 8 \} $$
+
+            The elements here are 2, 4, 6, and 8.
+            The index of the element 2 is 1 - it is
+            at position 1 of the set - so $A_1 = 2$.
+        \end{intro}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Create sets that meet the following criteria.
+            Give the sets any letter identifier that you want.
+
+            \begin{enumerate}
+                \item[a.]   All elements of the set are odd integers.
+                    \solution{}{ ~\\~\\ }
+
+                \item[b.]   All elements of the set are fractions
+                    such that, when divided, they result in
+                    an infinite string of numbers to the right
+                    of the decimal place (e.g., $3.333333\bar{3}$...)
+                    \solution{}{ ~\\~\\ }
+
+                \item[c.]   Create two sets of integers, where
+                    the two sets have exactly two elements in common.
+                    \solution{}{ ~\\~\\ }
+
+                \item[d.]   Create two sets of natural numbers,
+                    where the two sets have NO elements in common.
+                    \solution{}{ ~\\~\\ }
+
+                \item[e.]   Create a set that is empty.
+                    \solution{}{ ~\\~\\ }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+        \newpage
+
+        \subsection{Subsets}
+
+        \begin{intro}{Subsets and existence within sets:}
+            ~\\
+            \begin{tabular}{l l}
+                $x$ exists in $A$ &
+                    The notation $x \in A$ means ``$x$ is an element of $A$"
+                    \\ &
+                    which means that $x$ is one of the member elements
+                    \\ & of $A$.
+                \\ \\
+                $A$ is a subset of $B$ &
+                    $A$ is a subset of $B$ (written as $A \subseteq B$) if
+                    \\ &
+                    every element in $A$ is also an element in $B$.
+                    \\ &
+                    Formally, this means that for every $x$, if $x \in A$,
+                    \\ & then $x \in B$.
+                \\ \\
+                $A$ is equal to $B$ &
+                    $A$ is equal to $B$ (written $A = B$) means that
+                    \\ &
+                    $A$ and $B$ have exactly the same members. This is
+                    \\ &
+                    expressed formally by saying, $A \subseteq B$ and $B \subseteq A$.
+                \\ \\
+                An Empty set &
+                    A set that contains no elements is called an empty
+                    \\ & set,
+                    and it is denoted by $\{ \}$ or $\emptyset$.
+                \\ \\
+                The Universal set &
+                    For any given discussion, all the sets will be subsets
+                    \\ & of a larger set called the universal set (or universe)
+                    \\ &We commonly use the letter $U$ to denote this set.
+            \end{tabular}
+        \end{intro}
+
+
+        \newpage
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Given theset sets:
+
+            \begin{tabular}{l l l}
+                $U = \{1, 2, 3, 4, 5, 6\}$ &
+                $A = \{1, 1, 2, 2, 2, 4, 4\}$ &
+                $B = \{2, 2\}$ \\
+                $C = \{1, 2, 4, 5, 6\}$ &
+                $D = \{6, 5, 4, 2, 1\}$ &
+                $E = \{1, 4\}$
+            \end{tabular}
+
+            \begin{enumerate}
+                \item[a.] Which of these statements are true? Mark with a $\checkmark$
+
+                \begin{tabular}{l l l}
+                    a. $A \subseteq B$      \solution{}{}
+                \end{tabular}
+
+                \item[b.] Fill in the blanks with either
+                    $\subseteq$ (is a subset of), or
+                    $\not\subseteq$ (is not a subset of), or
+                    $=$ (is equal to) for the following:
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+
+        \end{questionNOGRADE}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+
+        \end{questionNOGRADE}
+
+
+\end{document}
+
+
+
+
+
+
+
+
