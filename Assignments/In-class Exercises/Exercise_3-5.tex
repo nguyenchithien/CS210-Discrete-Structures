@@ -41,17 +41,17 @@
     \section{Logic Circuits}
 
 	\subsection{Logic Circuits}
-	
+
 	\begin{intro}{\ }
 		We are going to be using logic gates as one way to represent our
 		Boolean Algebra expressions graphically. The gates that we will be using are:
-		
+
 		\begin{center}
 			\begin{tabular}{c c c}
 				AND $\cdot$ & OR $+$ & NOT $'$ \\
 				\includegraphics[height=4cm]{images/3-5-andgate.png} &
 				\includegraphics[height=4cm]{images/3-5-orgate.png} &
-				\includegraphics[height=4cm]{images/3-5-notgate.png} 
+				\includegraphics[height=4cm]{images/3-5-notgate.png}
 				\\ \\
 				\begin{tabular}{ c c | c }
 					$a$ & $b$ & $a \cdot b$ \\ \hline
@@ -61,7 +61,7 @@
 					1 & 1 & 1
 				\end{tabular}
 				&
-				
+
 				\begin{tabular}{ c c | c }
 					$a$ & $b$ & $a + b$ \\ \hline
 					0 & 0 & 0 \\
@@ -70,20 +70,20 @@
 					1 & 1 & 1
 				\end{tabular}
 				&
-				
+
 				\begin{tabular}{ c | c }
 					$a$ & $a'$ \\ \hline
 					0 & 1 \\
-					1 & 0 
+					1 & 0
 				\end{tabular}
 			\end{tabular}
-			
+
 		\end{center}
-		
+
 			~\\
-			Additionally, we can connect gates together in order to build an expression. 
+			Additionally, we can connect gates together in order to build an expression.
 			For example:
-			
+
 		\begin{center}
 			\begin{tabular}{c c c}
 				$(a+b)'$ &
@@ -92,42 +92,65 @@
 				\\
 				\includegraphics[height=6cm]{images/3-5-gate1.png} &
 				\includegraphics[height=6cm]{images/3-5-gate2.png} &
-				\includegraphics[height=6cm]{images/3-5-gate3.png} 
+				\includegraphics[height=6cm]{images/3-5-gate3.png}
 			\end{tabular}
 		\end{center}
-			
+
 	\end{intro}
-		
+
 		\newpage
-		
+
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
-			
+
 			Write out the Boolean expression that describes each diagram:
-	
-			
+
+
+            \begin{center}
+                \begin{tabular}{c c c}
+                    \includegraphics[height=8cm]{images/3-5-gate4.png} &
+                    \includegraphics[height=8cm]{images/3-5-gate5.png} &
+                    \includegraphics[height=8cm]{images/3-5-gate6.png}
+
+                \end{tabular}
+            \end{center}
+
+            \solution{}
+            { ~\\~\\~\\ }
+
+
         \end{questionNOGRADE}
-        
+
         \hrulefill
-		
+
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
-			
+
 			Draw a circuit diagram for the following Boolean expressions:
-			
+
 			\begin{tabular}{p{4cm} p{4cm} p{4cm}}
 				a. $a + b'$ &
 				b. $a' \cdot b'$ &
 				c. $a + (b \cdot c)$
 			\end{tabular}
 
-			
+
         \end{questionNOGRADE}
-        
-        
-        
+
+
+        \newpage
+
+        \subsection{2-variable Karnaugh Maps}
+
+        \begin{intro}{\ }
+        \end{intro}
+
+        \subsection{3-variable Karnaugh Maps}
+
+        \begin{intro}{\ }
+        \end{intro}
 
 \end{document}
 
