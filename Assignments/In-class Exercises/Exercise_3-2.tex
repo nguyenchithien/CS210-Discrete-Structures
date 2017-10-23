@@ -1,0 +1,426 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\setcounter{chapter}{3}
+\setcounter{section}{1}
+\newcommand{\laChapter}{3.2 More Operations on Sets\ }
+\newcounter{question}
+
+\newcommand{\laClass}{CS 210\ }
+\newcommand{\laSemester}{Fall 2017\ }
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\laClass \laSemester}
+\chead{}
+\rhead{Ch \laChapter}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize Compiled by Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
+
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    \section{More Operations on Sets}
+
+    %------------------------------------------------------------------%
+    \subsection{Cartesian Products}
+
+    \begin{intro}{\ }
+        We can compute the Cartesian Product of two sets, such as $A$ and $B$.
+        The result will be a set of \textbf{ordered pairs}, such as $(a, b)$, combining
+        the elements of $A$ and $B$ together.
+
+        \paragraph{Example:} For $A = \{1, 2\}$ and $B = \{4, 5, 6\}$, find $A \times B$.
+
+        \begin{center}
+            \begin{tabular}{c | c | c | c}
+                & $B_{1} = 4$ & $B_{2} = 5$ & $B_{3} = 6$
+                \\ \hline
+                $A_{1} = 1$ & (1, 4) & (1, 5) & (1, 6)
+                \\
+                $A_{2} = 2$ & (2, 4) & (2, 5) & (2, 6)
+            \end{tabular}
+        \end{center}
+
+        So the result is that
+        $$ A \times B = \{ (1, 4), (1, 5), (1, 6), (2, 4), (2, 5), (2, 6) \} $$
+    \end{intro}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Given the following sets, calculate each Cartesian Product.
+            Write it out in a table and as a set, like above.
+
+            $$ A = \{1, 2\} \tab B = \{3, 4\} $$
+
+            \begin{enumerate}
+                \item[a.] $A \times B = \{ \tab[6cm] \}$
+                    \begin{center}
+                        \begin{tabular}{c | c | c}
+                            & $B_{1} = 3$ & $B_{2} = 4$ \\ \hline
+                            $A_{1} = 1$ & & \\
+                            $A_{2} = 2$ & &
+                        \end{tabular}
+                    \end{center}
+
+                
+                \item[b.] $B \times A = \{ \tab[6cm] \}$
+                    \begin{center}
+                        \begin{tabular}{c | c | c}
+                            & $A_{1} = 1$ & $A_{2} = 2$ \\ \hline
+                            $B_{1} = 3$ & & \\
+                            $B_{2} = 4$ & &
+                        \end{tabular}
+                    \end{center}
+
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+        \newpage
+
+        
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Given the following sets, calculate each Cartesian Product.
+            Write it out in a table and as a set.
+
+            $$ A = \{x, y, z\} \tab B = \{1, 3\} $$
+
+            \begin{enumerate}
+                \item[a.] $A \times B = \{ \tab[6cm] \}$
+                    \begin{center}
+                        \begin{tabular}{c | c | c}
+                            & $B_{1} = 1$ & $B_{2} = 3$ \\ \hline
+                            $A_{1} = x$ & & \\
+                            $A_{2} = y$ & & \\
+                            $A_{3} = z$ & & 
+                        \end{tabular}
+                    \end{center}
+
+                
+                \item[b.] $B \times A = \{ \tab[6cm] \}$
+                    \begin{center}
+                        \begin{tabular}{c | c | c | c}
+                            & $A_{1} = x$ & $A_{2} = y$ & $A_{3} = z$ \\ \hline
+                            $B_{1} = 1$ & & & \\
+                            $B_{2} = 3$ & & &
+                        \end{tabular}
+                    \end{center}
+
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+        \hrulefill
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Calculate the Cartesian Products and write out the result
+            as a set of coordinate pairs.
+
+            $$ A = \{2, 4\} \tab B = \{1, 3\} \tab C = \{3, 4, 5, 6\} $$
+
+            \begin{enumerate}
+                \item[a.]   $A \times B$    \solution{
+                    $\{2, 4\} \times \{1, 3\} = \{ (2, 1), (2, 3), (4, 1), (4, 3) \}$
+                }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[b.]   $A \times C$    \solution{
+                    $\{2, 4\} \times \{3, 4, 5, 6\} =
+                    \{  (2, 3), (2, 4), (2, 5), (2, 6),
+                        (4, 3), (4, 4), (4, 5), (4, 6) \}$
+                }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[c.]   $B \times C$    \solution{
+                    $\{1, 3\} \times \{3, 4, 5, 6\} = \{
+                        (1, 3), (1, 4), (1, 5), (1, 6),
+                        (3, 3), (3, 4), (3, 5), (3, 6) \}$
+                }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[d.]   $A^{2}$ (Hint: $A \times A$)    \solution{
+                    $\{2, 4\} \times \{2, 4\} = \{
+                        (2, 2), (2, 4),
+                        (4, 2), (4, 4) \}$
+                }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+        \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            With the given sets, find the intersections, unions, and differences.
+
+            $$ A = \{1\} \tab B = \{3, 5, 7\} \tab C = \{3, 5, 9, 11\} $$
+            $$ A \times B = \{ (1, 3), (1, 5), (1, 7) \} \tab{}
+                A \times C = \{ (1, 3), (1, 5), (1, 9), (1, 11) \} $$
+
+            \begin{enumerate}
+                \item[a.]   $(A \times B) - (A \times C)$
+                    \solution{}{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[b.]   $A \times C) - (A \times B)$
+                    \solution{}{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[c.]   $A \times (B \cup C)$
+                    \solution{}{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[d.]   $A \times (B \cup C) \cap (A \times B)$
+                    \solution{}{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+                \item[e.]   $(A \times B) \cup (A \times C)$
+                    \solution{}{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+    \newpage
+    
+    %------------------------------------------------------------------%
+    \subsection{Partitions}
+
+    \begin{intro}{\ }
+        The Partition of a set, usually denoted by $S$, is a set of subsets
+        that, when combined together, form the original set.
+
+        \paragraph{Definition:}
+            For a set $A$, a partition of $A$ is a set $S = \{ S_{1}, S_{2}, S_{3}, ... \}$
+            of subsets of $A$, such that:
+            \begin{enumerate}
+                \item   For all $i$, $S_{i} \neq \emptyset$; that is, each part is non-empty.
+                \item   For all $i$ and $j$, if $S_{i} \neq S_{j}$, then $S_{i} \cap S_{j} = \emptyset$;{}
+                    that is, different \textit{parts} have nothing in common.
+                \item   $S_{1} \cup S_{2} \cup S_{3} \cup ... = A$; that is,
+                    every element in $A$ is in some part.
+            \end{enumerate}
+
+            \subparagraph{Clarifications:}
+                The elements in $S$, such as $S_{i}$, are just sets of elements that
+                contain elements from $A$. None of the elements of $A$ can be duplicated
+                across multiple elements from $S$. And, all elements of $A$ must be
+                present in $S$.
+
+
+            \paragraph{Example:}
+                Let's say we have a set $A = \{1, 2, 3, 4\}$, we could form multiple partitions, such as:
+
+                \begin{itemize}
+                    \item   Partition 1:    $\{ \{1\}, \{2\}, \{3\}, \{4\} \}$
+                    \item   Partition 2:    $\{ \{1, 2\}, \{3, 4\} \}$
+                    \item   Partition 3:    $\{ \{1, 2, 3\}, \{4\} \}$
+                    \item   Partition 4:    $\{ \{1, 2, 3, 4\} \}$
+                \end{itemize}
+
+                Essentially, it can be any combination of subsets of whatever size,
+                so long as all elements of $A$ are represented in the partition.
+    \end{intro}
+
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            For the given set, write out all possible partitions of
+            $ A = \{1, 2\} $.
+            There should be 2. Note that the \textit{order} of the
+            elements of the set does not matter.
+            
+            \solution{
+                $\{ \{1\}, \{2\} \}$ and $\{ \{1, 2\} \}$
+            }{}
+
+        \end{questionNOGRADE}
+    
+    \newpage
+    
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            For the given set, write out all possible partitions.
+            There should be 5.
+
+            $$ B = \{1, 2, 3\} $$
+
+            \solution{
+                \begin{enumerate}
+                    \item   $\{ \{1\}, \{2\}, \{3\} \}$
+                    \item   $\{ \{1, 2\}, \{3\} \}$
+                    \item   $\{ \{1\}, \{2, 3\} \}$
+                    \item   $\{ \{1, 3\}, \{2\} \}$
+                    \item   $\{ \{1, 2, 3\} \}$
+                \end{enumerate}
+            }{
+                \begin{enumerate}
+                    \item   
+                    \item
+                    \item
+                    \item
+                    \item
+                \end{enumerate}
+            }
+
+        \end{questionNOGRADE}
+
+        \hrulefill
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Which of the following are valid partitions of the set
+            $A = \{1, 2, 4, 8, 16, 32, 64, 128 \}$? For those that
+            are not, explain why not.
+
+            \begin{enumerate}
+                \item[a.]   $\{ 1, 2, \{4, 8, 16\}, \{32, 64, 128\} \}$
+                    \solution{ Not valid - 1 and 2 aren't sets }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[b.]   $\{ \{1, 16\}, \{32, 64, 2\}, \{8, 4, 16\}, \{ 128 \} \}$
+                    \solution{ Not valid - 16 shows up twice. } { ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[c.]   $\{ \{1, 128\}, \{8, 4, 16\}, \{64, 2\} \}$
+                    \solution{ Not valid - 32 is missing. }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[d.]   $\{ \{8, 4, 2\}, \{16, 1, 128\}, \{32, 64\} \}$
+                    \solution{ Valid partition }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+    \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            For the set $A = \{1, 2, 3, 4, 5, 6\}$, build partitions that
+            meet the following criteria:
+
+            \begin{enumerate}
+                \item[a.]   Find a partition where each part has the same size.
+                    \solution{ Multiple solutions }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[b.]   Find a partition where no two parts have the same size.
+                    \solution{ Multiple solutions }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[c.]   Find a partition that has as many parts as possible.
+                    \solution{ Multiple solutions }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+
+                \item[d.]   Find the partition that has as few parts as possible.
+                    \solution{ Multiple solutions }{ ~\\ \raisebox{0pt}[1cm][0pt]{  } }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+    \newpage
+    
+    %------------------------------------------------------------------%
+    \subsection{Power Sets}
+
+        \begin{intro}{\ }
+            The Power Set of $A$ is defined as
+            $\wp(A) = \{ S : S \subseteq A \}$. In other words, the Power Set
+            is a set of all possible subsets you could build from $A$, including
+            the empty set.
+
+            \paragraph{Example 1:} Find the Power Set of $\{A\}$.
+
+            $$\wp(\{A\}) = \{ \emptyset, \{A\} \}$$
+
+            \paragraph{Example 2:} Find the Power Set of $\{A, B\}$.
+
+            $$\wp(\{A, B\}) = \{ \emptyset, \{A\}, \{B\}, \{A, B\} \}$$
+
+            \paragraph{Example 3:} Find the Power Set of $\{A, B, C\}$.
+
+            $$\wp(\{A, B, C\}) =
+                \{ \emptyset,
+                    \{A\}, \{B\}, \{C\},
+                    \{A, B\}, \{B, C\}, \{A, C\},
+                    \{A, B, C\}
+                \}$$
+                
+            \paragraph{Example 4:} Find the Power Set of $\{A, B, C, D\}$.
+
+            ~\\
+            $\wp(\{A, B, C, D\}) = \{ \\
+                    \tab \emptyset, \\
+                    \tab \{ A \}, \{ B \}, \{ C \}, \{ D \}, \\
+                    \tab \{ A, B \}, \{ A, C \}, \{ A, D \},
+                     \{ B, C \}, \{ B, D \},
+                     \{ C, D \}, \\
+                    \tab \{ A, B, C \}, \{ A, B, D \}, \{ A, C, D \}, \{ B, C, D \}, \\
+                    \tab \{ A, B, C, D \} \\
+                \}$
+
+            (Phew!)
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Find the Power Set for each.
+
+            \begin{enumerate}
+                \item[a.]   $\wp( \{1, 2\} ) = $
+                    \solution{
+                        $\{ \emptyset, \{1\}, \{2\}, \{1, 2\}$
+                    }{ }
+                \item[b.]   $\wp( \{3, 4\} ) = $
+                    \solution{
+                        $\{ \emptyset, \{3\}, \{4\}, \{3, 4\}$
+                    }{ }
+                \item[c.]   $\wp( \{1, 2, 3\} ) = $
+                    \solution{
+                        $\{ \emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{2, 3\}, \{1, 3\}, \{1, 2, 3\}$
+                    }{ }
+            \end{enumerate}
+
+        \end{questionNOGRADE}
+
+
+
+
+
+        
+
+\end{document}
+
+
+
+
+
+
+
+
