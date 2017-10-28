@@ -44,7 +44,7 @@ def OutputSet( fileHandler, key, values ):
 
     adjustKey = key.replace( "n", "\cap" ).replace( "u", "\cup" )
     
-    fileHandler.write( adjustKey + " = $\{ " )
+    fileHandler.write( "$" + adjustKey + " = \{ " )
     
     items = 0
     for v in values:
