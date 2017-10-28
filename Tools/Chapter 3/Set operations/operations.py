@@ -41,7 +41,10 @@ def GetDifference( A, B ):
     
 def OutputSet( fileHandler, key, values ):
     # So I can use it in LaTeX
-    fileHandler.write( key + " = \{ " )
+
+    adjustKey = key.replace( "n", "\cap" ).replace( "u", "\cup" )
+    
+    fileHandler.write( adjustKey + " = $\{ " )
     
     items = 0
     for v in values:
@@ -51,7 +54,7 @@ def OutputSet( fileHandler, key, values ):
         fileHandler.write( str( v ) )
         items = items + 1
 
-    fileHandler.write( " \}" )
+    fileHandler.write( " \}$" )
     fileHandler.write( "\n" )
         
 
