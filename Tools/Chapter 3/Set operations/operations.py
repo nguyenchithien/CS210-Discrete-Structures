@@ -39,6 +39,23 @@ def GetDifference( A, B ):
             
     return newSet
     
+def OutputSet( fileHandler, key, values ):
+    # So I can use it in LaTeX
+    fileHandler.write( key + " = \{ " )
+    
+    items = 0
+    for v in values:
+        if items != 0:
+            fileHandler.write( ", " )
+
+        fileHandler.write( str( v ) )
+        items = items + 1
+
+    fileHandler.write( " \}" )
+    fileHandler.write( "\n" )
+        
+
+fileHandler = open( "Sets.txt", "w" )
 
 sets = {}
 
@@ -58,20 +75,23 @@ for i in range( 1, 5 ):
             thisSet.append( element )
 
     thisSet.sort()
-
     sets[ letter ] = thisSet
     letter = chr( ord( letter ) + 1 )
 
 # Show sets
 print( "U = ", universe )
+OutputSet( fileHandler, "U", universe )
 
 for key, value in sets.iteritems():
     print( key + " = ", value )
+    OutputSet( fileHandler, key, value )
 
 # Do operations
 operations = {}
 
-print( "\n\n OPERATIONS \n" )
+print( "\n\n BASIC OPERATIONS \n" )
+fileHandler.write( "\n\n ------------------------------------------------------------------" )
+fileHandler.write( "\n BASIC OPERATIONS \n" )
 
 for k1, s1 in sets.iteritems():
     for k2, s2 in sets.iteritems():
@@ -90,11 +110,39 @@ for k1, s1 in sets.iteritems():
         for k, o in operationSet.iteritems():
             sys.stdout.write( k + "\t" )
             sys.stdout.write( str( o ) + "\n" )
+            
+            OutputSet( fileHandler, k, o )
+            
             operations[ k ] = o
-
-        
         
         print( "\n" )
+        fileHandler.write( "\n" )
 
 
+print( "\n\n COMPOUND OPERATIONS \n" )
 
+fileHandler.write( "\n\n ------------------------------------------------------------------" )
+fileHandler.write( "\n COMPOUND OPERATIONS \n" )
+
+for k1, s1 in operations.iteritems():
+    for k2, s2 in operations.iteritems():
+        if k1 == k2:
+            continue
+
+        operationSet = {}
+    
+        operationSet[ "(" + k1 + ") n (" + k2 + ")" ] = GetIntersection( s1, s2 )
+        operationSet[ "(" + k1 + ") u (" + k2 + ")" ] = GetUnion( s1, s2 )
+        operationSet[ "(" + k1 + ") - (" + k2 + ")" ] = GetDifference( s1, s2 )
+        operationSet[ "(" + k2 + ") - (" + k1 + ")" ] = GetDifference( s2, s1 )
+        operationSet[ "(" + k1 + ")'" ] = GetDifference( universe, s1 )
+        operationSet[ "(" + k2 + ")'" ] = GetDifference( universe, s2 )
+
+        for k, o in operationSet.iteritems():
+            sys.stdout.write( k + "\t" )
+            sys.stdout.write( str( o ) + "\n" )
+            
+            OutputSet( fileHandler, k, o )
+        
+        print( "\n" )
+        fileHandler.write( "\n" )
