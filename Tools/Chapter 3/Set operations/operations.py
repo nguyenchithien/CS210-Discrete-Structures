@@ -69,6 +69,7 @@ for key, value in sets.iteritems():
     print( key + " = ", value )
 
 # Do operations
+operations = {}
 
 print( "\n\n OPERATIONS \n" )
 
@@ -76,25 +77,23 @@ for k1, s1 in sets.iteritems():
     for k2, s2 in sets.iteritems():
         if k1 == k2:
             continue
-            
-        sys.stdout.write( k1 + " n " + k2 + ": \t\t" )
-        sys.stdout.write( str( GetIntersection( sets[ k1 ], sets[ k2 ] ) ) )
-        print( "" )
-        sys.stdout.write( k1 + " u " + k2 + ": \t\t" )
-        sys.stdout.write( str( GetUnion( sets[ k1 ], sets[ k2 ] ) ) )
-        print( "" )
-        sys.stdout.write( k1 + " - " + k2 + ": \t\t" )
-        sys.stdout.write( str( GetDifference( sets[ k1 ], sets[ k2 ] ) ) )
-        print( "" )
-        sys.stdout.write( k1 + " - " + k2 + ": \t\t" )
-        sys.stdout.write( str( GetDifference( sets[ k2 ], sets[ k1 ] ) ) )
-        print( "" )
-        sys.stdout.write( k1 + "': \t\t" )
-        sys.stdout.write( str( GetDifference( universe, sets[ k1 ] ) ) )
-        print( "" )
-        sys.stdout.write( k2 + "': \t\t" )
-        sys.stdout.write( str( GetDifference( universe, sets[ k2 ] ) ) )
-        print( "" )
+
+        operationSet = {}
+    
+        operationSet[ k1 + " n " + k2 ] = GetIntersection( sets[ k1 ], sets[ k2 ] )
+        operationSet[ k1 + " u " + k2 ] = GetUnion( sets[ k1 ], sets[ k2 ] )
+        operationSet[ k1 + " - " + k2 ] = GetDifference( sets[ k1 ], sets[ k2 ] )
+        operationSet[ k2 + " - " + k1 ] = GetDifference( sets[ k2 ], sets[ k1 ] )
+        operationSet[ k1 + "'" ] = GetDifference( universe, sets[ k1 ] )
+        operationSet[ k2 + "'" ] = GetDifference( universe, sets[ k2 ] )
+
+        for k, o in operationSet.iteritems():
+            sys.stdout.write( k + "\t" )
+            sys.stdout.write( str( o ) + "\n" )
+            operations[ k ] = o
+
+        
+        
         print( "\n" )
 
 
