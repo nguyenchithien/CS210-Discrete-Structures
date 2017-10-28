@@ -8,6 +8,7 @@ def GetIntersection( A, B ):
         for b in B:
             if ( a == b ):
                 newSet.append( a )
+                
     newSet.sort()
     
     return newSet
@@ -53,7 +54,10 @@ for i in range( 1, 5 ):
     
     for e in range( nS ):
         element = random.randint( 1, 10 )
-        thisSet.append( element )
+        if element not in thisSet:
+            thisSet.append( element )
+
+    thisSet.sort()
 
     sets[ letter ] = thisSet
     letter = chr( ord( letter ) + 1 )
