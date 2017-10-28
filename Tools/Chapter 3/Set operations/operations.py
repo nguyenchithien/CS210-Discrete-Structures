@@ -41,7 +41,7 @@ def GetDifference( A, B ):
 
 sets = {}
 
-universe = range( 1, 10 )
+universe = range( 1, 11 )
 
 letter = "A"
 
