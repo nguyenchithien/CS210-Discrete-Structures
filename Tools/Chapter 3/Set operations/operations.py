@@ -142,10 +142,10 @@ for k1, s1 in operations.iteritems():
         operationSet[ "(" + k2 + ")'" ] = GetDifference( universe, s2 )
 
         for k, o in operationSet.iteritems():
-            sys.stdout.write( k + "\t" )
-            sys.stdout.write( str( o ) + "\n" )
+            #sys.stdout.write( k + "\t" )
+            #sys.stdout.write( str( o ) + "\n" )
             
             OutputSet( fileHandler, k, o )
         
-        print( "\n" )
+        #print( "\n" )
         fileHandler.write( "\n" )
