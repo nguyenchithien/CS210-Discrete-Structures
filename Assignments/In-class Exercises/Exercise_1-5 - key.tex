@@ -1,0 +1,194 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\title{}
+\author{Rachel Morris}
+\date{\today}
+
+\usepackage{rachwidgets}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{dirtree}
+\usepackage{boxedminipage}
+
+\newcommand{\laChapter}{1.5\ }
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{CS 210}
+\chead{Fall 2017}
+\rhead{Ch \laChapter Exercise}
+\rfoot{\thepage\ of \pageref{LastPage}}
+\lfoot{\scriptsize By Rachel Morris, last updated \today}
+
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\begin{document}
+
+    \toggletrue{answerkey}
+    %\togglefalse{answerkey}
+    
+    %------------------------------------------------------------------%
+    %- Exercise Begin -------------------------------------------------%
+    %------------------------------------------------------------------%
+
+    %------------------------------------------------------------------%
+    \section*{1. Predicates}
+
+        \begin{intro}{Implications} ~\\
+            A statement like ``if $p$ is true, then $q$ is true" is known
+            as an implication. It can be written symbolically as $p \to q$,
+            and read as ``p implies q" or ``if p, then q".
+
+            For the implication $p \to q$, $p$ is the \textbf{hypothesis}
+            and $q$ is the \textbf{conclusion}
+
+            \paragraph{Example:} Write the following statement symbolically,
+                defining the propositional variable:
+                \begin{center} ``If it is Kate's birthday, then Kate will get a cake." \end{center}
+
+                I will define two propositional variables: ~\\
+                $b$ is ``It is Kate's birthday" \tab $c$ is ``Kate will get a cake."
+
+                ~\\
+                And then I can write it symbolically: $b \to c$.
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{1}{5\%}
+            For the following ``if, then" statements, create two
+            \textbf{propositional variables}, assign them values (from
+            the original statement), and then write it symbolically.
+
+            \begin{enumerate}
+                \item[a.] IF you don't play, THEN you can't win!
+                \item[b.] IF your friends don't dance, THEN they aren't friends of mine!
+                \item[c.] IF Timmy's age is over 8 AND Timmy's age is less than 13, THEN Timmy gets Tween-priced movie tickets.
+                \item[d.] IF I get enough sleep, OR I drink coffee, THEN I can go to work.
+            \end{enumerate}
+        \end{question}
+
+        \newpage
+        \begin{intro}{Truth for implications}
+            With an implication, ``if \textbf{hypothesis}, then \textbf{conclusion}",
+            the truth table will look a bit different than what you've done so far.
+            Make sure to take notice because it is easy to make an error when it
+            comes to implication truth tables!
+
+            For an implication to be logically FALSE, it must be the case that
+            the \textbf{hypothesis is true, but the conclusion is false}. In
+            all other cases, the implication results to \textbf{true}.
+
+            \begin{center}
+                \begin{tabular}{| c | c | c | c |}
+                    \hline{}
+                    $p$ & $q$ & & $p \to q$
+                    \\ \hline
+                    T & T & & T
+                    \\ \hline
+
+                    T & F & & F
+                    \\ \hline
+
+                    F & T & & T
+                    \\ \hline
+
+                    F & F & & F
+                    \\ \hline
+                \end{tabular}
+            \end{center}
+
+            Seems weird? Think of it this way: The only FALSE result is if
+            the \textbf{hypothesis} is true, but the \textbf{conclusion}
+            ends up being false. In science, it would mean our hypothesis
+            has been disproven. If, however, the \textbf{hypothesis}
+            is false, we can't really say anything about the conclusion
+            (again thinking about science experiments)
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \begin{question}{1}{5\%}
+            Complete the truth tables (on the worksheet) for the following
+            compound expressions.
+
+            \begin{enumerate}
+                \item[a.] $(p \land q) \to q$
+            \end{enumerate}
+        \end{question}
+
+    %------------------------------------------------------------------%
+    %- WORKSHEET ------------------------------------------------------%
+    %------------------------------------------------------------------%
+    \newpage
+    \begin{center} \section*{Chapter \laChapter In-class Exercise Worksheet} \end{center}
+
+    \iftoggle{answerkey}{
+      \begin{answer} \begin{center} ANSWER KEY \end{center} \end{answer}
+    }{}
+
+    % \iftoggle{answerkey}{ \begin{answer} asdfasdf \end{answer} }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+    % \iftoggle{answerkey}{ \begin{answer} TRUE \end{answer} }{}
+
+\begin{answersheetquestion}{1}{Basic If, Then Statements}{5}
+
+    \begin{enumerate}
+        \item[a.] IF you don't play, THEN you can't win!
+        \item[b.] IF your friends don't dance, THEN they aren't friends of mine!
+        \item[c.] IF Timmy's age is over 8 AND Timmy's age is less than 13, THEN Timmy gets Tween-priced movie tickets.
+        \item[d.] IF I get enough sleep, OR I drink coffee, THEN I can go to work.
+    \end{enumerate}
+\end{answersheetquestion}
+
+\hrulefill{}
+
+
+
+
+
+
+
+    %- Team Info ------------------------------------------------------%
+
+    \newpage
+    
+    \paragraph{Team:}
+    Please write down all people in your team. ~\\
+
+    % table %
+    \begin{tabular}{ p{6cm} p{6cm} }
+        1. & 2. \\
+        3. & 4.
+    \end{tabular}
+    % table %
+    ~\\
+
+    \hrulefill
+    \subsection*{Grading}
+            
+    \begin{center}
+        
+        \begin{tabular}{ | l | l | l | l | }
+            \hline
+            \textbf{ Question } & \textbf{ Weight } & \textbf{ 0-4 } & \textbf{ Adjusted score }
+            \\ \hline
+            
+            1 & 5\% & &    \\ \hline
+            
+            2 & 6\% & &    \\ \hline
+            
+            3 & 12\% & &    \\ \hline
+            
+            4 & 15\% & &    \\ \hline
+            
+            5 & 25\% & &    \\ \hline
+            
+            6 & 25\% & &    \\ \hline
+            
+            7 & 12\% & &    \\ \hline
+            
+            
+            
+        \end{tabular}
+    \end{center}
+
+\end{document}
