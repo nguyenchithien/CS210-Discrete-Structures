@@ -360,7 +360,13 @@
                     $(A \cap B) \cup C$
                     \\
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[fill=pink]
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm);
+                                \clip (2.5, 2.5) circle (1cm);
+                                \fill (2.5, 2.5) circle (1cm);
+                                \fill (1.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -368,7 +374,13 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[fill=pink]
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm);
+                                \clip (2, 1.5) circle (1cm);
+                                \fill (2, 1.5) circle (1cm);
+                                \fill (1.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -376,7 +388,14 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[fill=pink]
+                            \scope
+                                \fill (2, 1.5) circle (1cm);
+                                \clip (1.5, 2.5) circle (1cm);
+                                \clip (2.5, 2.5) circle (1cm);
+                                \fill (2.5, 2.5) circle (1cm);
+                                \fill (1.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -389,7 +408,11 @@
                     $B - C$
                     \\
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[fill=pink]
+                            \scope
+                                \fill (2, 1.5) circle (1cm);
+                                \fill (2.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -397,7 +420,12 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[fill=pink]
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm);
+                                \fill (2, 1.5) circle (1cm);
+                                \fill (2.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -405,7 +433,11 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \clip (2, 1.5) circle (1cm) (0,0) rectangle (4,4);
+                                \fill[pink] (2.5, 2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -418,7 +450,11 @@
                     $A \cup (B - C)$
                     \\
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm) (0,0) rectangle (4,4);
+                                \fill[pink] (0, 0) rectangle (4, 4);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -426,7 +462,12 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \clip (2.5, 2.5) circle (1cm) (0,0) rectangle (4,4);
+                                \fill[pink] (1.5,2.5) circle (1cm);
+                                \fill[pink] (2.5,2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -434,7 +475,12 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \fill[pink] (1.5,2.5) circle (1cm);
+                                \clip (2, 1.5) circle (1cm) (0,0) rectangle (4,4);
+                                \fill[pink] (2.5,2.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -447,7 +493,42 @@
                     $(A \cup B \cup C)$
                     \\
                     \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm);
+                                \clip (2.5, 2.5) circle (1cm);
+                                \fill[pink] (2.5, 2.5) circle (1cm);
+                                \fill[pink] (1.5, 2.5) circle (1cm);
+                                \fill[pink] (2, 1.5) circle (1cm);
+                            \endscope
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm);
+                                \clip (2, 1.5) circle (1cm);
+                                \fill[pink] (1.5, 2.5) circle (1cm);
+                                \fill[pink] (2, 1.5) circle (1cm);
+                            \endscope
+                            \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
+                            \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
+                            \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
+                            \draw (2, 1.5) circle (1cm) node[below] {C};
+                        \end{tikzpicture}
+                    }{ \venndiagram } &
+                    \solution{FIXME
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \clip (2, 1.5) circle (1cm) (0,0) rectangle (4,4);
+                                \fill[pink] (2, 1.5) circle (1cm);
+                                \clip (1.5, 2.5) circle (1cm) ;
+                                \clip (2.5, 2.5) circle (1cm) ;
+                                \fill[pink] (2.5, 2.5) circle (1cm);
+                                \fill[pink] (1.5, 2.5) circle (1cm);
+                            \endscope
+                            %\scope
+                            %    \clip (1.5, 2.5) circle (1cm);
+                            %    \clip (2, 1.5) circle (1cm);
+                            %    \fill[pink] (2.5, 2.5) circle (1cm);
+                            %    \fill[pink] (2, 1.5) circle (1cm);
+                            %\endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
@@ -455,15 +536,12 @@
                         \end{tikzpicture}
                     }{ \venndiagram } &
                     \solution{
-                        \begin{tikzpicture}
-                            \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
-                            \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
-                            \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
-                            \draw (2, 1.5) circle (1cm) node[below] {C};
-                        \end{tikzpicture}
-                    }{ \venndiagram } &
-                    \solution{
-                        \begin{tikzpicture}
+                        \begin{tikzpicture}[even odd rule]
+                            \scope
+                                \fill[pink] (1.5,2.5) circle (1cm);
+                                \fill[pink] (2.5,2.5) circle (1cm);
+                                \fill[pink] (2,1.5) circle (1cm);
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
