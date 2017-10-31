@@ -31,8 +31,8 @@
 
 \begin{document}
 
-    \toggletrue{answerkey}
-    %\togglefalse{answerkey}
+    %\toggletrue{answerkey}
+    \togglefalse{answerkey}
 
     %------------------------------------------------------------------%
     %- Exercise Begin -------------------------------------------------%
@@ -513,22 +513,26 @@
                             \draw (2, 1.5) circle (1cm) node[below] {C};
                         \end{tikzpicture}
                     }{ \venndiagram } &
-                    \solution{FIXME
+                    \solution{
                         \begin{tikzpicture}[even odd rule]
                             \scope
-                                \clip (2, 1.5) circle (1cm) (0,0) rectangle (4,4);
-                                \fill[pink] (2, 1.5) circle (1cm);
-                                \clip (1.5, 2.5) circle (1cm) ;
-                                \clip (2.5, 2.5) circle (1cm) ;
-                                \fill[pink] (2.5, 2.5) circle (1cm);
-                                \fill[pink] (1.5, 2.5) circle (1cm);
+                                \clip (1.5, 2.5) circle (1cm); % Draw only A
+                                \clip (2.5, 2.5) circle (1cm); % Draw only B
+                                \fill[pink] (2.5, 2.5) circle (1cm); % B
+                                \fill[pink] (1.5, 2.5) circle (1cm); % A
                             \endscope
-                            %\scope
-                            %    \clip (1.5, 2.5) circle (1cm);
-                            %    \clip (2, 1.5) circle (1cm);
-                            %    \fill[pink] (2.5, 2.5) circle (1cm);
-                            %    \fill[pink] (2, 1.5) circle (1cm);
-                            %\endscope
+                            \scope
+                                \clip (2.5, 2.5) circle (1cm);  % Draw only B
+                                \clip (2, 1.5) circle (1cm);    % Draw only C
+                                \fill[pink] (2, 1.5) circle (1cm); % C
+                                \fill[pink] (2, 2.5) circle (1cm); % B
+                            \endscope
+                            \scope
+                                \clip (1.5, 2.5) circle (1cm); % Draw only A
+                                \clip (2, 1.5) circle (1cm);    % Draw only C
+                                \fill[pink] (2, 1.5) circle (1cm); % C
+                                \fill[pink] (1.5, 2.5) circle (1cm); % A
+                            \endscope
                             \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- (0,0) node[anchor=south west] {U};
                             \draw (1.5, 2.5) circle (1cm) node[anchor=south east] {A};
                             \draw (2.5, 2.5) circle (1cm) node[anchor=south west] {B};
