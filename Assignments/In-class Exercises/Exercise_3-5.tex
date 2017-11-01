@@ -138,9 +138,10 @@
                 b. $a' \cdot b'$ &
                 c. $a + (b \cdot c)$
                 \\
+                FIXME
                 \solution{ \includegraphics{images/3-5-answer1.png} }{} &
                 \solution{ \includegraphics{images/3-5-answer2.png} }{} &
-                \solution{ \includegraphics{images/3-5-answer3.png} }{} 
+                \solution{ \includegraphics{images/3-5-answer3.png} }{}
             \end{tabular}
 
 
@@ -200,7 +201,7 @@
                     & $y$ & $y'$ \\ \cline{2-3}
                     $x$     & \multicolumn{1}{|c}{ \checkmark } & \multicolumn{1}{|c|}{ \checkmark } \\ \cline{2-3}
                     $x'$    & \multicolumn{1}{|c}{  } & \multicolumn{1}{|c|}{ \checkmark } \\ \cline{2-3}
-                \end{tabular}       
+                \end{tabular}
 
         \end{intro}
 
@@ -208,7 +209,7 @@
         % - QUESTION --------------------------------------------------%
         \stepcounter{question}
         \begin{questionNOGRADE}{\thequestion}
-            
+
             Check off all appropriate term cells for the following maps.
 
             \begin{center}
@@ -238,7 +239,7 @@
                         $x'$    & \multicolumn{1}{|c}{ \solution{\checkmark}{} }
                                 & \multicolumn{1}{|c|}{ \solution{\checkmark}{} } \\ \cline{2-3}
                     \end{tabular}
-                    
+
                 \end{tabular}
             \end{center}
 
@@ -246,9 +247,9 @@
 
     \newpage
 
-    
+
         \begin{intro}{One region}
-            
+
             After writing out all of the products, any \underline{adjacent} cells can be grouped off
             within a rectangular region. For a $2x2$ grid, our grouping rectangles can be $1x1$ (no simplification), $2x1$, $1x2$, or $2x2$.
 
@@ -263,7 +264,7 @@
 
             When you have a rectangular region, you can remove one of the variables. Whichever
             variable has both the \textbf{normal} and \textbf{prime} version can be removed.
-            
+
             \begin{center}
                 $xy + x'y$:
                 \begin{tabular}{c c c}
@@ -299,17 +300,17 @@
                     &
                     \begin{tabular}{c c c}
                         & $y$ & $y'$ \\ \cline{2-3}
-                        $x$     & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} } 
+                        $x$     & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} }
                                 & \multicolumn{1}{|c|}{ } \\ \cline{2-3}
-                        $x'$    & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} } 
+                        $x'$    & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} }
                                 & \multicolumn{1}{|c|}{ } \\ \cline{2-3}
                     \end{tabular}
                     &
                     \begin{tabular}{c c c}
                         & $y$ & $y'$ \\ \cline{2-3}
-                        $x$     & \multicolumn{1}{|c}{ } 
+                        $x$     & \multicolumn{1}{|c}{ }
                                 & \multicolumn{1}{|c|}{  } \\ \cline{2-3}
-                        $x'$    & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} } 
+                        $x'$    & \multicolumn{1}{|c}{ \solution{\cellcolor{red!25}\checkmark}{} }
                                 & \multicolumn{1}{|c|}{ \solution{\cellcolor{red!25}\checkmark}{} } \\ \cline{2-3}
                     \end{tabular}
                     \\
@@ -317,20 +318,20 @@
                     \solution{= $x$}{}
                     & \solution{= $y$}{}
                     & \solution{= $x'$}{}
-                    
+
                 \end{tabular}
             \end{center}
 
         \end{questionNOGRADE}
 
         \newpage
-        
+
         \begin{intro}{Multiple regions}
             If you can highlight multiple regions, you will end up with that amount of terms,
             combined by Boolean addition +.
 
             \paragraph{Example:} We have the expression $xy + xy' + x'y$, our map looks like this:
-            
+
                 \begin{center}
                     \begin{tabular}{c c c}
                         & $y$ & $y'$ \\ \cline{2-3}
@@ -388,7 +389,7 @@
                                 & \multicolumn{1}{|c|}{ \solution{ \cellcolor{red!25}\checkmark }{} } \\ \cline{2-3}
                     \end{tabular}
                     &
-                    
+
                     \begin{tabular}{c c c}
                         & $y$ & $y'$ \\ \cline{2-3}
                         $x$     & \multicolumn{1}{|c }{ \solution{ \cellcolor{red!25}\checkmark }{} }
@@ -400,15 +401,15 @@
                     \\ \\
                     \solution{= $y'$ }{} &
                     \solution{= $x' + y$ }{}
-                    
+
             \end{tabular}
         \end{questionNOGRADE}
-        
-        
+
+
 
         \newpage
         \subsection{3-variable Karnaugh Maps}
-            
+
         \begin{intro}{\ }
             Once we have three variables, we will have to change our map.
             It will become a $2x4$ map, where each column represents \textbf{two variables}.
@@ -416,8 +417,8 @@
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{  }
-                            & \multicolumn{1}{|c }{  } 
-                            & \multicolumn{1}{|c }{  } 
+                            & \multicolumn{1}{|c }{  }
+                            & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c }{  }
@@ -431,13 +432,13 @@
             you CANNOT go from $yz$ to $y'z'$.
 
             We can then follow the same approach to mark off cells that correspond to products of terms:
-            
+
             \begin{center}
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{ \checkmark }
-                            & \multicolumn{1}{|c }{  } 
-                            & \multicolumn{1}{|c }{  } 
+                            & \multicolumn{1}{|c }{  }
+                            & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{ \checkmark }
                             & \multicolumn{1}{|c }{  }
@@ -457,8 +458,8 @@
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{  }
-                            & \multicolumn{1}{|c }{ \checkmark } 
-                            & \multicolumn{1}{|c }{ \checkmark } 
+                            & \multicolumn{1}{|c }{ \checkmark }
+                            & \multicolumn{1}{|c }{ \checkmark }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{ \checkmark }
                             & \multicolumn{1}{|c }{  }
@@ -473,8 +474,8 @@
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{  }
-                            & \multicolumn{1}{|c }{ \cellcolor{red!25}\checkmark } 
-                            & \multicolumn{1}{|c }{ \cellcolor{red!25}\checkmark } 
+                            & \multicolumn{1}{|c }{ \cellcolor{red!25}\checkmark }
+                            & \multicolumn{1}{|c }{ \cellcolor{red!25}\checkmark }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{ \cellcolor{green!25}\checkmark }
                             & \multicolumn{1}{|c }{  }
@@ -494,7 +495,7 @@
 
         \begin{intro}{\ }
             \textbf{More rules...}
-            
+
             \paragraph{Choosing regions:}
             Sometimes you can come up with multiple regions in your map.
             What is the best way to make your regions? In order to get
@@ -503,7 +504,7 @@
 
             \paragraph{1x1 regions} You can choose a 1x1 region if
             doing so allows you to have largest-possible-regions for other terms.
-        
+
         \end{intro}
 
         % - QUESTION --------------------------------------------------%
@@ -513,12 +514,12 @@
 
             \begin{enumerate}
                 \item[a.]   $xyz + xyz' + xy'z' + xy'z$
-                
+
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
                             & \multicolumn{1}{|c|}{ \solution{\checkmark}{} } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c }{  }
@@ -527,14 +528,14 @@
                 \end{tabular}
 
                 \solution{ ~\\ = $x$}{ ~\\~\\ }
-                
+
                 \item[b.]   $xyz + xyz' + x'yz + x'yz'$
-                
+
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
-                            & \multicolumn{1}{|c }{  } 
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
+                            & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
                             & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
@@ -543,14 +544,14 @@
                 \end{tabular}
 
                 \solution{ ~\\ = $y$}{ ~\\~\\ }
-                
+
                 \item[c.]   $xyz + xyz' + x'y'z' + x'y'z$
-                
+
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
-                            & \multicolumn{1}{|c }{  } 
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
+                            & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c|}{  } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c }{  }
@@ -559,14 +560,14 @@
                 \end{tabular}
 
                 \solution{ ~\\ = $xy + x'y'$}{ ~\\~\\ }
-                
+
                 \item[d.]   $x'y'z' + xyz + xyz' + xy'z' + xy'z$
-                
+
                 \begin{tabular}{c c c c c}
                     & $yz$ & $yz'$ & $y'z'$ & $y'z$ \\ \cline{2-5}
                     $x$     & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
-                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} } 
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
+                            & \multicolumn{1}{|c }{ \solution{\checkmark}{} }
                             & \multicolumn{1}{|c|}{ \solution{\checkmark}{} } \\ \cline{2-5}
                     $x'$    & \multicolumn{1}{|c }{  }
                             & \multicolumn{1}{|c }{  }
@@ -578,11 +579,11 @@
             \end{enumerate}
         \end{questionNOGRADE}
 
-        
-        
 
-        
-        
+
+
+
+
 \end{document}
 
 
