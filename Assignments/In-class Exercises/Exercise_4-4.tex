@@ -395,7 +395,7 @@
 
         \Square\ Transitive? \tab Why?
         \solution{ ~\\
-            It is transitive - not; 6 goes to 8, and 8 goes to other places,
+            It is NOT transitive: 6 goes to 8, and 8 goes to other places,
                 but 6 doesn't go to other locations.
         }{ \vspace{2.5cm} }
 
@@ -448,42 +448,51 @@
 
 \newpage
 
-
+    \begin{wrapfigure}{r}{0.4\textwidth} \includegraphics[height=5cm]{images/catfamily.png} \end{wrapfigure}
+        
     % -------------------------------------------------------------%
     % - QUESTION --------------------------------------------------%
     % -------------------------------------------------------------%
     \stepcounter{question}
     \begin{questionNOGRADE}{\thequestion}
 
+    
         Let $C$ be the set of all cats who have ever lived. For each of the
         following relations on the set $C$, decide if the given is
         reflexive irreflexive, transitive, or antisymmetric.
         Some of these can satisfy more than one property. Give
         explanations on how you decided each of these.
+        
 
         \begin{itemize}
             \item[a.]   $R_{1} = \{ (a, b) \in C \times C : a$ is a child of $b \}$
 
                 \begin{itemize}
                     \item   Reflexive - Is $(a,a) \in C$ for all $a$ valid?
-                            \solution{ no; a cat cannot be its own parent }{ \vspace{1cm} }
+                            \\ \textit{(For some cat $a$, $(a,a)$ means ``$a$ is a child of $a$''. Is this valid?)}
+                            \solution{ no; a cat cannot be its own parent }{ \vspace{2cm} }
 
                     \item   Irreflexive - Is $(a,a) \not\in C$ for all $a$ valid?
-                            \solution{ yes; a cat cannot be its own parent }{ \vspace{1cm} }
+                            \solution{ yes; a cat cannot be its own parent }{ \vspace{2cm} }
 
                     \item   Transitive - Is there some $(a,b) \in C$ and $(b,c) \in C$?
                             \footnote{Just assume a cat isn't going to mate with its child. $:|$}
+                            \\ \textit{(For three cats $a$, $b$, and $c$, if $a$ is a chlid of $b$,
+                            and $b$ is a child of $c$, can $a$ be a child of $c$?)}
                             \solution{
                                 no; if ``Cat A" is a child of ``Cat B",
                                 and ``Cat B" is a child of ``Cat C", then
                                 ``Cat A" cannot also be a child of ``Cat C".
-                            }{ \vspace{1cm} }
+                            }{ \vspace{2cm} }
 
                     \item   Antisymmetric - Is $(a,b) \in C$ and $(b,a) \not\in C$ valid?
+                            \\ \textit{For some cat $a$ and $b$, can both of the following be true? ``$a$ is a child of $b$, and $b$ is a child of $a$'')}
                             \solution{
                             yes; if ``Cat A" is a child of ``Cat B", then ``Cat B" cannot be a child of ``Cat A".
                             }{ \vspace{1cm} }
                 \end{itemize}
+
+        \newpage
 
             \item[b.]   $R_{2} = \{ (a, b) \in C \times C : a$ is a descendant of $b \}$
 
@@ -491,24 +500,24 @@
                     \item   Reflexive - Is $(a,a) \in C$ for all $a$ valid?
                             \solution{
                                 no; same as above
-                            }{ \vspace{1cm} }
+                            }{ \vspace{3cm} }
 
                     \item   Irreflexive - Is $(a,a) \not\in C$ for all $a$ valid?
                             \solution{
                                 yes; same as above
-                            }{ \vspace{1cm} }
+                            }{ \vspace{3cm} }
 
                     \item   Transitive - Is there some $(a,b) \in C$ and $(b,c) \in C$?
                             \solution{
                                 yes; f ``Cat A" is a descendant of ``Cat B" and ``Cat B" is
                                 a descendant of ``Cat C", then ``Cat A" is also a
                                 descendant of ``Cat C".
-                            }{ \vspace{1cm} }
+                            }{ \vspace{3cm} }
 
                     \item   Antisymmetric - Is $(a,b) \in C$ and $(b,a) \not\in C$ valid?
                             \solution{
                             yes; same as above
-                            }{ \vspace{1cm} }
+                            }{ \vspace{3cm} }
                 \end{itemize}
         \end{itemize}
 
