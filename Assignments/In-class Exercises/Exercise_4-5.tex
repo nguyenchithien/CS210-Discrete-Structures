@@ -140,7 +140,7 @@
         In this section, we are talking about equivalence relations.
 
         \paragraph{Example:} Draw the diagram for the equivalence relation
-        defined by $R_{1} = \{ (a, b) \in S \times S : A \subseteq B \}$,
+        defined by $R_{1} = \{ (A, B) \in S \times S : A \subseteq B \}$,
         where $S = \{ \{0\}, \{1\}, \{1, 2\}, \{1, 2, 3\} \}$.
 
         \begin{itemize}
@@ -162,14 +162,14 @@
                 %\draw[arrow] (2,0)  to[bend left] (2,-1)    to[bend left](1.8,-0.1);
                 %\draw[arrow] (0,2)  to[bend left] (1,2)     to[bend left](0.1, 1.8);
                 %\draw[arrow] (0,-2) to[bend left] (-1,-2)   to[bend left](-0.1, -1.8);
-                \draw[arrow,gray] (2,  0) to [out=-50, in=50, looseness=40] (2,0.2);
-                \draw[arrow,gray] (-2, 0) to [out=-135, in=-225, looseness=40] (-2,0.2);
-                \draw[arrow,gray] (0,2) to [out=0, in=150, looseness=50] (-0.2,2);
-                \draw[arrow,gray] (0,-2) to [out=-35, in=-180, looseness=50] (-0.2,-2);
+                \draw[arrow,black] (2,  0) to [out=-50, in=50, looseness=40] (2,0.2);
+                \draw[arrow,black] (-2, 0) to [out=-135, in=-225, looseness=40] (-2,0.2);
+                \draw[arrow,black] (0,2) to [out=0, in=150, looseness=50] (-0.2,2);
+                \draw[arrow,black] (0,-2) to [out=-35, in=-180, looseness=50] (-0.2,-2);
 
-                \draw[arrow,gray] (0,2) to (1.9,0.1);
-                \draw[arrow,gray] (0,2) to (0,-1.8);
-                \draw[arrow,gray] (2,0) to (0.1,-1.9);
+                \draw[arrow,black] (0,2) to (1.9,0.1);
+                \draw[arrow,black] (0,2) to (0,-1.8);
+                \draw[arrow,black] (2,0) to (0.1,-1.9);
             \end{tikzpicture}
         \end{center}
 
@@ -291,6 +291,48 @@
         if, for all $a \in A$, $(a,a) \not\in R$. On the arrow diagram,
         this means \textbf{there are no loops.}
 
+        \begin{center}
+            \begin{tabular}{p{5cm} p{4cm} p{4cm}}
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[->,ultra thick] (0,0) -- (1.8,0);
+                    \draw[->,ultra thick] (2,0) -- (1.1,1);
+                    \draw[->,ultra thick] (1,1) -- (0,0.1);
+                    
+                    \draw[->,ultra thick] (0,0) to [out=90, in=180, looseness=5] (-0.3,0);
+                    \draw[->,ultra thick] (2,0) to [out=45, in=0, looseness=5] (2.3,0);
+                    \draw[->,ultra thick] (1,1) to [out=0, in=90, looseness=5] (1,1.3);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+                &
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[->,ultra thick] (0,0) -- (1.8,0);
+                    \draw[->,ultra thick] (2,0) -- (1.1,1);
+                    \draw[->,ultra thick] (1,1) -- (0,0.1);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+                &
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[->,ultra thick] (0,0) -- (1.8,0);
+                    \draw[->,ultra thick] (2,0) -- (1.1,1);
+                    \draw[->,ultra thick] (1,1) -- (0,0.1);
+                    \draw[->,ultra thick] (1,1) to [out=0, in=90, looseness=5] (1,1.3);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+
+                \\
+                \tab Reflexive &  Irreflexive &  \tab[0.5cm]Neither
+            \end{tabular}
+        \end{center}
+
         \subparagraph{Symmetric:} $R$ is called symmetric if
         for all $a,b \in A$, if $a \neq b$ and $(a,b) \in R$,
         then $(b,a) \in R$. In terms of the arrow diagram, this
@@ -301,6 +343,44 @@
         then $(b,a) \not\in R$. In terms of the arrow diagram, this
         means that \textbf{arrows only go in one direction}.
 
+        \begin{center}
+            \begin{tabular}{p{5cm} p{4cm} p{4cm}}
+                \tab
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[<->,ultra thick] (0.2,0) -- (1.8,0);
+                    \draw[<->,ultra thick] (1.9,0.1) -- (1.1,0.9);
+                    \draw[<->,ultra thick] (0.9,0.9) -- (0.1,0.1);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+                &
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[->,ultra thick] (0,0) -- (1.8,0);
+                    \draw[->,ultra thick] (2,0) -- (1.1,1);
+                    \draw[->,ultra thick] (1,1) -- (0,0.1);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+                &
+                \begin{tikzpicture}[arrow/.style = {thick,-stealth}]
+                    \draw[<->,ultra thick] (0.2,0) -- (1.8,0);
+                    \draw[->,ultra thick] (2,0) -- (1.1,1);
+                    \draw[->,ultra thick] (1,1) -- (0,0.1);
+                    
+                    \filldraw (0,0) circle (2pt);
+                    \filldraw (2,0) circle (2pt);
+                    \filldraw (1,1) circle (2pt);
+                \end{tikzpicture}
+
+                \\
+                \tab Symmetric &  Antisymmetric &  \tab[0.5cm]Neither
+            \end{tabular}
+        \end{center}
+        
         \subparagraph{Transitive:} $R$ is transitive if, whenever
         $(a,b) \in R$ and $(b,c) \in R$, it must also be the case
         that $(a,c) \in R$. In terms of the arrow diagram, this
