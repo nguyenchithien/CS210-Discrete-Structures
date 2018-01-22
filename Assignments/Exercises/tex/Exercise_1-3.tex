@@ -1,0 +1,491 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {1.3}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Propositional Logic}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{1}
+\setcounter{section}{3}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+\notonkey{
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+
+    \subsection{Propositional Logic}
+
+    \begin{introNOHEAD}{}
+        A \textbf{proposition} is a statement which has truth value: it is either true (T) or false (F).
+        \footnote{From https://en.wikibooks.org/wiki/Discrete\_Mathematics/Logic}
+
+        The statement doesn't have to necessarily be TRUE, it could also
+        be FALSE, but it has to be unambiguously so. ~\\
+
+        \begin{tabular}{ | l | l | l | }
+            \hline
+            \textbf{Statement} & \textbf{Proposition?} & \textbf{Result?}
+            \\ \hline
+            2 + 3 = 5 & Yes & True
+            \\ \hline
+            2 + 2 = 5 & Yes & False
+            \\ \hline
+            This class has 30 students & Yes & False\footnote{Probably :)}
+            \\ \hline
+            Is the movie good? & No &
+            \\ \hline
+        \end{tabular}
+    \end{introNOHEAD}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following, mark whether the statement is a \textbf{proposition} and,
+        if it is, mark whether it is \textbf{true} or \textbf{false}.
+
+        \begin{center}
+            \begin{tabular}{l l | c | c}
+                & \textbf{statement} & \textbf{is proposition?} & \textbf{is true/false?}
+                \\ \hline
+                a. & 10 + 20 = 30
+                & & \\
+                
+                b. & 2 times an integer is always even.
+                & & \\
+
+                c. & Is $4 < 5$?
+                & & \\
+
+                d. & My cat is the best cat.
+                & & \\
+
+                e. & $x \cdot y$ is odd.
+                & & \\
+
+                f. & $5 + 1$ is odd.
+                & & \\
+            \end{tabular}
+        \end{center}
+
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \subsection{Compound Propositions}
+
+    \begin{introNOHEAD}{}
+        We can also create a \textbf{compound proposition} using the logical operators
+        for AND $\land$, OR $\lor$, and NOT $\neg$. When we're writing out
+        a compound proposition, we will usually assign each proposition a
+        \textbf{propositional variable}.
+
+        ~\\ If we have the propositions
+        $p$ is the proposition ``Paul is taking discrete math",
+        $q$ is the proposition, ``Paul has a calculator",
+        then we can build the compound propositions like:
+        \begin{itemize}
+            \item[] $p \land q$: Paul is taking discrete math and Paul has a calculator
+            \item[] $p \lor q$: Paul is taking discrete math or Paul has a calculator
+            \item[] $\neg p$: Paul is NOT taking discrete math
+            \item[] $\neg q$: Paul does NOT have a calculator
+        \end{itemize}
+
+        The result of a compound proposition depends on the value of
+        each proposition it is made up of:
+
+        \begin{enumerate}
+            \item A compound proposition $a \land b \land c$ is \textbf{only true}
+                if all propositions are true; it will be \textbf{false} if
+                one or more of the propositions is false.
+            \item A compound proposition $a \lor b \lor c$ is \textbf{true}
+                if one or more of the propositions is true; it is \textbf{only false}
+                if all propositions are false.
+            \item A compound proposition $\neg a$ is \textbf{true} only
+                if the proposition is false; it is only \textbf{false} if
+                the proposition is true.
+        \end{enumerate}
+
+    \end{introNOHEAD}
+
+    \newpage
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Given the following compound propositions and proposition values,
+        write out whether the full compound proposition is \textbf{true} or \textbf{false}.
+    \end{questionNOGRADE}
+
+        \paragraph{a AND b:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            a. &        $a \land b$ &       $a = true, b = true$ &       TRUE   \\ \hline
+            b. &        $a \land b$ &       $a = true, b = false$ &       FALSE   \\ \hline
+            c. &        $a \land b$ &       $a = false, b = true$ &       FALSE   \\ \hline
+            d. &        $a \land b$ &       $a = false, b = false$ &       FALSE   \\ \hline
+        \end{tabular}
+
+        \paragraph{a OR b:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            e. &        $a \lor b$ &       $a = true, b = true$ &     \\ \hline
+            f. &        $a \lor b$ &       $a = true, b = false$ &    \\ \hline
+            g. &        $a \lor b$ &       $a = false, b = true$ &    \\ \hline
+            h. &        $a \lor b$ &       $a = false, b = false$ &   \\ \hline
+        \end{tabular}
+
+        \paragraph{Combinations:} ~\\
+
+        \begin{tabular}{ | l  c | c | p{6cm} | }
+            \hline
+            & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+            \\ \hline
+
+            i. &        $a \land \neg b$ &       $a = true, b = false$ &   \\ \hline
+            j. &        $a \lor \neg b$ &        $a = false, b = true$ &   \\ \hline
+
+            k. &        $\neg a \land b$ &       $a = false, b = true$ &   \\ \hline
+            l. &        $\neg a \lor b$ &        $a = false, b = false$ &  \\ \hline
+        \end{tabular}
+
+    \newpage
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following, ``translate" the following English statements
+        into compound propositions.
+
+        ~\\ $p:$ ``The printer is offline" \tab
+        $q:$ ``The printer is out of paper" \\ 
+        $r:$ ``The document has finished printing"
+
+
+        \begin{enumerate}
+            \item[a.] The printer is not out of paper.
+            \item[b.] The printer is online.
+            \item[c.] The printer is offline and it is out of paper
+            \item[d.] The printer is online and it is not out of paper.
+            \item[e.] Either the printer is online, or it is out of paper.
+            \item[f.] The printer is online, but it is out of paper.
+            \item[g.] The printer is offline or it is out of paper, but not both.
+            \item[h.] The printer is online and the printer has paper, and the document has not finished printing.
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \subsection{Truth Tables}
+
+    \begin{introNOHEAD}{}
+        When we're working with compound propositional statements,
+        the result of the compound depends on the true/false values
+        of each proposition it is built up of.
+        ~\\
+        We can diagram out all possible states of a compound proposition
+        by using a \textbf{truth table}. In a truth table, we list
+        all propositional variables first on the left, as well as
+        all possible combinations of their states, and then
+        the compound statement's result on the right.
+
+        ~\\
+
+        \begin{tabular}{ l l l }
+
+            \begin{tabular}{ | c | c | c | c | }
+                \hline
+                $p$ & $q$ & & $p \land q$ \\ \hline
+                T & T & & T \\ \hline
+                T & F & & F \\ \hline
+                F & T & & F \\ \hline
+                F & F & & F \\ \hline
+
+            \end{tabular}
+            &
+
+            \begin{tabular}{ | c | c | c | c | }
+                \hline
+                $p$ & $q$ & & $p \lor q$ \\ \hline
+                T & T & & T \\ \hline
+                T & F & & T \\ \hline
+                F & T & & T \\ \hline
+                F & F & & F \\ \hline
+
+            \end{tabular}
+            &
+
+            \begin{tabular}{ | c | c | c | }
+                \hline
+                $p$ & & $\neg p$ \\ \hline
+                T & & F \\ \hline
+                F & & T \\ \hline
+
+            \end{tabular}
+
+        \end{tabular}
+    \end{introNOHEAD}
+
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Complete the following truth tables. ~\\
+        
+        ~\\
+        a.
+        \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
+            \hline
+            $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
+            T & T & & F & \\ \hline
+            T & F & & T & \\ \hline
+            F & T & &  & \\ \hline
+            F & F & &  & \\ \hline
+        \end{tabular}
+
+        ~\\~\\
+        b.
+        \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
+            \hline
+            $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
+            T & T & & & & \\ \hline
+            T & F & & & & \\ \hline
+            F & T & & & & \\ \hline
+            F & F & & & & \\ \hline
+        \end{tabular}
+    \end{questionNOGRADE}
+
+    \newpage
+    \begin{introNOHEAD}{}
+        When you're building out truth tables, there is a specific order
+        you should write out the ``T" and ``F" states.
+        Begin with all ``T" values first, and work your way down to
+        all ``F" values first. As you go, change the right-most state
+        from ``T" to ``F", working your way from right-to-left.
+
+        ~\\
+        So with two variables: \\ ``TT", ``TF", ``FT", ``FF".
+    \end{introNOHEAD}
+    
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Using the rules above, write out all the states for a
+        truth table with three propositional variables. ~\\
+        
+        \begin{center}
+            \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
+                \hline
+                $p$ & $q$ & $r$   \\ \hline
+                T & T & T         \\ \hline
+                T & T & F         \\ \hline
+                T &  &          \\ \hline
+                T & F & F         \\ \hline
+                F &  &          \\ \hline
+                F &  &          \\ \hline
+                F &  &          \\ \hline
+                F & F & F         \\ \hline
+            \end{tabular}
+        \end{center}
+    \end{questionNOGRADE}
+
+    ~\\
+        
+    \newpage
+
+    \begin{introNOHEAD}{}
+        Whenever the final columns of the truth tables for two propositions $p$ and $q$ are the same,
+        we say that $p$ and $q$ are \textbf{logically equivalent}, and we write: $p \equiv q$.
+        \footnote{From https://en.wikibooks.org/wiki/Discrete\_Mathematics/Logic}
+    \end{introNOHEAD}
+
+
+
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Use a truth table to show that the compound propositions,
+
+        \begin{center}
+        $ \neg p \land \neg q $
+        \tab and \tab
+        $ \neg ( p \lor q ) $
+        \end{center}
+        are logically equivalent. The final two columns are
+        the compound propositions above
+        ~\\
+        \begin{center}
+            \begin{tabular}{ | c | c | c | c | c | c  c | c | c | c | c | c | }
+                \hline
+                $p$ &
+                $q$ & &
+
+                $\neg p$ &
+                $\neg q$ &
+
+                $(p \lor q)$ & & &
+
+                $ \neg p \land \neg q $ & &
+                $ \neg ( p \lor q ) $
+                \\ \hline
+
+                T & T & & F & F & & & & & & \\ \hline
+                T & F & & F & T & & & & & & \\ \hline
+                F & T & & T & F & & & & & & \\ \hline
+                F & F & & T & T & & & & & & \\ \hline
+            \end{tabular} 
+        \end{center}       
+    \end{questionNOGRADE}
+
+
+
+
+}{
+% KEY ------------------------------------ %
+
+    \begin{enumerate}
+        \item[1a.]  Is a proposition, is true.
+        \item[1b.]  Is a proposition, is true.
+        \item[1c.]  Not a proposition - it is a question.
+        \item[1d.]  Not a proposition - it is an opinion.
+        \item[1e.]  Not a proposition - because of variables, it is not unambiguously true or false.
+        \item[1f.]  Is a proposition, is false.
+
+        \item[2a.]  true
+        \item[2b.]  false
+        \item[2c.]  false
+        \item[2d.]  false
+
+        \item[2e.]  true
+        \item[2f.]  true
+        \item[2g.]  true
+        \item[2h.]  false
+
+        \item[2i.]  true
+        \item[2j.]  false
+        \item[2k.]  true
+        \item[2l.]  true
+
+        \item[3a.]  $\neg q$
+        \item[3b.]  $\neg p$
+        \item[3c.]  $p \land q$
+        \item[3d.]  $\neg p \land \neg q$
+        \item[3e.]  $p \lor q$
+        \item[3f.]  $\neg p \land q$
+        \item[3g.]  $(p \lor q) \land (p \land q)$
+        \item[3h.]  $\neg p \land \neg q \land \neg r$
+
+        \item[4a.]
+            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
+                \hline
+                $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
+                T & T & & F & F 
+                \\ \hline
+                T & F & & T & T 
+                \\ \hline
+                F & T & & F & F 
+                \\ \hline
+                F & F & & T & F 
+                \\ \hline
+            \end{tabular}
+
+        \item[4b.]
+            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
+                \hline
+                $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
+                T & T &
+                &  F 
+                &  F 
+                &  F 
+                \\ \hline
+                T & F &
+                &  F 
+                &  T 
+                &  T 
+                \\ \hline
+                F & T &
+                &  T 
+                &  F 
+                &  T 
+                \\ \hline
+                F & F &
+                &  T 
+                &  T 
+                &  T 
+                \\ \hline
+            \end{tabular} ~\\
+
+    \item[5.]
+        \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
+            \hline
+            $p$ & $q$ & $r$
+            \\ \hline
+            T & T & T
+            \\ \hline
+            T & T & F
+            \\ \hline
+            T &  F  &  T 
+            \\ \hline
+            T & F & F
+            \\ \hline
+            F &  T  &  T 
+            \\ \hline
+            F &  T  &  F 
+            \\ \hline
+            F &  F  &  T 
+            \\ \hline
+            F & F & F
+            \\ \hline
+        \end{tabular}
+
+    \item[6.]
+        \begin{tabular}{ | c | c | c | c |  c | c | c | c | c | c | }
+            \hline
+                $p$ &
+                $q$ & &
+
+                $\neg p$ &
+                $\neg q$ &
+
+                $(p \lor q)$ & &
+
+                $ \neg p \land \neg q $ & &
+                $ \neg ( p \lor q ) $
+                \\ \hline
+            T & T & & F & F
+            &  T  &
+            &  T  &
+            &  T 
+            \\ \hline
+            T & F & & F & T
+            &  T  &
+            &  F  &
+            &  F 
+            \\ \hline
+            F & T & & T & F
+            &  T  &
+            &  F  &
+            &  F 
+            \\ \hline
+            F & F & & T & T
+            &  F  &
+            &  F  &
+            &  F 
+            \\ \hline
+        \end{tabular}
+    \end{enumerate}
+}
+
+\input{BASE-FOOT}

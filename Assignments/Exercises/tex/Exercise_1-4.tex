@@ -1,0 +1,284 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {1.4}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Predicates}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{5}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+\notonkey{
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+
+    \subsection{Predicates}
+
+    \begin{intro}{Predicates\\}
+        In mathematical logic, a \textbf{predicate} is commonly understood to be a Boolean-valued function.
+        \footnote{From https://en.wikipedia.org/wiki/Predicate\_(mathematical\_logic)}
+
+        We write a predicate as a function, such as $P(x)$, for example:
+
+        \begin{center}
+            $P(x)$ is the predicate, ``x is less than 2".
+        \end{center}
+
+        Once some value is plugged in for $x$, the result is a proposition -
+        something either unambiguously \textbf{true} or \textbf{false},
+        but until we have some input for $x$, we don't know whether it
+        is true or false.
+
+        \begin{center}
+            $P(0)$ = true \tab $P(2)$ = false \tab $P(10)$ = false
+        \end{center}
+
+        Additionally, predicates can also be combined with the logical
+        operators AND $\land$ OR $\lor$ and NOT $\neg$.
+    \end{intro}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following predicates given, plug in \textbf{2, 23, -5, and 15}
+        as inputs and write out whether the result is true or false.
+        
+        \begin{enumerate}
+            \item[a.] $P(x)$ is the predicate ``$x > 15$"
+            \item[b.] $Q(x)$ is the predicate ``$x \leq 15$"
+            \item[c.] $R(x)$ is the predicate ``$(x > 5) \land (x < 20)$"
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \begin{intro}{Domain\\}
+        When we're working with predicates, we will also define the domain.
+
+        The \textbf{domain} is the set of all possible inputs for our predicate.
+        In other words, $x$ must be chosen from the domain.
+    \end{intro}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following predicates and domains given, specify
+        whether the predicate is true for \textbf{all members of the domain},
+        \textbf{some members of the domain}, or \textbf{no members of the domain.}
+        
+        \begin{enumerate}
+            \item[a.]   $P(x)$ is the predicate ``$x > 15$", the domain is \{10, 12, 14, 16, 18\}.
+                        ~\\
+                        \Square \ True for all \tab \Square \ True for some \tab \Square \ True for none \\
+            
+            \item[b.] $Q(x)$ is the predicate ``$x \leq 15$", the domain is \{0, 1, 2, 3\}.
+                        ~\\
+                        \Square \ True for all \tab \Square \ True for some \tab \Square \ True for none \\
+                        
+            \item[c.] $R(x)$ is the predicate ``$(x > 5) \land (x < 20)$", the domain is \{0, 1, 2\}.
+                        ~\\
+                        \Square \ True for all \tab \Square \ True for some \tab \Square \ True for none \\
+                        
+            \item[d.] $S(x)$ is the predicate ``$(x > 1) \land (x < 5)$", domain is \{2, 3, 4\}.
+                        ~\\
+                        \Square \ True for all \tab \Square \ True for some \tab \Square \ True for none \\
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \subsection{Quantifiers}
+
+    \begin{intro}{Quantifiers\\}
+        Symbolically, we can specify that the input of our predicate, $x$,
+        belongs in some domain set $D$ with the notation: $x \in D$.
+        This is read as, ``$x$ exists in the domain $D$."
+
+        Additionally, we can also specify whether a predicate is true
+        \textbf{for all inputs $x$ from the domain $D$} using the ``for all"
+        symbol $\forall$, or we can specify that the predicate is true
+        \textbf{for \textit{some} inputs $x$ from the domain $D$} using
+        the ``there exists" symbol $\exists$.{}
+
+        \paragraph{Example:} Rewrite the predicate symbolically.
+            $P(x)$ is ``$x > 15$", the domain D is \{16, 17, 18\}.
+            Here we can see that all inputs from the domain will
+            result in the predicate evaluating to true, so we can write:
+
+            \begin{center}
+                $ \forall x \in D, P(x) $ (``For all x in D, x is greater than 15.")
+            \end{center}
+
+        \begin{itemize}
+            \item The symbol $\in$ (``in") indicates membership in a set.
+            \item The symbol $\forall$ (``for all") means "for all", or "every".
+            \item The symbol $\exists$ (``there exists") means "there is (at least one)", or "there exists (at least one)".
+            \item The symbols $\forall$ and $\exists$ are called \textbf{quantifiers}. When used
+                with predicates, the statement is called a \textbf{quantified predicate}.
+        \end{itemize}
+    \end{intro}
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following predicates, rewrite the sentence symbolically,
+        as in the example above.
+        Use either $\forall$ or $\exists$, based on whether the
+        predicate is true for the domain given.
+        
+        \paragraph{Hint:}
+            If a predicate P(x) is false for all elements in the domain, you
+            can phrase it as: ``$\forall x \in D, \neg P(x)$".
+        
+        \begin{enumerate}
+            \item[a.] $P(x)$ is the predicate ``$x > 15$", the domain is \{10, 12, 14, 16, 18\}.
+            \item[b.] $Q(x)$ is the predicate ``$x \leq 15$", the domain is \{0, 1, 2, 3\}.
+            \item[c.] $R(x)$ is the predicate ``$(x > 5) \land (x < 20)$", the domain is \{0, 1, 2\}.
+            \item[d.] $S(x)$ is the predicate ``$(x > 1) \land (x < 5)$", domain is \{2, 3, 4\}.
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \newpage
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        For the following predicates, rewrite the sentence symbolically
+        using the domain D = \{ 3, 4, 5, 10, 20, 25 \}.
+        Make sure to define your predicates (state that ``$P(x)$ is the predicate...",
+        and afterwards specify whether the quantified predicate is true or false.
+        (If it states ``there exists" but none exist, then the quantified predicate is false.)
+        
+        \begin{enumerate}
+            \item[a.] There is (at least one) $k$ in the set $D$ with the property
+                that $k^{2}$ is also in the set $D$.
+                \begin{hint}{Hint}
+                    How can you specify the predicate, ``$k^{2}$ is in the set $D$" symbolically?
+                \end{hint}
+
+            \item[b.] There exists some $m$ that is a member of $D$, such that
+                $m \geq 3$.
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+    \hrulefill
+
+    \subsection{Negating quantifiers}
+
+        \begin{intro}{Proposition 1\\}
+            For any predicates $P$ and $Q$ over a domain $D$,
+            \begin{itemize}
+                \item The negation of $\forall x \in D, P(x)$ is $\exists x \in D, \neg P(x)$.
+                \item The negation of $\exists x \in D, P(x)$ is $\forall x \in D, \neg P(x)$.
+            \end{itemize}
+
+            When negating a predicate that uses an equal sign, the negation would be ``not equals".
+
+            \paragraph{Example:} $\forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, x \cdot y = 0$.
+            \begin{enumerate}
+                \item $\neg( \forall x \in \mathbb{Z}, \exists y \in \mathbb{Z}, x \cdot y = 0 )$
+                \item $\equiv$ \tab $\exists x \in \mathbb{Z}, \forall y \in \mathbb{Z}, x \cdot y \neq 0$
+            \end{enumerate}
+        \end{intro}
+
+    \newpage
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Write the negation of each of these statements. Simplify as much as possible.
+        
+        \begin{enumerate}
+            \item[a.] $\forall x \in \mathbb{Z},$ \tab[0.2cm] $\exists y \in \mathbb{Z},$ \tab[0.2cm] $2x+y = 3$
+            \item[b.] $\exists x \in \mathbb{N},$ \tab[0.2cm] $\forall y \in \mathbb{N},$ \tab[0.2cm] $x \cdot y < x$
+            \item[c.] $\exists x \in \mathbb{Z},$ \tab[0.2cm] $\exists y \in \mathbb{Z},$ \tab[0.2cm] $(x + y = 13) \land (x \cdot y = 36)$
+        \end{enumerate}
+    \end{questionNOGRADE}
+        
+    \begin{hint}{Hint:Negating propositions}
+        From DeMorgan's laws,
+        \begin{center}
+            $\neg(p \land q) \equiv \neg p \lor \neg q$.
+        \end{center} 
+    \end{hint}
+    
+    \begin{hint}{Sets of numbers}
+        Some sets we will be using often in this class are...
+        \begin{itemize}
+            \item[] $\mathbb{Z}$ = ``The set of all integers".
+            \item[] $\mathbb{N}$ = ``The set of all natural numbers".
+            \item[] $\mathbb{Q}$ = ``The set of all rational numbers".
+            \item[] $\mathbb{R}$ = ``The set of all real numbers".
+        \end{itemize}
+    \end{hint}
+
+    \hrulefill
+
+    \stepcounter{question}
+    \begin{questionNOGRADE}{\thequestion}
+        Which elements of the set D = \{2, 4, 6, 8, 10, 12\} make the
+        \textbf{negation} of each of these predicates true?
+        
+        \begin{enumerate}
+            \item[a.] $Q(n)$ is the predicate, ``$n > 10$".
+            \item[b.] $R(n)$ is the predicate, ``$n$ is even".
+            \item[c.] $S(n)$ is the predicate, ``$n^{2} < 1$".
+            \item[d.] $T(n)$ is the predicate, ``$n-2$ is an element of $D$".
+        \end{enumerate}
+    \end{questionNOGRADE}
+
+
+}{
+% KEY ------------------------------------ %
+
+\begin{enumerate}
+    \item[1a.]      $P(2):$  False  \\
+                    $P(23):$ True   \\
+                    $P(-5):$ False  \\
+                    $P(15):$ False
+
+    \item[1b.]      $Q(2):$  True   \\
+                    $Q(23):$ False  \\
+                    $Q(-5):$ True   \\
+                    $Q(15):$ True   \\
+
+    \item[1c.]      $R(2):$  False  \\
+                    $R(23):$ False  \\
+                    $R(-5):$ False  \\
+                    $R(15):$ True
+
+    \item[2a.]      True for some
+    \item[2b.]      True for all
+    \item[2c.]      True for none
+    \item[2d.]      True for all
+
+    \item[3a.]      $P(x)$ is the predicate ``$x > 15$", the domain is \{10, 12, 14, 16, 18\}. \\
+                    $\exists x in D, P(x)$
+
+    \item[3b.]      $Q(x)$ is the predicate ``$x \leq 15$", the domain is \{0, 1, 2, 3\}. \\
+                    $\forall x in D, Q(x)$
+    
+    \item[3c.]      $R(x)$ is the predicate ``$(x > 5) \land (x < 20)$", the domain is \{0, 1, 2\}. \\
+                    $\forall x in D, \neg R(x)$
+    
+    \item[3d.]      $S(x)$ is the predicate ``$(x > 1) \land (x < 5)$", domain is \{2, 3, 4\}. \\
+                    $\forall x in D, S(x)$
+
+    \item[4a.]      $\exists k \in D, P(x)$, where $P(x)$ is the predicate ``$k^{2} \in D$".
+    \item[4b.]      $\exists m \in D, Q(x)$, where $Q(m)$ is the predicate ``$m \geq 3$".
+
+    \item[5a.]      $\neg Q(n)$ is $n \leq 10$, so \{2, 4, 6, 8, and 10\}.
+    \item[5b.]      $\neg R(n)$ is $n$ is odd, so NONE.
+    \item[5c.]      $\neg S(n)$ is $n^{2} \geq 1$, so ALL.
+    \item[5d.]      $\neg T(n)$ is $n-1$ is not an element of $D$, so \{2\}.
+\end{enumerate}
+
+}
+
+\input{BASE-FOOT}
