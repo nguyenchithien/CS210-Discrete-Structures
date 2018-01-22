@@ -1,0 +1,424 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {}
+\newcommand{\laType}        {}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Exam 1 Review}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{1}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+    % ------------------------------------------------------ %
+    \chapter*{Concepts}
+
+    \paragraph{Sequences}
+
+    \subparagraph{Element:} One specific item of a list (or array) at some position.
+        (e.g., For $a_{1} = 5$, the index is 1 and the element is 5.)
+
+    \subparagraph{Index:} The position of an item in a sequence. In Discrete Math,
+        these generally begin with $a_{1}$, while in programming the index
+        usually starts at 0.
+
+    \subparagraph{Closed formula:} A formula where the element is calculated based
+        on the index (or position) in the sequence. (e.g., $a_{n} = 2n + 1$)
+
+    \subparagraph{Recursive formula:} A formula where the first element is given
+        and subsequent elements are calculated based on previous elements.
+        (e.g., $a_{1} = 1, a_{n} = a_{n-1} + 2$)
+
+    \paragraph{Propositions}  ~\\
+    
+        A \textbf{propositional variable} is a variable that is unambiguously
+        true or false. These variables can also be combined with AND $\land$,{}
+        OR $\lor$, and NOT $\neg$ to build a compound statement. The compound
+        statement will also result in either true or false based on the values
+        of the propositional variables it is made up of.
+
+    \paragraph{Predicates} ~\\
+
+        \textbf{Predicates} are generally denoted as $P(x)$, $Q(x)$, etc. where
+        $x$ is some input value. Based on the input, the predicate results in either
+        true or false.
+
+        ~\\ Example: $P(x)$ is the predicate ``$x$ is even''. \\
+        $P(2)$ is true, and $P(3)$ is false. ~\\
+
+        Further, a \textbf{domain} is usually specified with the predicate.
+        Given the domain, a proposition may be \textbf{always true}, or
+        \textbf{sometimes true}.
+
+        ~\\ Example: $\forall x \in D, P(x)$ \\ \tab For all elements $x$ from the domain $D$, $P(x)$ is true.
+        
+        ~\\ Example: $\exists x \in D, P(x)$ \\ \tab There exists (at least one) element $x$ in the domain $D$ such that $P(x)$ results to true.
+        ~\\
+        
+        In the case where the proposition is
+        always false, we can say that, ``for all elements $x$, $P(x)$ is not true''.
+
+        ~\\ Example: $\forall x \in D, \neg P(x)$ \\ \tab For all elements $x$ from the domain $D$, $P(x)$ is false.
+
+    \paragraph{Negations} ~\\
+
+        \begin{enumerate}
+            \item   $\neg (p \land q)   \equiv      \neg p \lor \neg q$
+            \item   $\neg (p \lor q)    \equiv      \neg p \land \neg q$
+            \item   $\neg (\forall x \in D, P(x))   \equiv      \exists x \in D, \neg P(x)$
+            \item   $\neg (\exists x \in D, P(x))   \equiv      \forall x \in D, \neg P(x)$
+            \item   $\neg (p \to q)     \equiv      p \land \neg q$
+        \end{enumerate}
+
+    \paragraph{Inverse, converse, and contrapositive} ~\\
+
+        Given $p \to q$, we have:
+
+        \begin{enumerate}
+            \item   Converse:       $q \to p$
+            \item   Inverse:        $\neg p \to \neg q$
+            \item   Contrapositive: $\neg q \to \neg p$
+        \end{enumerate}
+        
+        
+        
+
+    % ------------------------------------------------------ %
+    \chapter*{\laTitle}
+
+    \section{First Examples}
+
+        No questions from this section. 
+    
+    \section{Sequences and Summations}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            For sequence ``3, 5, 7, 9, 11'' find the \textbf{closed formula}.
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            For sequence ``1, 4, 9, 16, 25'' find the \textbf{closed formula}.
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            For sequence ``2, 4, 6, 8'' find the \textbf{recursive formula}.
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            For sequence ``1, 3, 7, 15, 31'' find the \textbf{recursive formula}.
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Evaluate the sum: $$ \sum_{k=1}^{4}(3)$$
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Evaluate the sum: $$ \sum_{k=1}^{5}(2k)$$
+        \end{questionNOGRADE}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Evaluate the sum: $$ \sum_{k=1}^{5}(3k+1)$$
+        \end{questionNOGRADE}
+        
+    \section{Propositional Logic}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Create a truth table for the expression: $(p \lor q) \land \neg (p \land q)$
+        \end{questionNOGRADE}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Create a truth table for the expression: $(p \lor q) \land \neg r$
+        \end{questionNOGRADE}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Given the following propositional variables:
+
+            \begin{center}
+                $o.$ patron has overdue books   \tab{}
+                $a.$ the book is available at this library \\
+                $m.$ patron has maximum amount of books checked out
+            \end{center}
+
+            Translate each of the following into symbolic statements:
+
+            \begin{itemize}
+                \item[a.]   Patron has overdue books and has the maximum amount of books checked out.
+                \item[b.]   Patron does not have overdue books, but the book is not available at this library.
+                \item[c.]   Patron does not have overdue books and the book is available at the library.
+                \item[d.]   Patron does not have overdue books and the book is available at the library, but (and) the patron has 	the maximum amount of books checked out.
+                \item[e.]   Patron either has overdue books, or has the maximum amount of books checked out.
+                \item[f.]   The patron doesn’t have overdue books, and doesn’t have the maximum checked out, and the 		book is not available at this library.
+            \end{itemize}
+        \end{questionNOGRADE}
+        
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Given three variables $p$, $q$, and $r$, write a compound statement that will meet the following criteria.
+            Also build the truth table for the statement.
+
+            \begin{itemize}
+                \item[a.]   $p$ and $q$ are true, but not $r$
+                \item[b.]   $p$ and either $q$ or $r$ are true, but not all three variables.
+            \end{itemize}
+        \end{questionNOGRADE}
+
+    \section{Predicates}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Given the following predicate, come up with a domain that matches the criteria.
+            There are many solutions.
+
+            \begin{itemize}
+                \item[a.]   $P(x)$ is the predicate, ``$x$ is divisible by 3''. \\
+                            Quantified predicate: $\forall x \in D, P(x)$ \\
+                            Define domain $D$.
+                            
+                \item[b.]   $Q(x)$ is the predicate, ``$x$ is divisible by 2''. \\
+                            Quantified predicate: $\forall x \in E, \neg Q(x)$ \\
+                            Define domain $E$.
+                            
+                \item[c.]   $R(x)$ is the predicate, ``$x$ is positive''. \\
+                            Quantified predicate: $\exists x \in F, R(x)$ \\
+                            Define domain $F$.
+                            
+                \item[d.]   $S(x)$ is the predicate, ``$x$ is positive''. \\
+                            Quantified predicate: $\exists x \in G, \neg S(x)$ \\
+                            Define domain $G$.
+            \end{itemize}
+        \end{questionNOGRADE}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Solve the following.
+
+            \begin{itemize}
+                \item[a.]   Translate the following statement into a quantified statement using predicate logic...\\
+                ``For every element $x$ that is a member of the domain $D$, $x$ is greater than 10.'' \\
+                $D = \{20, 40, 60, 80, 100 \}$
+
+                \item[b.]   Write the negation of your statement from (a) and simplify.
+
+                \item[c.]   Which statement is true: (a) or (b)?
+            \end{itemize}
+        \end{questionNOGRADE}
+
+    \section{Implications}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Solve the following.
+
+            \begin{itemize}
+                \item[a.]   Translate the following statement into a quantified statement using predicate logic...\\
+                ``for all integers $x$, if $2 \times x$ is 0, then $x$ is 0.'' \\
+                Make sure to define two predicates: one for the hypothesis and one for the conclusion.
+
+                \item[b.]   Write the negation of your statement from (a) and simplify.
+
+                \item[c.]   Which statement is true: (a) or (b)?
+            \end{itemize}
+        \end{questionNOGRADE}
+    
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Given the following statement, find the contrapositive, converse, and inverse. \\
+            $G(x)$ is $x$ glitters  \tab $A(x)$ is $x$ is gold. \\
+            $G(x) \to A(x)$:    \tab ``If $x$ glitters, then $x$ is gold''
+        \end{questionNOGRADE}
+
+        
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Given the following predicates:
+
+            \begin{center}
+                $S(x)$ is $x$ studies hard, \tab $G(x)$ is $x$ gets a good grade, \\ $P(x)$ is $x$ passes the class.
+            \end{center}
+
+            Use the logical operators $\land$, $\lor$, $\neg$, and the quantifiers $\forall$ and $\exists$, and the implication $\to$ where appropriate.
+            Assume the domain is $P$, the domain of all people.
+
+            \begin{itemize}
+                \item[a.]   For all students $x$, if $x$ studies hard, then $x$ passes the class.
+                \item[b.]   There exists some student $x$ such that $x$ didn't study hard and $x$ passed the class.
+                \item[c.]   There exists some student $x$ such that $x$ studied hard and $x$ didn't pass the class.
+                \item[d.]   For all students $x$, if $x$ studies hard and $x$ gets a good grade, then $x$ passes the class.
+                \item[e.]   For all students $x$, if $x$ doesn't pass the class, then $x$ didn't get a good grade.
+            \end{itemize}
+        \end{questionNOGRADE}
+
+            
+    % ------------------------------------------------------ %
+    \chapter*{Answer Key}
+
+    \begin{enumerate}
+        \item   $a_{n} = 2n+1$
+        \item   $a_{n} = n^{2}$
+        \item   $a_{1} = 2; a_{n} = a_{n-1} + 2$
+        \item   $a_{1} = 1; a_{n} = 2 \cdot a_{n-1} + 1$
+        
+        \item   $ \sum_{k=1}^{4}(3) = 3 + 3 + 3 + 3 = 4(3) = 12$
+        
+        \item   $ \sum_{k=1}^{5}(2k) = (2 \cdot 1) + (2 \cdot 2) + (2 \cdot 3) + (2 \cdot 4) + (2 \cdot 5) $ \\
+                $ = 2 + 4 + 6 + 8 + 10$ \\ $= 30$
+        
+        \item   $ \sum_{k=1}^{5}(3k+1) = (3 \cdot 1 + 1) + (3 \cdot 2 + 1) + (3 \cdot 3 + 1) + (3 \cdot 4 + 1) + (3 \cdot 5 + 1)$ \\
+                $ = 4 + 7 + 10 + 13 + 16 $ \\ $ = 50$
+
+        \item   
+            \begin{tabular}{c c | c | c | c | c}
+                $p$ & $q$
+                    & $(p \lor q)$
+                    & $(p \land q)$
+                    & $\neg (p \land q)$
+                    & $(p \lor q) \land \neg (p \land q)$
+                \\ \hline
+                T & T &     T &    T  &     F &     F
+                \\
+                T & F &     T &    F  &     T &     T
+                \\
+                F & T &     T &    F  &     T &     T
+                \\
+                F & F &     F &    F  &     T &     F
+            \end{tabular}
+
+        \item
+            \begin{tabular}{c c c | c | c | c}
+                $p$ & $q$ & $r$ &
+                    $(p \lor q)$ &
+                    $\neg r$ &
+                    $(p \lor q) \land \neg r$
+                \\ \hline
+                T & T & T &     T &     F &     F
+                \\
+                T & T & F &     T &     T &     T
+                \\
+                T & F & T &     T &     F &     F
+                \\
+                T & F & F &     T &     T &     T
+                \\
+                F & T & T &     T &     F &     F
+                \\
+                F & T & F &     T &     T &     T
+                \\
+                F & F & T &     F &     F &     F
+                \\
+                F & F & F &     F &     T &     F
+            \end{tabular}
+
+        \item
+            \begin{itemize}
+                \item[a.]   $o \land m$
+                \item[b.]   $\neg o \land \neg a$
+                \item[c.]   $\neg o \land a$
+                \item[d.]   $\neg o \land a \land m$
+                \item[e.]   $o \lor m$
+                \item[f.]   $\neg o \land \neg m \land \neg a$ \\ or
+                            $\neg (o \lor m \lor a)$
+            \end{itemize}
+            
+        \item
+            \begin{itemize}
+                \item[a.]   $p \land q \land \neg r$ \\
+                            \begin{tabular}{c c c | c  l}
+                                $p$ & $q$ & $r$     & $p \land q \land \neg r$
+                                \\ \hline
+                                    T & T & T           & F
+                                \\  T & T & F           & T & $p$ and $q$ are true, but not $r$
+                                \\  T & F & T           & F
+                                \\  T & F & F           & F
+                                \\  F & T & T           & F
+                                \\  F & T & F           & F
+                                \\  F & F & T           & F
+                                \\  F & F & F           & F
+                                
+                            \end{tabular}
+                            
+                \item[b.]   $p \land (q \lor r) \land \neg (p \land q \land r)$ \\
+                            \begin{tabular}{c c c | c | c | c | c l}
+                                $p$ & $q$ & $r$
+                                    & \footnotesize  $(q \lor r)$
+                                    & \footnotesize  $\neg(p \land q \land r)$
+                                    & \footnotesize  $p \land (q \lor r)$
+                                \\ & & & & &\footnotesize   $\land \neg (p \land q \land r)$
+                                \\ \hline
+                                    T & T & T           &   T   &  F     & F
+                                \\  T & T & F           &   T   &  T     & T    & \footnotesize  $p$ and $q$ or $r$ are true, but not all 3.
+                                \\  T & F & T           &   T   &  T     & T    & \footnotesize  $p$ and $q$ or $r$ are true, but not all 3.
+                                \\  T & F & F           &   F   &  T     & F
+                                \\  F & T & T           &   T   &  T     & F
+                                \\  F & T & F           &   T   &  T     & F
+                                \\  F & F & T           &   T   &  T     & F
+                                \\  F & F & F           &   F   &  T     & F
+                                
+                            \end{tabular}
+            \end{itemize}
+
+        \item   
+            \begin{itemize}
+                \item[a.]   Multiple solutions; \textbf{ALL} elements of $D$ should be divisible by 3. \\
+                            Example: $D = \{3, 6, 9, 12\}$
+                            
+                \item[b.]   Multiple solutions; \textbf{NO} elements of $E$ should be divisible by 2. \\
+                            Example: $E = \{5, 7, 9, 11\}$
+                            
+                \item[c.]   Multiple solutions; \textbf{some} element(s) of $F$ should be positive. \\
+                            Example: $F = \{ -2, -1, 0, 1, 2 \}$
+                            
+                \item[d.]   Multiple solutions; \textbf{some} element(s) of $G$ should not be positive. \\
+                            Example: $G = \{ -5, 5, 10, 15 \}$
+            \end{itemize}
+
+        \item   
+            \begin{itemize}
+                \item[a.]   $\forall x \in D, P(x)$ where $P(x)$ is $x > 10$.
+                \item[b.]   $\neg(\forall x \in D, P(x)) = \exists x \in D, \neg P(x)$; \\
+                            There is some $x$ in $D$ such that $x \leq 10$.
+                \item[c.]   (a) is true.
+            \end{itemize}
+
+        \item
+            \begin{itemize}
+                \item[a.]   $\forall x \in \mathbb{Z}, P(x) \to Q(x)$, where $P(x)$ is $2x = 0$ and $Q(x)$ is $x = 0$.
+
+                \item[b.]   $\neg(\forall x \in \mathbb{Z}, P(x) \to Q(x)) = \exists x \in \mathbb{Z}, P(x) \land \neg Q(x)$
+
+                \item[c.]   (a) is true.
+            \end{itemize}
+
+        \item   Original:           $G(x) \to A(x)$             \\ \tab ``If $x$ glitters, then $x$ is gold''
+                \\
+                Inverse:            $\neg G(x) \to \neg A(x)$   \\ \tab ``If $x$ doesn't glitter, then $x$ isn't gold''
+                \\
+                Converse:           $A(x) \to G(x)$             \\ \tab ``If $x$ is gold, then $x$ glitters''
+                \\
+                Contrapositive:     $\neg A(x) \to \neg G(x)$   \\ \tab ``If $x$ doesn't glitter, then $x$ isn't gold''
+
+        \item
+            \begin{itemize}
+                \item[a.]   $\forall x \in P, S(x) \to P(x)$
+                \item[b.]   $\exists x \in P, \neg S(x) \land P(x)$
+                \item[c.]   $\exists x \in P, S(x) \land \neg P(x)$
+                \item[d.]   $\forall x \in P, (S(x) \land G(x)) \to P(x)$
+                \item[e.]   $\forall x \in P, \neg P(x) \to \neg G(x)$
+            \end{itemize}
+    \end{enumerate}
+
+\input{BASE-FOOT}
