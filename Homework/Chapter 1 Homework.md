@@ -10,7 +10,12 @@ Exercises 1 (a, c, i, k), 6 (a, c), 7 (a, c, e), 8 (a, c, e)
 
 ## 1.3: Propositional Logic
 
+No homework - Make sure to do the exercise and the quizzes
+
 ## 1.4: Predicates
+
+No homework - Make sure to do the exercise and the quizzes
 
 ## 1.5: Implications
 
+No homework - Make sure to do the exercise and the quizzes
