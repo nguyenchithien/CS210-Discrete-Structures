@@ -17,196 +17,73 @@
 
 \input{INSTRUCTIONS-EXERCISE}
 
-% ASSIGNMENT ------------------------------------ %
-    \section{Numerical Representation}
+\begin{enumerate}
+    \item
+        \begin{itemize}
+            \item[a.]   $\{0, 1, 2, 3, 4, 5, 6, 7\}$
+            \item[b.]   $\{0, 1\}$
+        \end{itemize}
 
-    %------------------------------------------------------------------%
-    \subsection{Intro practice}
+    \item
+        \begin{itemize}
+            \item[a.]
+            
+                    \begin{tabular}{ | c | c | }
+                        \hline
+                        $10^{1}$ & $10^{0}$
+                        \\ \hline
+                        {1}{} &
+                        {9}{}
+                        \\ \hline
+                    \end{tabular}
+                
+            \item[b.]   
+                    \begin{tabular}{ | c | c | c | c | c | c | c | c | }
+                        \hline
+                        $2^{7}$ &
+                        $2^{6}$ &
+                        $2^{5}$ &
+                        $2^{4}$ &
+                        $2^{3}$ &
+                        $2^{2}$ &
+                        $2^{1}$ &
+                        $2^{0}$
+                        \\ \hline
+                        {0}{} &
+                        {0}{} &
+                        {1}{} &
+                        {0}{} &
+                        {1}{} &
+                        {1}{} &
+                        {0}{} &
+                        {1}{}
+                        \\ \hline
+                    \end{tabular}
 
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
+            \item[c.]   
+                    \begin{tabular}{ | c | c | c | c | c | c | }
+                        \hline
+                        $16^{5}$ &
+                        $16^{4}$ &
+                        $16^{3}$ &
+                        $16^{2}$ &
+                        $16^{1}$ &
+                        $16^{0}$
+                        \\ \hline
+                        {F}{} &
+                        {F}{} &
+                        {A}{} &
+                        {A}{} &
+                        {6}{} &
+                        {6}{}
+                        \\ \hline
+                    \end{tabular}
+        \end{itemize}
 
-            The set of digits in base-10 (decimal) number system is
-            $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$. Use this information
-            to help you figure out the following.
-
-            \begin{itemize}
-                \item[a.]   Write out the set of digits in the octal
-                (base-8) number system.
-                \solution{ $\{0, 1, 2, 3, 4, 5, 6, 7\}$ }{ ~\\~\\ }
-
-                \item[b.]   Write out the set of digits in the binary
-                (base-2) number system.
-                \solution{ $\{0, 1\}$ }{ ~\\~\\ }
-            \end{itemize}
-        \end{questionNOGRADE}
-
-        \begin{introNOHEAD}
-            The hexadecimal (base-16) number system is
-            \begin{center}
-                $\{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F\}$.
-            \end{center}
-            Why do we use letters? To keep numbers 10 through 15
-            as one-character representations.
-        \end{introNOHEAD}
-
-        \begin{intro}{Specifying base}
-            When we need to specify the base when writing out
-            numbers, write it within parentheses, with a subscript
-            of its base number.
-
-            \begin{itemize}
-                \item   $(123)_{10}$ = 123, base-10
-                \item   $(1337)_{8}$ = 1337, base-8
-                \item   $(C47)_{16}$ = C47, base-16
-                \item   $(1011)_{2}$ = 1011, base-2
-            \end{itemize}
-        \end{intro}
-
-        \newpage
-    \subsection{Digits}
-
-        \begin{introNOHEAD}
-            For the decimal number $2,368$, we can write this as its
-            individual digits:
-
-            \begin{center}
-                \begin{tabular}{ | c | c | c | c | }
-                    \hline
-                    \textbf{Thousands}   ($10^{3}$) &
-                    \textbf{Hundreds}    ($10^{2}$) &
-                    \textbf{Tens}        ($10^{1}$) &
-                    \textbf{Ones}        ($10^{0}$)
-                    \\ \hline
-                    2 & 3 & 6 & 8
-                    \\ \hline
-                \end{tabular}
-            \end{center}
-
-            And then we can build out $2,368$ as the mathematical equation:
-
-            $$ 2 \cdot 10^{3} + 3 \cdot 10^{2} + 6 \cdot 10^{1} + 8 \cdot 10^{0} $$
-
-            Likewise, for the binary number 0101 1001, we can write it as:
-
-            \begin{center}
-                \begin{tabular}{ | c | c | c | c | c | c | c | c | }
-                    \hline
-                    $2^{7}$ &
-                    $2^{6}$ &
-                    $2^{5}$ &
-                    $2^{4}$ &
-                    $2^{3}$ &
-                    $2^{2}$ &
-                    $2^{1}$ &
-                    $2^{0}$
-                    \\ \hline
-                    0 & 1 & 0 & 1 & 1 & 0 & 0 & 1
-                    \\ \hline
-                \end{tabular}
-            \end{center}
-
-            And into the equation:
-
-            $$1 \cdot 2^{6} + 1 \cdot 2^{4} + 1 \cdot 2^{3} + 1 \cdot 2^{0} $$
-
-        \end{introNOHEAD}
-
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-
-            Expand each of the following numbers as a mathematical
-            equation. Make sure to pay attention to the $base$ value.
-
-            \begin{itemize}
-                \item[a.]   Write out the equation for $(19)_{10}$
-                    \begin{center}
-                        \begin{tabular}{ | c | c | }
-                            \hline
-                            $10^{1}$ & $10^{0}$
-                            \\ \hline
-                            \solution{1}{} &
-                            \solution{9}{}
-                            \\ \hline
-                        \end{tabular}
-                    \end{center}
-
-                \item[b.]   Write out the equation for (0010 1101)$_{2}$
-                    \begin{center}
-                        \begin{tabular}{ | c | c | c | c | c | c | c | c | }
-                            \hline
-                            $2^{7}$ &
-                            $2^{6}$ &
-                            $2^{5}$ &
-                            $2^{4}$ &
-                            $2^{3}$ &
-                            $2^{2}$ &
-                            $2^{1}$ &
-                            $2^{0}$
-                            \\ \hline
-                            \solution{0}{} &
-                            \solution{0}{} &
-                            \solution{1}{} &
-                            \solution{0}{} &
-                            \solution{1}{} &
-                            \solution{1}{} &
-                            \solution{0}{} &
-                            \solution{1}{}
-                            \\ \hline
-                        \end{tabular}
-                    \end{center}
-
-                \item[c.]   Write out the equation for $(FFAA66)_{16}$
-                    \begin{center}
-                        \begin{tabular}{ | c | c | c | c | c | c | }
-                            \hline
-                            $16^{5}$ &
-                            $16^{4}$ &
-                            $16^{3}$ &
-                            $16^{2}$ &
-                            $16^{1}$ &
-                            $16^{0}$
-                            \\ \hline
-                            \solution{F}{} &
-                            \solution{F}{} &
-                            \solution{A}{} &
-                            \solution{A}{} &
-                            \solution{6}{} &
-                            \solution{6}{}
-                            \\ \hline
-                        \end{tabular}
-                    \end{center}
-            \end{itemize}
-        \end{questionNOGRADE}
-
-        \newpage
-
-        \subsection{Converting between bases}
-
-            \begin{intro}{Algorithm for converting a decimal number to base $b$:}
-                \begin{enumerate}
-                    \item   Input a natural number $n$
-                    \item   While $n > 0$, do the following:
-                        \begin{enumerate}
-                            \item   Divide $n$ by $b$ and get a quotient $q$ and remainder $r$.
-                            \item   Write $r$ as the next (right-to-left) digit.
-                            \item   Replace the value of $n$ with $q$, and repeat.
-                        \end{enumerate}
-                \end{enumerate}
-            \end{intro}
-
-
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-            Convert the following between bases:
-
-            \begin{itemize}
-                \item[a.]   Convert (35)$_{10}$ to binary (base-2)
+    \item
+        \begin{itemize}
+            \item[a.]   Convert (35)$_{10}$ to binary (base-2)
                     \tab $n = 35$, $b = 2$
-                    \solution{
                         ~\\
                         $35/2 = 17 + 1/2 \tab (a/b = q + r/b)$ \tab[1cm] $q = 17$, $r = 1$ \\
                         $17/2 = 8 + 1/2 $ \tab[5cm] $q = 8$, $r = 1$ \\
@@ -214,13 +91,10 @@
                         $4/2 = 2 + 0/2$ \tab[5.2cm] $q = 2$, $r = 0$ \\
                         $2/2 = 1 + 0/2$ \tab[5.2cm] $q = 1$, $r = 0$ \\
                         $1/2 = 0 + 1/2$ \tab[5.2cm] $q = 0$, $r = 1$ \\
-                        n = 0 \\ \\
+                        n = 0 \\
                         = 0010 0011
-                    }{ ~\\ \raisebox{0pt}[5cm][0pt]{  } }
-
-                \item[b.]   Convert (125)$_{10}$ to binary (base-2)
+            \item[b.]   Convert (125)$_{10}$ to binary (base-2)
                     \tab $n = 125$, $b = 2$
-                    \solution{
                         ~\\
                         $125/2 = 62 + 1/2 \tab (a/b = q + r/b)$ \tab[1cm] $q = 62$, $r = 1$ \\
                         $62/2 = 31 + 0/2 $ \tab[5cm] $q = 31$, $r = 0$ \\
@@ -229,67 +103,24 @@
                         $7/2 = 3 + 1/2 $ \tab[5.4cm] $q = 3$, $r = 1$ \\
                         $3/2 = 1 + 1/2 $ \tab[5.4cm] $q = 1$, $r = 1$ \\
                         $1/2 = 0 + 1/2 $ \tab[5.4cm] $q = 0$, $r = 1$ \\
-                        n = 0 \\ \\
+                        n = 0 \\
                         = 0111 1101
-                    }{ ~\\ \raisebox{0pt}[2cm][0pt]{  } }
-            \end{itemize}
-        \end{questionNOGRADE}
+        \end{itemize}
 
-        \newpage
+    \item
+        \begin{itemize}
+            \item[a.]   Convert $(1F0B)_{16}$ to binary:
+                    ~\\
+                    1 = 0001 \tab F = 1111 \tab 0 = 0000 \tab B = 1011 \\ \\
+                    = 0001 1111 0000 1011
 
-            \begin{intro}{Hexadecimal to Binary}
-                Often in computers, we write binary strings as hexadecimal
-                to save space and make it easier to read.
+            \item[b.]   Convert (0100 0110)$_{2}$ to hexadecimal:
+                    ~\\
+                    0100 = 4 \tab 0110 = 6 \\ \\
+                    = 46
+        \end{itemize}
+\end{enumerate}
 
-                \begin{center}
-                    \begin{tabular}{l c c c c c c c c}
-                        Hex & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7
-                        \\
-                        Binary & 0000 & 0001 & 0010 & 0011 & 0100 & 0101 & 0110 & 0111
-                        \\ \hline
-                        Hex & 8 & 9 & A & B & C & D & E & F
-                        \\
-                        Binary & 1000 & 1001 & 1010 & 1011 & 1100 & 1101 & 1110 & 1111
-                    \end{tabular}
-                \end{center}
-
-                \paragraph{Example:}
-                Convert 11001 from binary to hexadecimal \\
-                    1. Write out in chunks of four. Add leading 0's to the left side. \\
-                        \tab 0001 1001 \\
-                    2. Swap out each ``nibble" with hexadecimal \\
-                        \tab 0001 = 1 \tab 1001 = 9 \\ \\
-                    So, (0001 1001)$_{2}$ = (19)$_{16}$
-
-                \paragraph{Example:}
-                Convert $DAD$ from hexadecimal to binary \\
-                    1. Convert each digit back to binary. \\
-                        \tab D = 1101 \tab A = 1010 \tab D = 1101
-                    \\ \\ So, (DAD)$_{16}$ = (1101 1010 1101)$_{2}$
-            \end{intro}
-
-
-        % - QUESTION --------------------------------------------------%
-        \stepcounter{question}
-        \begin{questionNOGRADE}{\thequestion}
-            Do the following conversions
-
-            \begin{itemize}
-                \item[a.]   Convert $(1F0B)_{16}$ to binary:
-                    \solution{
-                        ~\\
-                        1 = 0001 \tab F = 1111 \tab 0 = 0000 \tab B = 1011 \\ \\
-                        = 0001 1111 0000 1011
-                    }{ ~\\ \raisebox{0pt}[2cm][0pt]{  } }
-
-                \item[b.]   Convert (0100 0110)$_{2}$ to hexadecimal:
-                    \solution{
-                        ~\\
-                        0100 = 4 \tab 0110 = 6 \\ \\
-                        = 46
-                    }{ ~\\ \raisebox{0pt}[2cm][0pt]{  } }
-            \end{itemize}
-        \end{questionNOGRADE}
 
 \input{BASE-FOOT}
 
