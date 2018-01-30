@@ -1,0 +1,191 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {1.5}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Implications}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{5}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+\input{BASE-HEADER}
+
+% KEY ------------------------------------ %
+
+\begin{enumerate}
+
+    \item
+        \begin{itemize}
+            \item[a.]  $p$: You play, $w$: You win, \\
+                        $\neg p \to \neg w$
+                        
+            \item[b.]  $d$: Your friends dance, $f$: Your friends are my friends,\\
+                        $\neg d \to \neg f$
+                        
+            \item[c.]  $e$: Timmy's age is over 8, $t$: Timmy's age is less than 13, \\
+                        $m$: Timmy gets Tween-priced movie tickets. \\
+                        $(e \land t) \to m$
+                        
+            \item[d.]  $s$: I get enough sleep, $c$: I drink coffee, $w$: I go to work. \\
+                        $(s \lor c) \to w$
+        \end{itemize}
+
+    
+    \item
+        \begin{itemize}
+            \item[a. b.]  
+                \begin{tabular}{ c c c | p{2cm} c | p{2cm} c | }
+                    $p$ & $q$ & $r$ & & a. $(p \land q) \to r$ & & b. $p \to (q \lor r)$
+                    \\ \hline
+                    T & T & T &
+                    &  T  &
+                    &  T 
+
+                    \\
+                    T & T & F &
+                    &  F  &
+                    &  T 
+
+                    \\
+                    T & F & T & 
+                    &  T  &
+                    &  T 
+
+                    \\
+                    T & F & F &
+                    &  T  &
+                    &  F 
+
+                    \\
+                    F & T & T &
+                    &  T  &
+                    &  F 
+
+                    \\
+                    F & T & F &
+                    &  T  &
+                    &  F 
+
+                    \\
+                    F & F & T &
+                    &  T  &
+                    &  F 
+
+                    \\
+                    F & F & F &
+                    &  T  &
+                    &  F 
+                \end{tabular}
+                        
+            \item[c.]  
+                \begin{tabular}{c c | c | c}
+                    $p$ & $q$ & $p \to q$ & $\neg(p \to q)$
+                    \\ \hline
+                    T & T
+                    &  T 
+                    &  F 
+                    \\
+                    T & F
+                    &  F 
+                    &  T 
+                    \\
+                    F & T
+                    &  T 
+                    &  F 
+                    \\
+                    F & F
+                    &  T 
+                    &  F 
+                \end{tabular}
+        \end{itemize}
+
+    \item
+        \begin{itemize}
+            \item[a.]  $P(x) \to Q(X)$
+            \item[b.]  $P(x) \to \neg Q(x)$
+            \item[c.]  $\neg P(x) \to Q(x)$
+            \item[d.]  $\neg P(x) \to Q(x)$
+        \end{itemize}
+
+    \item
+        \begin{itemize}
+            \item[a.]  $i \land \neg j$: You go to New Delhi and you do NOT see the Jantar Mantar.
+            \item[b.]  $(j \lor c) \land \neg b$: Jessica gets chocolate OR Jessica gets cake AND
+                        Jessica DOES NOT have a happy birthday.
+            \item[c.]  $p \land \neg (w \land s) \equiv p \land \neg w \lor \neg s$: You have a group project AND
+                        neither you do all the work, nor someone else does all the work.
+        \end{itemize}
+        
+    \item
+        \begin{itemize}
+            \item[a.]  $\forall x \in D, \neg B(x) \to H(x)$
+                    \begin{itemize}
+                        \item Converse:
+                                $\forall x \in D, H(x) \to \neg B(x)$      \\
+                                For all people $x$, if $x$ is hungry, then $x$ didn't eat breakfast     
+                        
+                        \item Inverse:
+                                $\forall x \in D, B(x) \to \neg H(x)$      \\
+                                For all people $x$, if $x$ ate breakfast then $x$ is NOT hungry     
+                        
+                        \item Contrapositive:
+                                $\forall x \in D, \neg H(x) \to B(x)$      \\
+                                For all people $x$, if $x$ is NOT hungry, then $x$ ate breakfast     
+                    \end{itemize}
+            \item[b.] $\forall x \in D, (P(x) \lor G(x)) \to M(x)$
+                    \begin{itemize}
+                        \item Converse:
+                                $\forall x \in D, M(x) \to (P(x) \lor G(x))$      \\
+                                For all people $x$, if $x$ is a musician, then $x$ plays piano \\
+                                or $x$ plays guitar     
+                        
+                        \item Inverse:
+                                $\forall x \in D, \neg (P(x) \lor G(x)) \to \neg M(x)$      \\
+                                For all people $x$, if $x$ does NOT play piano \\
+                                and does NOT play guitar,
+                                then $x$ is NOT a musician     
+                        
+                        \item Contrapositive:
+                                $\forall x \in D, \neg M(x) \to \neg (P(x) \lor G(x))$      \\
+                                For all people $x$, if $x$ is NOT a musician,
+                                then $x$ doesn't play piano and $x$ doesn't play guitar.
+                             
+                    \end{itemize}
+            \item[c.] $\forall x \in \mathbb{R}: P(x) \to Q(x)$
+                    \begin{itemize}
+                        \item Converse:
+                                $\forall x \in D, Q(x) \to P(x)$      \\
+                                For all real numbers $x$, if $x^{2} > 4$ then $x > 2$.     
+                        
+                        \item Inverse:
+                                $\forall x \in D, \neg P(x) \to \neg Q(x)$      \\
+                                For all real numbers $x$, if $x \leq 2$ then $x^{2} \leq 4$     
+                        
+                        \item Contrapositive:
+                                $\forall x \in D, \neg Q(x) \to \neg P(x)$      \\
+                                For all real numbers $x$, if $x^{2} \leq 4$ then $x \leq 2$     
+                    \end{itemize}
+            \item[d.] $\forall x \in \mathbb{Z}: R(x) \to S(x)$
+                    \begin{itemize}
+                        \item Converse:
+                                $\forall x \in D, S(x) \to R(x)$      \\
+                                For all integers $x$, if $x^{3} = 1$ then $x^{2} = 1$     
+                        
+                        \item Inverse:
+                                $\forall x \in D, \neg R(x) \to \neg S(x)$      \\
+                                For all integers $x$, if $x^{2} \neq 1$ then $x^{3} \neq 1$     
+                        
+                        \item Contrapositive:
+                                $\forall x \in D, \neg S(x) \to \neg R(x)$      \\
+                                For all integers $x$, if $x^{3} \neq 1$ then $x^{2} \neq 1$     
+                    \end{itemize}
+        \end{itemize}
+        
+\end{enumerate}
+
+\input{BASE-FOOT}
