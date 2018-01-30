@@ -1,0 +1,310 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {2.1}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Mathematical Writing}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{2}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% ASSIGNMENT ------------------------------------ %
+
+    \section{\laTitle}
+    
+    \subsection{Turning statements to implications}
+
+        \begin{intro}{Implications} ~\\
+            This time we're exploring mathematical writing and getting introduced
+            to proofs. This means that we are going to be working with
+            \textbf{contrapositives} and \textbf{implications} some more
+            in order to prove statements.
+            To work with a statement, we turn it into an implication that
+            we can work with mathematically.
+
+            \paragraph{Example:}
+            For every positive even integer $n$, $n+1$ is odd.
+
+            Changing to an ``if, then" statement, we can form:
+
+            If a positive integer $n$ is even, then $n+1$ is odd.
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Rewrite the following statements as ``if, then" statements.
+            They don't need to be \textit{true} statements, we will talk
+            about disproving statements next.
+
+            \begin{enumerate}
+                \item[a.] When a positive integer $n$ is odd, then $n+1$ is even.
+
+                \item[b.] All squares have four equal sides.
+                    \begin{hint}{Hint}
+                        Think of representing the square as a variable,
+                        and the length of a side as a variable.
+                    \end{hint}
+
+                \item[c.] All prime numbers are odd.
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+    \newpage
+
+    %------------------------------------------------------------------%
+    \section*{Counter-examples}
+
+        \begin{intro}{Counter-examples} ~\\
+            A \textbf{counter-example} is a way to disprove a proposition.
+            For implications, if we can keep the \textbf{hypothesis} true,
+            and find a scenario where the \textbf{conclusion} ends up being false,
+            then we can disprove a statement.
+
+            \paragraph{Example:}
+            If $n$ is a prime number, then $n$ is odd.
+
+            Can we find any examples of prime numbers that aren't odd?
+            Yes - 2 is a prime number. So this statement is false.
+        \end{intro}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Disprove the following statements by coming up with a counter-example:
+
+            \begin{enumerate}
+                \item[a.] For every even integer $n$, $n+1$ is also even.
+
+                \item[b.] If $n$ is a non-negative integer, then $n! > n$, where $n!$ is $n$-factorial.
+
+                \item[c.] For every integer $n \geq 1$, if $n$ is an odd prime, then $n^{2} + 4$ is also prime.
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+    \hrulefill
+
+    %------------------------------------------------------------------%
+    \section*{Even, Odd, and Divisibility}
+
+        \begin{intro}{\ }
+            In Chapter 2, we will be working with the concept of even and
+            odd numbers a lot, and working out proofs relating to these concepts.
+            But, how do you actually specify that some number is even or odd symbolically?
+
+            \begin{center}
+                ``An integer is even if it is evenly divisible by two\\ and odd if it is not even."
+
+                [...]
+
+                ``A formal definition of an even number is that it is an integer of the form $n = 2k$,
+                where $k$ is an integer;
+                it can then be shown that an odd number is an integer of the form $n = 2k + 1$."
+                \footnote{From https://en.wikipedia.org/wiki/Parity\_(mathematics)}
+            \end{center}
+
+        \end{intro}
+
+    \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Identify the following numbers as either even or odd, by writing it as either
+            2 times some other integer, or 2 times some other integer plus 1.
+
+            \paragraph{Example:}    $21 = 2 \cdot 10 + 1$
+
+            \begin{enumerate}
+                \item[a.] 7
+                    \iftoggle{answerkey}{ \begin{answer} $15 = 2 \cdot 3 + 1$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+                \item[b.] 9
+                    \iftoggle{answerkey}{ \begin{answer} $15 = 2 \cdot 4 + 1$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+                \item[c.] 15
+                    \iftoggle{answerkey}{ \begin{answer} $15 = 2 \cdot 7 + 1$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+                \item[d.] 8
+                    \iftoggle{answerkey}{ \begin{answer} $8 = 2 \cdot 4$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+                \item[e.] 16
+                    \iftoggle{answerkey}{ \begin{answer} $16 = 2 \cdot 8$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+                \item[f.] 20
+                    \iftoggle{answerkey}{ \begin{answer} $20 = 2 \cdot 10$ \end{answer} } { { ~\\ \raisebox{0pt}[0.7cm][0pt]{  } } }
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+
+    %------------------------------------------------------------------%
+
+        \begin{intro}{Divisibility}
+            We looked at the definitions for an even and odd number.
+            Here's one more - divisibility!
+
+            ~\\
+            An integer $n$ is divisible by $4$ if it is the result of
+            4 times some other integer. Symbolically, $n = 4k$.
+
+            ~\\
+            We can use this definition for divisible by any number, as we
+            need.
+        \end{intro}
+
+    \newpage
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Using the definitions of even, odd, and divisible by \textit{some integer},
+            prove that the following statements are true...
+
+            \paragraph{Example:} ``12 is even" - rewrite as 2(6).
+
+            \begin{enumerate}
+                \item[a.] 100 is even.
+
+                \item[b.] 13 is odd.
+
+                \item[c.] -13 is odd.
+
+                \item[d.] 20 is divisible by 5.
+
+                \item[e.] 20 is divisible by 4.
+
+                \item[f.] $6n$ is even.
+
+                \item[g.] $8n^{2} + 8n + 4$ is divisible by 4.
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+    %------------------------------------------------------------------%
+    \section*{Closure properties of integers}
+
+        \begin{intro}{\ }
+            The set of all integers is written as $\mathbb{Z}$.
+
+            \begin{center}
+                \textit{``A set has closure under an operation if
+                performance of that operation on members of the set
+                always produces a member of the same set; in this
+                case we also say that the set is closed under the operation."}
+                \footnote{From https://en.wikipedia.org/wiki/Closure\_(mathematics)}
+            \end{center}
+
+            \begin{itemize}
+                \item   If you add two integers, the result is also an integer
+                \item   If you subtract two integers, the result is also an integer
+                \item   If you multiply two integers, the result is also an integer
+                \item   If you divide two integers, the result \textbf{may not be an integer}
+            \end{itemize}
+
+            We can use these properties in our proofs, by remembering that
+            if two integers $k$ and $j$ are added, the result $k+j$ is also an integer.
+        \end{intro}
+
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Identify if the result of the following operations belong to the set of integers $\mathbb{Z}$.
+            Write the result as either $\in \mathbb{Z}$ or $\not\in \mathbb{Z}$.
+
+            \begin{enumerate}
+                \item[a.] 2 + 8
+                \item[b.] 12 - 4
+                \item[c.] 5 * 3
+                \item[d.] 6 / 3
+                \item[e.] 5 / 2
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+        
+    %------------------------------------------------------------------%
+    \section*{Proving an implication}
+
+        \begin{intro}{Simple proof} ~\\
+            How do we prove if an implication is true? We will be studying
+            this throughout Chapter 2...
+
+            \paragraph{Example:}
+            ``The result of summing any odd integer with any even integer is an odd integer."
+
+            We should first write this in mathematical language. Let's define our numbers:
+            an even number and an odd number. But how do we write these symbolically?
+
+            \begin{center}
+                \begin{tabular}{c c}
+                    odd integer & even integer
+                    \\
+                    $x = 2k+1$ & $y = 2j$
+                \end{tabular}
+            \end{center}
+            ~\\
+            An even integer is technically a number that is \textbf{evenly divisible by 2}.
+            If we re-word this, we can say that an even integer is ``some \textit{other} integer
+            times 2." (Note here that $y$ is our even integer, and it is 2 times some other integer $j$.)
+            ~\\~\\
+            We know what an even integer is... and an odd integer is just one more than an even number.
+            In this case, we define our odd integer $x$, as 2 times \textit{some other integer} $k$, plus 1.
+            (Again note that we're using a different variable for $x$! $j$ for $y$ and $k$ for $x$...
+            Make sure to not re-use the same variable.)
+            ~\\~\\
+            With these numbers defined, we can start working mathematically, translating our original
+            statement into symbols.
+
+            \begin{center}
+                \begin{tabular}{l l}
+                    $x + y$         &       An odd number plus an even number...
+                    \\
+                    $x + y = (2k+1) + (2j) $    &   Adding definitions of odd and even...
+                    \\
+                    $x + y = 2(k + j) + 1 $     &   Rewriting to the definition of an odd \#...
+                \end{tabular}
+            \end{center}
+
+            $(k+j)$ is still an integer, and the definition of an odd integer
+            is 2 times \textit{some integer} plus 1, proving our statement.
+
+        \end{intro}
+
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Prove the following statements.
+
+            \begin{enumerate}
+                \item[a.] For all integers $n > 0$, if $n$ is even, then $n^{2}$ is also even.
+
+                    \begin{hint}{Hint}
+                        Begin with n is even, $n = 2k$, then simplifying
+                        $2$ to try to get the definition
+                        of an even number, 2 $\times$ some integer.
+                    \end{hint}
+
+                \item[b.] For all integers $n > 0$, if $n$ is odd, then $n^{2} + n$ is even.
+
+                    \begin{hint}{Hint}
+                        Begin with n is odd, $n = 2k+1$, then simplifying
+                        $(2k+1)^{2} + (2k+1)$ to try to get the definition
+                        of an even number, 2 $\times$ some integer.
+                    \end{hint}
+
+
+            \end{enumerate}
+        \end{questionNOGRADE}
+
+
+\input{BASE-FOOT}

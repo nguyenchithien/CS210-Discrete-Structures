@@ -1,0 +1,112 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {2.1}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Mathematical Writing}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{2}
+\setcounter{section}{1}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% ASSIGNMENT ------------------------------------ %
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item[a.]   If $n$ is odd, then $n+1$ is even.
+                \item[b.]   If $s$ is a square, then the length of every side is $l$.
+                \item[c.]   If $n$ is a prime number, then $n$ is odd.
+            \end{itemize}
+
+        \item
+            \begin{itemize}
+                \item[a.]   This is false for all even numbers. For example, 2 and 2+1 = 3!
+                \item[b.]   This is false for $0!$, because $0! = 1$.
+                \item[c.]   We can find an example for $n=9$: $9^{2} + 4 = 85$, and this is divisible by 5 and 17.
+            \end{itemize}
+
+        \item
+            \begin{itemize}
+                \item[a.] $15 = 2 \cdot 3 + 1$
+
+                \item[b.] $15 = 2 \cdot 4 + 1$
+
+                \item[c.] $15 = 2 \cdot 7 + 1$
+
+                \item[d.] $8 = 2 \cdot 4$
+
+                \item[e.] $16 = 2 \cdot 8$
+
+                \item[f.] $20 = 2 \cdot 10$
+            \end{itemize}
+
+        \item
+            \begin{enumerate}
+                \item[a.] 100 is even. \\
+                    $100 = 2(50)$
+
+                \item[b.] 13 is odd. \\
+                    $13 = 2(6) + 1$
+
+                \item[c.] -13 is odd. \\
+                    $13 = 2(-7) + 1$
+
+                \item[d.] 20 is divisible by 5. \\
+                    $20 = 5(4)$
+
+                \item[e.] 20 is divisible by 4. \\
+                    $20 = 4(5)$
+
+                \item[f.] $6n$ is even. \\ 
+                    $2(3n)$
+
+                \item[g.] $8n^{2} + 8n + 4$ is divisible by 4. \\
+                    $8n^{2} + 8n + 4 = 4(2n^{2} + 2n + 1)$
+            \end{enumerate}
+
+        \item
+            \begin{enumerate}
+                \item[a.] 2 + 8 \\ $10 \in \mathbb{Z}$ 
+
+                \item[b.] 12 - 4 \\ $8 \in \mathbb{Z}$
+
+                \item[c.] 5 * 3 \\ $15 \in \mathbb{Z}$ 
+
+                \item[d.] 6 / 3 \\ $2 \in \mathbb{Z}$ 
+
+                \item[e.] 5 / 2 \\ $2.5 \not\in \mathbb{Z}$ 
+            \end{enumerate}
+
+        \item
+            \begin{enumerate}
+                \item[a.] For all integers $n > 0$, if $n$ is even, then $n^{2}$ is also even.
+
+                    $n = 2k$
+
+                    $n^{2}    \tab[1.1cm] => \tab (2k)(2k)  \tab => \tab    2(2k^{2})$
+
+
+                \item[b.] For all integers $n > 0$, if $n$ is odd, then $n^{2} + n$ is even.
+
+                    $n = 2k+1$
+
+                    $(2k+1)^{2} + (2k+1)    \tab[1.1cm] => \tab (2k+1)(2k+1) + (2k+1)$
+
+                    $(4k^{2} + 4k + 1) + (2k + 1) \tab[0.2cm] => \tab 4k^{2} + 4k + 2k + 1 + 1$
+
+                    $4k^{2} + 6k + 2 \tab[2.5cm] => \tab 2(2k^{2} + 3k + 1)$
+            \end{enumerate}
+    \end{enumerate}
+
+
+
+\input{BASE-FOOT}

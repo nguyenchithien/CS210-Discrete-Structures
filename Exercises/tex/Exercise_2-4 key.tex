@@ -1,0 +1,324 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {2.4}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {More About Induction}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{2}
+\setcounter{section}{4}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% ASSIGNMENT ------------------------------------ %
+    \section{More about induction}
+
+    %------------------------------------------------------------------%
+    \subsection{Sums as recursive sequences}
+
+        \begin{intro}{\ }
+            Last time, we were proving that a sum and a closed formula
+            were equivalent. Now we will use induction to prove that
+            a sum and a recursive sequence are equivalent.
+            Again, we have a set of steps that you'll need to follow
+            in order to solve these.
+
+            \paragraph{Example 1 from the textbook}
+            Consider the sum $\sum_{i=1}^{n}(2i-1)$, which is the same
+            as $1 + 3 + 5 + ... + (2n-1)$. Use the notation $s_{n}$ to
+            denote this sum. Find a recursive description of $s_{n}$.
+
+            \subparagraph{Step 1: Find the first term, $s_{1}$:}
+                We solve for $s_{1}$, or in other words, $\sum_{i=1}^{1}(2i-1)$.
+                
+                $\sum_{i=1}^{1}(2i-1) = (2 \cdot 1 - 1) = 1$ \tab
+                $s_{1} = 1$
+
+            \subparagraph{Step 2: Restate the result of $s_{n}$ as $s_{n-1}$ plus the final term:}
+                Similar to last time, we were rewriting some $\sum_{i=1}^{n}$
+                as the sum up until $n-1$, plus the final term. Here,
+                we're using $s_{n}$ to represent this sum from $i=1$ to $n$,
+                so we can rewrite it as:
+
+                $$ s_{n} = s_{n-1} + (2n-1)$$
+
+            So we have found an equation and the first term, and we can
+            show that the recursive formula that is equivalent is:
+
+            $$ s_{1} = 1 \tab s_{n} = s_{n-1} + 2n - 1 $$
+        \end{intro}
+
+        \newpage
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Consider the sum $\sum_{i=1}^{n} (3i^{2})$. Use the notation
+            $s_{n}$ to denote this sum. Find a recursive description of $s_{n}$.
+
+            \paragraph{Step 1: Find $s_{1}$}
+
+            \solution{
+                $s_{1} = \sum_{i=1}^{1} (3i^{2}) = 3(1)^{2} = 3$
+            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \paragraph{Step 2: Rewrite $s_{n}$ in terms of $s_{n-1}$ plus final term}
+            
+            \solution{
+                $s_{n} = s_{n-1} + 3n^{2}$
+            }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+
+            So, the recursive formula is:
+
+            \begin{framed}
+                $s_{1} = $ \solution{3}{}
+                \tab[4cm]
+                $s_{n} = $ \solution{$s_{n-1} + 3n^{2}$}{}
+            \end{framed}
+            
+        \end{questionNOGRADE}
+
+        \hrulefill
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Consider the sum $\sum_{i=1}^{n} (2^{i-1}+1)$. Use the notation
+            $s_{n}$ to denote this sum. Find a recursive description of $s_{n}$.
+
+            \paragraph{Step 1: Find $s_{1}$}
+
+            \solution{
+                $s_{1} = \sum_{i=1}^{1} (2^{i-1}+1) = 2^{0} + 1 = 2$
+            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \paragraph{Step 2: Rewrite $s_{n}$ in terms of $s_{n-1}$ plus final term}
+            
+            \solution{
+                $s_{n} = s_{n-1} + 2^{n-1} + 1$
+            }{ { ~\\ \raisebox{0pt}[2cm][0pt]{  } } }
+
+            So, the recursive formula is:
+
+            \begin{framed}
+                $s_{1} = $ \solution{2}{}
+                \tab[4cm]
+                $s_{n} = $ \solution{$s_{n-1} + 2^{n-1} + 1$}{}
+            \end{framed}
+            
+        \end{questionNOGRADE}
+
+        \subsection{More proofs by induction}
+
+        \begin{intro}{\ }
+            \small 
+            Back in the early parts of Chapter 2, we were proving that
+            items were divisible by some number, or even, or odd.
+            If we want to do this for a formula, we can use induction
+            to show that the statement is true for \textit{all}
+            values of $n$.
+
+            \paragraph{Example 6 from the book}
+                Show that $n^{3} + 2n$ is divisible by 3 for all positive
+                integers $n$.
+
+            \subparagraph{Step 1: Rephrase as a function:}
+                $D(n) = n^{3} + 2n$
+
+            \subparagraph{Step 2: Check proposition for $D(1)$:}
+                Make sure that $D(1)$ is divisible by 3. \tab
+                $D(1) = 1^{3} + 2 \cdot 1 = 3$ \checkmark{}
+
+            ~\\
+            Next, we assume that we have shown that the proposition holds
+            for all numbers from $D(1)$ to $D(m-1)$, as part of our inductive
+            proof. (We could also check $D(2)$, $D(3)$, etc.but we will just say
+            we've checked $m-1$ values...)
+
+            \subparagraph{Step 3: Write out $D(m-1)$ and get all terms:} ~\\            
+                $D(m-1) = (m-1)^{3} + 2(m-1) = m^{3} - 3m^{2} + 3m - 1 + 2m - 2$ \\
+                Note that we're not completely adding like terms here.
+
+            \subparagraph{Step 4: Rewrite so that $D(m)$'s terms are together:} ~\\
+                We want to reorganize our terms of $D(m-1)$ to include $D(m)$, which is
+                $m^{3} + 2m$.
+
+                $D(m-1) = (m^{3} + 2m) - 3m^{2} + 3m - 3$.
+
+            \subparagraph{Step 5: Rewrite with $D(m)$:}
+                $D(m-1) = D(m) - 3m^{2} + 3m - 3$.
+
+            \subparagraph{Step 6: Solve for $D(m)$:}
+                $D(m) = D(m-1) + 3m^{2} - 3m + 3$
+
+            \subparagraph{Step 7: Replace $D(m-1)$...}
+                From an earlier step, we said that we have proven
+                the proposition for $D(1)$ through $D(m-1)$. This means
+                that we ``have shown" that $D(m-1)$ is divisible by 3, or
+                is some integer times 3. We can then write $D(m-1)$ as
+                $3k$ in our equation instead...
+
+                $D(m) = 3k + 3m^{2} - 3m + 3$
+
+            \subparagraph{Step 8: Factor out common terms to prove:}
+                Finally, to show it is divisible by 3, we factor out
+                the 3 in the equation:
+
+                $D(m) = 3(k + m^{2} - m + 1)$
+        \end{intro}
+
+        \newpage
+        
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Use induction to prove that for each integer $n \geq 1$, $2n$ is even.
+
+            \subparagraph{Step 1: Rephrase as a function:} ~\\
+            \solution{
+                $D(m) = 2m$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+            
+            \subparagraph{Step 2: Check proposition for $D(1)$:} ~\\
+            \solution{
+                $D(1) = 2(1) = 2$ \checkmark
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 3: Write out $D(m-1)$ and get all terms:} ~\\            
+            \solution{
+                $D(m-1) = 2(m-1) = 2m - 2$
+            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \subparagraph{Step 4: Rewrite so that $D(m)$'s terms are together:} ~\\
+            \solution{
+                $D(m-1) = 2m - 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 5: Rewrite with $D(m)$:}~\\
+            \solution{
+                $D(m-1) = D(m) - 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 6: Solve for $D(m)$:}~\\
+            \solution{
+                $D(m) = D(m-1) + 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 7: Replace $D(m-1)$:}~\\
+            \solution{
+                $D(m) = 2k + 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 8: Factor out common terms to prove:}~\\
+            \solution{
+                $D(m) = 2(k + 1)$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+            
+        \end{questionNOGRADE}
+
+        \newpage
+        
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Use induction to prove that for each integer $n \geq 1$, $4n+1$ is odd.
+
+            \subparagraph{Step 1: Rephrase as a function:} ~\\
+            \solution{
+                $D(m) = 4m+1$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+            
+            \subparagraph{Step 2: Check proposition for $D(1)$:} ~\\
+            \solution{
+                $D(1) = 4(1) + 1 = 5$ \checkmark
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 3: Write out $D(m-1)$ and get all terms:} ~\\      
+            \solution{
+                $D(m-1) = 4(m-1) + 1 = 4m - 4 + 1$
+            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \subparagraph{Step 4: Rewrite so that $D(m)$'s terms are together:} ~\\
+            \solution{
+                $D(m-1) = (4m + 1) - 4$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 5: Rewrite with $D(m)$:}~\\
+            \solution{
+                $D(m-1) = D(m) - 4$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 6: Solve for $D(m)$:}~\\
+            \solution{
+                $D(m) = D(m-1) + 4$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 7: Replace $D(m-1)$:}~\\
+            \solution{
+                $D(m) = (2k+1) + 4 = 2k + 4 + 1$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 8: Factor out common terms to prove:}~\\
+            \solution{
+                $D(m) = 2(k + 2) + 1$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+        \end{questionNOGRADE}
+
+        \newpage
+        
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            Use induction to prove that for each integer $n \geq 1$, $n^{2} - n$ is even.
+
+            \subparagraph{Step 1: Rephrase as a function:} ~\\
+            \solution{
+                $D(m) = m^{2} - m$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+            
+            \subparagraph{Step 2: Check proposition for $D(1)$:} ~\\
+            \solution{
+                $D(1) = 1^{2} - 1 = 0$ \checkmark
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+            ~\\ (This will be 0, but according to $n = 2k$, $2(0)$ is ``even"?)
+
+            \subparagraph{Step 3: Write out $D(m-1)$ and get all terms:} ~\\      
+            \solution{
+                $D(m-1) = (m-1)^{2} - (m-1) = m^{2} - 2m + 1 - m + 1$
+            }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \subparagraph{Step 4: Rewrite so that $D(m)$'s terms are together:} ~\\
+            \solution{
+                $D(m-1) = (m^{2} - m) - 2m + 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 5: Rewrite with $D(m)$:}~\\
+            \solution{
+                $D(m-1) = D(m) - 2m  + 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 6: Solve for $D(m)$:}~\\
+            \solution{
+                $D(m) = D(m-1) + 2m - 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 7: Replace $D(m-1)$:}~\\
+            \solution{
+                $D(m) = 2k + 2m - 2$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+
+            \subparagraph{Step 8: Factor out common terms to prove:}~\\
+            \solution{
+                $D(m) = 2(k + m - 1)$
+            }{ { ~\\ \raisebox{0pt}[0.5cm][0pt]{  } } }
+        \end{questionNOGRADE}
+        
+\input{BASE-FOOT}

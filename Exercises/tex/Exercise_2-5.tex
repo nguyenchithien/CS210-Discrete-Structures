@@ -1,0 +1,199 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {2.5}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Contradiction}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{2}
+\setcounter{section}{5}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+\togglefalse{answerkey}
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+% ASSIGNMENT ------------------------------------ %
+    \section{Proof by contradiction}
+
+    %------------------------------------------------------------------%
+    \subsection{Review practice}
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+            For the statement, ``if $n \% 3 = 1$, then $n \% 9 \neq 5$",
+            where $\%$ stands for ``modulus"...
+
+            \begin{enumerate}
+                \item[a.]   What is the hypothesis $p$?
+                    \solution{$n \% 3 = 1$}{ ~\\~\\ }
+                    
+                \item[b.]   What is the conclusion $q$?
+                    \solution{$n \% 9 \neq 5$}{ ~\\~\\ }
+                
+                \item[c.]   Using $\neg(p \to q) \equiv p \land \neg q$,
+                    write out the negation of this implication in English.
+                    \solution{
+                    $n \% 3 = 1$ and $n \% 9 = 5$
+                    }{ ~\\~\\ }
+            \end{enumerate}
+
+            This negation can be used to build the counter-example,
+            which we will use for the proof by contradiction.
+        \end{questionNOGRADE}
+
+        ~\\~\\
+        \begin{figure}[h]
+            \centering
+            \includegraphics[height=4cm]{images/cat.png}
+            \caption*{There is extra space on the page}
+        \end{figure}
+    
+    \newpage
+    %------------------------------------------------------------------%
+    \subsection{Proof by contradiction}
+
+        \begin{framed}{Prove by contradiction: If $n^{2}$ is even, then $n$ is even}
+
+            \subparagraph{Step 1: Identify the hypothesis and conclusion:}
+            Here, our \textbf{hypothesis} is ``$n^{2}$ is even",
+            and our \textbf{conclusion} is ``$n$ is even".
+
+            \subparagraph{Step 2: Identify the negation:}
+            The negation of an implication is \textbf{not} an implication.
+            A counter-example of this would be if we have $p \land \neg q$,
+            or ``$n^{2}$ is even and $n$ is odd".
+
+            \subparagraph{Step 3: Build a counter-example:}
+            Our counter-example is the scenario where the hypothesis
+            is true and the conclusion is false... or in other words,
+            the negation. 
+            \textbf{Counter-example:} ``$n^{2}$ is even and $n$ is odd"
+
+            \subparagraph{Step 4: Write the hypothesis \& conclusion symbolically:}
+            (For our counter-example implication) \\
+            $n^{2} = 2k$ (some even integer) \tab{}
+            $n = 2j + 1$ (some odd integer)
+
+            \subparagraph{Step 5: Write equation:}
+            Using the statement, we are going to turn this into an equation.
+            $n$ is odd, and $n^{2}$ is even, so if we square the odd $n$
+            to get the even $n^{2}$, we would have...
+            to get the even $n^{2}$, we would have...
+            $(2j + 1)^{2} = 2k$
+
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+            $(2j + 1)^{2} = 2k$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $4j^{2} + 4j + 1 = 2k$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $1 = 2k - 4j^{2} - 4j$ \\
+            \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+            $\frac{1}{2} = k - 2j^{2} - 2j$
+
+            ~\\
+            Since $k$ and $j$ are both integers, through the closure property
+            of integers (+, -, and $\times$ results in an integer),
+            we can show that $k - 2j^{2} - 2j$ results in something that
+            is \textit{not an integer} -- this is a contradiction.
+            It shows that our counter-example
+            is \textbf{false}, and no counter-example can exist.
+        \end{framed}
+
+        \newpage
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Prove by contradiction: If $n^{2}$ is odd, then $n$ is odd.
+
+            \subparagraph{Step 1: Identify the hypothesis and conclusion:}
+                ~\\ \tab Hypothesis $p$:    \solution{$n^{2}$ is odd}{}
+                ~\\ \tab Conclusion $q$:    \solution{$n$ is odd}{}
+            
+            \subparagraph{Step 2: Identify the negation (counter-example):} ~\\~\\
+            	\tab[0.5cm]
+                $p$:
+                \solution{
+                    $n^{2}$ is odd
+                }{ \fitb[4cm] } AND \tab[0.5cm]
+                $\neg q$:
+                \solution{
+                    $n$ is even
+                }{ \fitb[4cm] }
+            
+                
+            \subparagraph{Step 3: Write the hypothesis \& conclusion-negation symbolically:}
+            ~\\
+            (Make sure you use different variables for $n^{2}$ and $n$.)
+                
+                ~\\~\\ \tab ($p$) \tab $n^{2} = $ \solution{$2k+1$}{}
+                ~\\~\\ \tab ($\neg q$) \tab $n = $ \solution{$2j$}{}
+                ~\\~\\ 
+
+            \subparagraph{Step 5: Write equation:}
+            
+            Set the equation for $n$-squared equal to the equation for $n^2$.
+            
+                \solution{
+                $2k+1 = (2j)^{2}$
+                }{ { ~\\ \raisebox{0pt}[1cm][0pt]{  } } }
+
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+                \solution{
+                $2k + 1 = 4j^{2}$ \\ 
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $1 = 4j^{2} - 2k$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $\frac{1}{2} = 2j^{2} - k$
+                }{ { ~\\ \raisebox{0pt}[4cm][0pt]{  } } }
+
+            Result:
+                \solution{ The result is a fraction, not an integer, therefore no counter-example exists. }{}
+            
+        \end{questionNOGRADE}
+
+        \newpage
+
+        % - QUESTION --------------------------------------------------%
+        \stepcounter{question}
+        \begin{questionNOGRADE}{\thequestion}
+
+            Use proof by contradiction to explain why it is impossible
+            for a number $n$ to be of the form $5k+3$ and of $5j+1$ for
+            integers $k$ and $j$.
+
+            \begin{hint}{Hint}
+                $n = 5k+3$ is one statement, and $n = 5j+1$ is the other statement,
+                so $5k+3 = 5j+1$ is your starting point.
+            \end{hint}
+
+            This isn't in an implication form, so we begin at Step 5...
+                
+            \subparagraph{Step 5: Write equation:} $5k+3 = 5j+1$
+
+            \subparagraph{Step 6: Simplify until we have a contradiction:} ~\\
+                \solution{
+                $3 - 1 = 5j - 5k$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $2 = 5(j - k)$ \\
+                \tab[0.5cm] $\Rightarrow$ \tab[0.5cm]
+                $\frac{2}{5} = j - k$
+                ~\\~\\
+                }{ { ~\\ \raisebox{0pt}[6cm][0pt]{  } } }
+
+            Result:
+                \solution{ Since $j$ is an integer and $k$ is an integer,
+                $j - k$ must also be an integer. Here, we get a fraction,
+                so the counter-example is invalid.
+                }{}
+            
+        \end{questionNOGRADE}
+
+\input{BASE-FOOT}
