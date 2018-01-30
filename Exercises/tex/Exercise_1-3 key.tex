@@ -1,0 +1,206 @@
+\input{BASE-HEAD}
+\newcommand{\laClass}       {CS 210}
+\newcommand{\laSemester}    {Spring 2018}
+\newcommand{\laChapter}     {1.3}
+\newcommand{\laType}        {Exercise}
+\newcommand{\laPoints}      {5}
+\newcommand{\laTitle}       {Propositional Logic}
+\newcommand{\laDate}        {}
+\setcounter{chapter}{1}
+\setcounter{section}{3}
+\addtocounter{section}{-1}
+\newcounter{question}
+
+\toggletrue{answerkey}
+
+
+\input{BASE-HEADER}
+
+\input{INSTRUCTIONS-EXERCISE}
+
+
+% KEY ------------------------------------ %
+
+    \begin{enumerate}
+        \item
+            \begin{itemize}
+                \item[a.]  Is a proposition, is true.
+                \item[b.]  Is a proposition, is true.
+                \item[c.]  Not a proposition - it is a question.
+                \item[d.]  Not a proposition - it is an opinion.
+                \item[e.]  Not a proposition - because of variables, it is not unambiguously true or false.
+                \item[f.]  Is a proposition, is false.
+            \end{itemize}
+
+        \item
+            \begin{itemize}
+                \item[a.]   a AND b: ~\\~\\
+                    \begin{tabular}{ | l  c | c | p{6cm} | }
+                        \hline
+                        & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+                        \\ \hline
+
+                        a. &        $a \land b$ &       $a = true, b = true$ &       TRUE   \\ \hline
+                        b. &        $a \land b$ &       $a = true, b = false$ &       FALSE   \\ \hline
+                        c. &        $a \land b$ &       $a = false, b = true$ &       FALSE   \\ \hline
+                        d. &        $a \land b$ &       $a = false, b = false$ &       FALSE   \\ \hline
+                    \end{tabular}
+                    
+                \item[b.]   a OR b: ~\\~\\
+                    \begin{tabular}{ | l  c | c | p{6cm} | }
+                        \hline
+                        & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+                        \\ \hline
+
+                        e. &        $a \lor b$ &       $a = true, b = true$ &   TRUE  \\ \hline
+                        f. &        $a \lor b$ &       $a = true, b = false$ &  TRUE  \\ \hline
+                        g. &        $a \lor b$ &       $a = false, b = true$ &  TRUE  \\ \hline
+                        h. &        $a \lor b$ &       $a = false, b = false$ & FALSE  \\ \hline
+                    \end{tabular}
+                    
+                \item[c.]   Compound: ~\\~\\
+                    \begin{tabular}{ | l  c | c | p{6cm} | }
+                        \hline
+                        & \textbf{Compound} & \textbf{Values} & \textbf{Result}
+                        \\ \hline
+
+                        i. &        $a \land \neg b$ &       $a = true, b = false$ & TRUE  \\ \hline
+                        j. &        $a \lor \neg b$ &        $a = false, b = true$ & FALSE  \\ \hline
+
+                        k. &        $\neg a \land b$ &       $a = false, b = true$ & TRUE  \\ \hline
+                        l. &        $\neg a \lor b$ &        $a = false, b = false$ & TRUE \\ \hline
+                    \end{tabular}
+            \end{itemize}
+            
+
+        \item[3.]   $m$: There is milk in the fridge, $e$: There are eggs in the fridge, $c$: There is cheese in the fridge.
+            \begin{enumerate}
+                \item[a.]   There is milk in the fridge, or there is cheese in the fridge. \\
+                            $m \lor c$
+                            
+                \item[b.]   There is milk in the fridge, or there is cheese in the fridge, but not both. \\
+                            $(m \lor c) \land (\neg m \lor \neg c)$ or \\
+                            $(m \lor c) \land \neg (m \land c)$.
+                            
+                \item[c.]   There is milk in the fridge but there are no eggs in the fridge. \\
+                            $m \land \neg e$
+                            
+                \item[d.]   There is milk in the fridge and there is either cheese or eggs in the fridge. \\
+                            $m \land (e \lor c)$
+                            
+                \item[e.]   There is not milk in the fridge and there is not cheese in the fridge. \\
+                            $\neg m \land \neg c$
+                            
+                \item[f.]   It is not true that... there is milk or cheese in the fridge. \\
+                            $\neg (m \lor c)$
+                            
+                \item[g.]   There is not milk in the fridge or there is not cheese in the fridge. \\
+                            $\neg m \lor \neg c$
+                            
+                \item[h.]   It is not true that... there is milk and cheese in the fridge. \\
+                            $\neg (m \land c)$
+                            
+            \end{enumerate}
+
+        \item[4a.]
+            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
+                \hline
+                $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
+                T & T & & F & F 
+                \\ \hline
+                T & F & & T & T 
+                \\ \hline
+                F & T & & F & F 
+                \\ \hline
+                F & F & & T & F 
+                \\ \hline
+            \end{tabular}
+
+        \item[4b.]
+            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
+                \hline
+                $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
+                T & T &
+                &  F 
+                &  F 
+                &  F 
+                \\ \hline
+                T & F &
+                &  F 
+                &  T 
+                &  T 
+                \\ \hline
+                F & T &
+                &  T 
+                &  F 
+                &  T 
+                \\ \hline
+                F & F &
+                &  T 
+                &  T 
+                &  T 
+                \\ \hline
+            \end{tabular} ~\\
+
+    \item[5.]
+        \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
+            \hline
+            $p$ & $q$ & $r$
+            \\ \hline
+            T & T & T
+            \\ \hline
+            T & T & F
+            \\ \hline
+            T &  F  &  T 
+            \\ \hline
+            T & F & F
+            \\ \hline
+            F &  T  &  T 
+            \\ \hline
+            F &  T  &  F 
+            \\ \hline
+            F &  F  &  T 
+            \\ \hline
+            F & F & F
+            \\ \hline
+        \end{tabular}
+
+    \item[6.]
+        \begin{tabular}{ | c | c | c | c |  c | c | c | c | c | c | }
+            \hline
+                $p$ &
+                $q$ & &
+
+                $\neg p$ &
+                $\neg q$ &
+
+                $(p \lor q)$ & &
+
+                $ \neg p \land \neg q $ & &
+                $ \neg ( p \lor q ) $
+                \\ \hline
+            T & T & & F & F
+            &  T  &
+            &  T  &
+            &  T 
+            \\ \hline
+            T & F & & F & T
+            &  T  &
+            &  F  &
+            &  F 
+            \\ \hline
+            F & T & & T & F
+            &  T  &
+            &  F  &
+            &  F 
+            \\ \hline
+            F & F & & T & T
+            &  F  &
+            &  F  &
+            &  F 
+            \\ \hline
+        \end{tabular}
+    \end{enumerate}
+
+
+\input{BASE-FOOT}

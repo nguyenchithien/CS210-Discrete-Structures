@@ -18,7 +18,6 @@
 
 \input{INSTRUCTIONS-EXERCISE}
 
-\notonkey{
 % ASSIGNMENT ------------------------------------ %
 
     \section{\laTitle}
@@ -124,7 +123,7 @@
         write out whether the full compound proposition is \textbf{true} or \textbf{false}.
     \end{questionNOGRADE}
 
-        \paragraph{a AND b:} ~\\
+        \paragraph{a. a AND b:} ~\\
 
         \begin{tabular}{ | l  c | c | p{6cm} | }
             \hline
@@ -137,7 +136,7 @@
             d. &        $a \land b$ &       $a = false, b = false$ &       FALSE   \\ \hline
         \end{tabular}
 
-        \paragraph{a OR b:} ~\\
+        \paragraph{b. a OR b:} ~\\
 
         \begin{tabular}{ | l  c | c | p{6cm} | }
             \hline
@@ -150,7 +149,7 @@
             h. &        $a \lor b$ &       $a = false, b = false$ &   \\ \hline
         \end{tabular}
 
-        \paragraph{Combinations:} ~\\
+        \paragraph{c. Combinations:} ~\\
 
         \begin{tabular}{ | l  c | c | p{6cm} | }
             \hline
@@ -171,20 +170,27 @@
         For the following, ``translate" the following English statements
         into compound propositions.
 
-        ~\\ $p:$ ``The printer is offline" \tab
-        $q:$ ``The printer is out of paper" \\ 
-        $r:$ ``The document has finished printing"
+        ~\\
+        $m$: There is milk in the fridge \tab
+        $e$: There are eggs in the fridge \\
+        $c$: There is cheese in the fridge
 
 
         \begin{enumerate}
-            \item[a.] The printer is not out of paper.
-            \item[b.] The printer is online.
-            \item[c.] The printer is offline and it is out of paper
-            \item[d.] The printer is online and it is not out of paper.
-            \item[e.] Either the printer is online, or it is out of paper.
-            \item[f.] The printer is online, but it is out of paper.
-            \item[g.] The printer is offline or it is out of paper, but not both.
-            \item[h.] The printer is online and the printer has paper, and the document has not finished printing.
+            \item[a.]   There is milk in the fridge, or there is cheese in the fridge.
+            \item[b.]   There is milk in the fridge, or there is cheese in the fridge, but not both.
+
+            ~\\
+            \item[c.]   There is milk in the fridge but there are no eggs in the fridge.
+            \item[d.]   There is milk in the fridge and there is either cheese or eggs in the fridge.
+
+            ~\\
+            \item[e.]   There is not milk in the fridge and there is not cheese in the fridge.
+            \item[f.]   It is not true that... there is milk or cheese in the fridge.
+
+            ~\\
+            \item[g.]   There is not milk in the fridge or there is not cheese in the fridge.
+            \item[h.]   It is not true that... there is milk and cheese in the fridge.
         \end{enumerate}
     \end{questionNOGRADE}
 
@@ -349,143 +355,5 @@
         \end{center}       
     \end{questionNOGRADE}
 
-
-
-
-}{
-% KEY ------------------------------------ %
-
-    \begin{enumerate}
-        \item[1a.]  Is a proposition, is true.
-        \item[1b.]  Is a proposition, is true.
-        \item[1c.]  Not a proposition - it is a question.
-        \item[1d.]  Not a proposition - it is an opinion.
-        \item[1e.]  Not a proposition - because of variables, it is not unambiguously true or false.
-        \item[1f.]  Is a proposition, is false.
-
-        \item[2a.]  true
-        \item[2b.]  false
-        \item[2c.]  false
-        \item[2d.]  false
-
-        \item[2e.]  true
-        \item[2f.]  true
-        \item[2g.]  true
-        \item[2h.]  false
-
-        \item[2i.]  true
-        \item[2j.]  false
-        \item[2k.]  true
-        \item[2l.]  true
-
-        \item[3a.]  $\neg q$
-        \item[3b.]  $\neg p$
-        \item[3c.]  $p \land q$
-        \item[3d.]  $\neg p \land \neg q$
-        \item[3e.]  $p \lor q$
-        \item[3f.]  $\neg p \land q$
-        \item[3g.]  $(p \lor q) \land (p \land q)$
-        \item[3h.]  $\neg p \land \neg q \land \neg r$
-
-        \item[4a.]
-            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{3cm} | }
-                \hline
-                $p$ & $q$ & & $\neg q$ & $p \land \neg q$ \\ \hline
-                T & T & & F & F 
-                \\ \hline
-                T & F & & T & T 
-                \\ \hline
-                F & T & & F & F 
-                \\ \hline
-                F & F & & T & F 
-                \\ \hline
-            \end{tabular}
-
-        \item[4b.]
-            \begin{tabular}{ | p{1cm} | p{1cm} | c | p{2cm} | p{2cm} | p{3cm} | }
-                \hline
-                $p$ & $q$ & & $\neg p$ & $\neg q$ & $\neg p \lor \neg q$ \\ \hline
-                T & T &
-                &  F 
-                &  F 
-                &  F 
-                \\ \hline
-                T & F &
-                &  F 
-                &  T 
-                &  T 
-                \\ \hline
-                F & T &
-                &  T 
-                &  F 
-                &  T 
-                \\ \hline
-                F & F &
-                &  T 
-                &  T 
-                &  T 
-                \\ \hline
-            \end{tabular} ~\\
-
-    \item[5.]
-        \begin{tabular}{ | p{2cm} | p{2cm} | p{2cm} | }
-            \hline
-            $p$ & $q$ & $r$
-            \\ \hline
-            T & T & T
-            \\ \hline
-            T & T & F
-            \\ \hline
-            T &  F  &  T 
-            \\ \hline
-            T & F & F
-            \\ \hline
-            F &  T  &  T 
-            \\ \hline
-            F &  T  &  F 
-            \\ \hline
-            F &  F  &  T 
-            \\ \hline
-            F & F & F
-            \\ \hline
-        \end{tabular}
-
-    \item[6.]
-        \begin{tabular}{ | c | c | c | c |  c | c | c | c | c | c | }
-            \hline
-                $p$ &
-                $q$ & &
-
-                $\neg p$ &
-                $\neg q$ &
-
-                $(p \lor q)$ & &
-
-                $ \neg p \land \neg q $ & &
-                $ \neg ( p \lor q ) $
-                \\ \hline
-            T & T & & F & F
-            &  T  &
-            &  T  &
-            &  T 
-            \\ \hline
-            T & F & & F & T
-            &  T  &
-            &  F  &
-            &  F 
-            \\ \hline
-            F & T & & T & F
-            &  T  &
-            &  F  &
-            &  F 
-            \\ \hline
-            F & F & & T & T
-            &  F  &
-            &  F  &
-            &  F 
-            \\ \hline
-        \end{tabular}
-    \end{enumerate}
-}
 
 \input{BASE-FOOT}
